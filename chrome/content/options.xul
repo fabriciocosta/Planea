@@ -1,0 +1,38 @@
+<?xml version="1.0"?>
+
+<?xml-stylesheet href="chrome://planea/skin/options.css" type="text/css"?>
+
+<!DOCTYPE window SYSTEM "chrome://planea/locale/options.dtd">
+ 
+<prefwindow id="options" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" title="&options.title;">
+ 
+<prefpane id="pane_general" label="&paneGeneral.label;">
+  <preferences>
+    <preference id="creador" name="creador" type="string"/>
+    <preference id="nombreproyecto" name="nombreproyecto" type="string"/>
+<!--    <preference id="pref_thing2" name="planea." type="bool"/>-->
+  </preferences>
+
+  <groupbox id="section1">
+    <caption label="&datoscreador.label;"/>
+
+    <hbox align="center">
+      <label value="&creador.label;" accesskey="&creador.accesskey;" control="thing1"/>
+      <textbox preference="creador" id="creador" width="250px"/>
+    </hbox>
+  </groupbox>
+
+  <groupbox id="section2">
+    <caption label="&datosproyecto.label;"/>
+
+    <!--<checkbox preference="pref_thing2" id="thing2" label="&proyecto.label;" accesskey="&proyecto.accesskey;"/>-->
+    <hbox align="center">
+      <label value="&nombre.label;" accesskey="&nombre.accesskey;" control="thing1"/>
+      <textbox preference="nombreproyecto" id="nombreproyecto" width="250px"/>
+    </hbox>
+
+
+  </groupbox>
+</prefpane>
+
+</prefwindow>

@@ -1,0 +1,11 @@
+<div class="campo campo-texto {CAMPOCONAYUDA}  campo-{CLASE}">
+	<div class="titulo">
+			<label class="titulocampo" title="{AYUDARAPIDA}"  onmouseover="javascript:ShowHint('{IDCAMPO}');"><span>{NOMBRECAMPO}</span></label>
+			{MARKER}				
+	</div>
+	<div class="entrada">
+		<input id="input_{IDCAMPO}" type="text" value="{VALOR}" placeholder="{AYUDARAPIDA}" title="{AYUDARAPIDA}" onfocus="javascript:OpenHelp('{PATHCAMPO}');ShowHint('{IDCAMPO}');"
+         onkeyup="javascript:SaveField('{PATHCAMPO}','input_{IDCAMPO}');"
+         />
+	</div>
+</div>

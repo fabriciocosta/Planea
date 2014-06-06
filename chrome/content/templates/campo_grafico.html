@@ -1,0 +1,21 @@
+<div class="campo campo-texto {CAMPOCONAYUDA}  campo-{CLASE}" id="field_{IDCAMPO}">
+	<div class="titulo">
+			<label class="titulocampo" title="{AYUDARAPIDA}" onmouseover="javascript:ShowHint('{IDCAMPO}');"><span>{NOMBRECAMPO}</span>{HELPER}</label>
+			{MARKER}			
+	</div>
+	<div class="entrada">
+	<!--
+		<input id="input_{IDCAMPO}" type="text" value="{VALOR}" title="{AYUDARAPIDA}" placeholder="{AYUDARAPIDA}" onfocus="javascript:OpenHelp('{PATHCAMPO}');"
+         onkeyup="javascript:SaveField('{PATHCAMPO}','input_{IDCAMPO}');"
+         />
+		-->
+		<div id="grafico_{IDCAMPO}" class="grafico grafico_{IDCAMPO}">
+			{VALOR}
+		</div>
+		<a onclick="javascript:getcanvasimage('grafico_canvg_{IDCAMPO}');">IMAGE</a>
+		<div id="grafico_canvg_{IDCAMPO}" class="graficocanvg" style="display: block;">
+		</div>
+		
+		
+	</div>
+</div>

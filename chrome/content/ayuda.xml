@@ -1,0 +1,1166 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<arbol>
+	<categoria clase="presentacion">Presentación
+	
+		<seccion clase="titulo">Título
+		
+			
+		<campo clase="titulo" tipo="texto" id="Título:Título">Título
+			<ayuda>
+				<nombre><![CDATA[Título]]></nombre>
+				<resumen><![CDATA[Enunciado claro, sencillo y directo que define el proyecto que se va a realizar. ]]></resumen>
+				<completo><![CDATA[Enunciado claro, sencillo y directo que define el proyecto que se va a realizar. El título debe asimilarse a una acción y su objetivo es identificar el proyecto de manera de caracterizar lo que quiere hacerse concretamente. La redacción debe ser breve, clara, sencilla y directa, y debe evitarse el uso de metáforas. Es recomendable definirlo al final de la formulación del proyecto para que el mismo no represente un obstáculo o limitación para su desarrollo. No confundir el título del proyecto con la marca, enunciado del problema, objetivos o resultados del proyecto.]]></completo>
+				<ejemplos><![CDATA[ Ejemplos
+
+	- Establecimiento de museo de arte contemporáneo en la zona norte del Estado de Quintana Roo, México;
+
+	- Creación de centro cultural en el barrio La Macarena de Bogotá;
+
+	- Programación y realización del festival Rock in Rio en Lisboa;
+
+	- Realización de ciclo de talleres de lectura en la sede Vespucio de Biblioteca Viva;
+
+	- Producción integral de documental comunitario en sede de Puntos de Cultura de la región nordeste de Brasil.]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="marca">Marca
+		
+			
+		<campo clase="marca" tipo="parrafo" id="Marca:Marca">Marca
+			<ayuda>
+				<nombre><![CDATA[Marca]]></nombre>
+				<resumen><![CDATA[Nombre de fantasía o denominación metafórica que le otorga identidad e individualidad al proyecto.]]></resumen>
+				<completo><![CDATA[Nombre de fantasía o denominación metafórica que le otorga identidad e individualidad al proyecto. Se sugiere poner especial atención a la hora de redactar la denominación verbal elegida para el proyecto, puesto que la marca tiene por finalidad contribuir a la diferenciación e identificación del proyecto. Es decir, oficia como su nombre propio y se utilizará como uno de los insumos para sus posteriores representaciones gráficas, aunque no debe confundirse con sus sistemas de identificación no verbal (logos, isologos, logotipos, símbolos, etc.). Al momento de diseñar la identidad de un proyecto cultural es necesario ser creativos de modo de arribar a marcas memorables, únicas, pregnantes y afectivas para llegar y permanecer en la memoria de sus diversos públicos. ]]></completo>
+				<ejemplos><![CDATA[Ejemplos: Rock in Rio; ARCO; Live Earth; Puntos de Cultura; Biblioteca Viva.]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="resumenejecutivo">Resumen Ejecutivo
+		
+			
+		<campo clase="resumenejecutivo" tipo="parrafo" id="Resumen Ejecutivo:Resumen Ejecutivo">Resumen Ejecutivo
+			<ayuda>
+				<nombre><![CDATA[Resumen Ejecutivo]]></nombre>
+				<resumen><![CDATA[Síntesis de los aspectos centrales del proyecto que funciona a modo de presentación y desarrollo global del mismo.]]></resumen>
+				<completo><![CDATA[Síntesis de los aspectos centrales del proyecto que funciona a modo de presentación y desarrollo global del mismo. Es una visión general y resumida del proyecto global, por lo tanto, se sugiere redactarlo una vez desarrollados sus diversos niveles y elementos. Debe tener una longitud que permita contemplar de manera sintética sus elementos centrales: nombre, en qué consiste, objetivos, valor diferencial, ubicación, quiénes lo llevan a cabo, en qué momento, resultados esperados, destinatarios y públicos, viabilidad, etc. Es un resumen que busca motivar al lector para que profundice en la lectura posterior y completa del proyecto. Por lo tanto debe estar redactado adecuadamente y utilizar un tono que despierte el interés. Es recomendable redactarlo en párrafos, sin incluir el uso de títulos, ni entrar en un desarrollo pormenorizado, a fin de lograr un equilibrio entre sus componentes y trasmitir una síntesis que permita a sus lectores hacerse una idea acabada y precisa de la propuesta.]]></completo>
+				<ejemplos><![CDATA[Ejemplo:
+
+	Título: Establecimiento de museo de arte contemporáneo en la zona norte del Estado de Quintana Roo, México.
+
+	Marca: MAR - Museo de Arte Contemporáneo de la Riviera Maya A.C.
+
+	Resumen ejecutivo:
+
+	El proyecto de establecimiento de un museo de arte contemporáneo en la zona norte del Estado de Quintana Roo busca consolidar un espacio dedicado a exhibir lo más representativo del arte mexicano y constituir un proyecto autosustentable preocupado por la diversidad cultural y el medio ambiente. (...) El museo será parte de un proyecto amplio en el que se integrarán otras propuestas orientadas a contribuir en el desarrollo sustentable del sitio y de la población aledaña, atendiendo necesidades específicas. Para conseguir nuestro objetivo se invitará a personas de diversas profesiones, como arquitectos, ingenieros, gestores culturales, promotores de arte, todas ellas, podrán intervenir para hacer del museo un espacio que trascienda la convención social de lo que se espera y se conoce sobre los museos. Ubicado en Quintana Roo, el museo se establecerá como uno de los principales atractivos de Turismo Cultural del país (...) y será un espacio de innovación y educación en el que involucraremos nuevas tecnologías para los contenidos del museo (...) Se buscará sumar a la comunidad y brindarle servicios que posibiliten una mejor calidad de vida de los habitantes de la zona. El museo será una ventana de México al mundo, activo promotor cultural en todas las disciplinas, en especial de la cultura maya y el arte contemporáneo.]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="titularidad">Titularidad
+		
+			<seccion clase="organizacion">Organización
+			
+				
+		<campo clase="organizacionnombre" tipo="texto" id="Organización:Nombre de la organización">Nombre de la organización
+			<ayuda>
+				<nombre><![CDATA[Nombre de la organización]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="organizacionformajuridica" tipo="texto" id="Organización:Forma jurídica">Forma jurídica
+			<ayuda>
+				<nombre><![CDATA[Forma jurídica]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="organizacionidentificacion" tipo="texto" id="Organización:Número de identificación tributaria">Número de identificación tributaria
+			<ayuda>
+				<nombre><![CDATA[Número de identificación tributaria]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="organizaciondomicilio" tipo="texto" id="Organización:Domicilio">Domicilio
+			<ayuda>
+				<nombre><![CDATA[Domicilio]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[Poder indicar por separado: (el ojetivo es que se georreferencie, si alguna vez lo necesitamos)
+
+	Calle ______________________________________
+
+	Número _______________
+
+	Piso ____________
+
+	Departamento_________]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="organizacionciudad" tipo="texto" id="Organización:Ciudad ">Ciudad 
+			<ayuda>
+				<nombre><![CDATA[Ciudad]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="organizacioncodigopostal" tipo="texto" id="Organización:Código Postal">Código Postal
+			<ayuda>
+				<nombre><![CDATA[Código Postal]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="organizacionprovincia" tipo="texto" id="Organización:Provincia">Provincia
+			<ayuda>
+				<nombre><![CDATA[Provincia]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="organizacionpais" tipo="texto" id="Organización:País">País
+			<ayuda>
+				<nombre><![CDATA[País]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="organizaciontelefono" tipo="texto" id="Organización:Teléfono">Teléfono
+			<ayuda>
+				<nombre><![CDATA[Teléfono]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="organizacionmail" tipo="texto" id="Organización:Mail">Mail
+			<ayuda>
+				<nombre><![CDATA[Mail]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="organizacionweb" tipo="texto" id="Organización:Web">Web
+			<ayuda>
+				<nombre><![CDATA[Web]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="organizacionredessociales" tipo="texto" id="Organización:Redes Sociales">Redes Sociales
+			<ayuda>
+				<nombre><![CDATA[Redes Sociales]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			</seccion>
+			<seccion clase="personafisica">Persona Física
+			
+				
+		<campo clase="personanombre" tipo="texto" id="Persona Física:Nombre">Nombre
+			<ayuda>
+				<nombre><![CDATA[Nombre]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="apellido" tipo="texto" id="Persona Física:Apellido">Apellido
+			<ayuda>
+				<nombre><![CDATA[Apellido]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="dni" tipo="texto" id="Persona Física:Nº Documento de Identidad">Nº Documento de Identidad
+			<ayuda>
+				<nombre><![CDATA[Nº Documento de Identidad]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="nacimiento" tipo="texto" id="Persona Física:Fecha de nacimiento">Fecha de nacimiento
+			<ayuda>
+				<nombre><![CDATA[Fecha de nacimiento]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="domicilio" tipo="texto" id="Persona Física:Domicilio">Domicilio
+			<ayuda>
+				<nombre><![CDATA[Domicilio]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="codigo_postal" tipo="texto" id="Persona Física:Código Postal">Código Postal
+			<ayuda>
+				<nombre><![CDATA[Código Postal]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="ciudad" tipo="texto" id="Persona Física:Ciudad">Ciudad
+			<ayuda>
+				<nombre><![CDATA[Ciudad]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="provincia" tipo="texto" id="Persona Física:Provincia">Provincia
+			<ayuda>
+				<nombre><![CDATA[Provincia]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="pais" tipo="texto" id="Persona Física:País">País
+			<ayuda>
+				<nombre><![CDATA[País]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="telefono" tipo="texto" id="Persona Física:Teléfono">Teléfono
+			<ayuda>
+				<nombre><![CDATA[Teléfono]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="web" tipo="texto" id="Persona Física:Web">Web
+			<ayuda>
+				<nombre><![CDATA[Web]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			</seccion>
+			<seccion clase="responsable">Responsable
+			
+				
+		<campo clase="responsablenombre" tipo="texto" id="Responsable:Nombre">Nombre
+			<ayuda>
+				<nombre><![CDATA[Nombre]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="responsableapellido" tipo="texto" id="Responsable:Apellido">Apellido
+			<ayuda>
+				<nombre><![CDATA[Apellido]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="responsablemail" tipo="texto" id="Responsable:Mail">Mail
+			<ayuda>
+				<nombre><![CDATA[Mail]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="responsabletelefono" tipo="texto" id="Responsable:Teléfono">Teléfono
+			<ayuda>
+				<nombre><![CDATA[Teléfono]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="responsableweb" tipo="texto" id="Responsable:Web">Web
+			<ayuda>
+				<nombre><![CDATA[Web]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="responsableredes" tipo="texto" id="Responsable:Redes Sociales">Redes Sociales
+			<ayuda>
+				<nombre><![CDATA[Redes Sociales]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			</seccion>
+		</seccion>
+	</categoria>
+	<categoria clase="fundamentos">Fundamentos
+	
+		<seccion clase="analisisexterno">Análisis Externo
+		
+			
+		<campo clase="analisisexterno" tipo="parrafo" id="Análisis Externo:Análisis Externo">Análisis Externo
+			<ayuda>
+				<nombre><![CDATA[Análisis Externo]]></nombre>
+				<resumen><![CDATA[Analizar el contexto exterior del proyecto y la influencia de sus factores, agentes y condicionantes principales.]]></resumen>
+				<completo><![CDATA[Analizar el contexto exterior del proyecto y la influencia de sus factores, agentes y condicionantes principales. Se trata de dar cuenta del conjunto de elementos externos, que deben analizarse y evaluarse antes del inicio del proyecto. Consta de un conjunto de estudios previos que son necesarios y definitorios; entre estas herramientas e instrumentos pueden mencionarse: estadísticas, informes técnicos, estudios especializados, mapas, imágenes, análisis de expertos, investigaciones sectoriales, etc. El objetivo de este análisis es ampliar los elementos a considerar para contar con una lectura certera del entorno del proyecto y poder emprender luego propuestas coherentes. Es importante señalar que el equipo responsable aún no toma decisiones acerca del proyecto. Este análisis concluye con la formulación de un diagnóstico o lectura crítica que lo sintetiza y concluye. Por ende, en este punto puede presentarse una síntesis del diagnóstico territorial y trasladar a los anexos el desarrollo pormenorizado de los análisis previos.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="analisisinterno">Análisis Interno
+		
+			
+		<campo clase="analisisinterno" tipo="parrafo" id="Análisis Interno:Análisis Interno">Análisis Interno
+			<ayuda>
+				<nombre><![CDATA[Análisis Interno]]></nombre>
+				<resumen><![CDATA[Analizar la situación interna y el estado actual de la organización responsable del proyecto.]]></resumen>
+				<completo><![CDATA[Una vez estudiado el entorno y factores externos, es importante analizar la organización y/o equipo responsable de la implementación del proyecto. Aquí es importante describir la capacidad, medios, estadio y motivaciones que caracterizan a la organización a cargo. Por ende, se deberá dar cuenta de los elementos y capacidades, tanto conceptuales como operativos que caracterizan al equipo gestor. El análisis interno puede incluir consideraciones acerca de la trayectoria y el desarrollo institucional de la organización, reflexiones sobre su estructura, capacidades y medios, sobre su potencial para encarar el desarrollo del proyecto, una evaluación de los recursos disponibles para su implementación, etc. Resta destacar que en este punto de los fundamentos se debe describir puntualmente el estado actual de la organización responsable; en caso de requerirse alianzas, fusiones, incorporaciones o procesos de re-ingeniería, deberán detallarse luego durante el desarrollo del proyecto.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="antecedentes">Antecedentes
+		
+			
+		<campo clase="antecedentes" tipo="parrafo" id="Antecedentes:Antecedentes">Antecedentes
+			<ayuda>
+				<nombre><![CDATA[Antecedentes]]></nombre>
+				<resumen><![CDATA[ 
+
+	Detallar cómo surgió el proyecto y las motivaciones para su realización.]]></resumen>
+				<completo><![CDATA[ 
+
+	Detallar cómo surgió el proyecto y las motivaciones para su realización. Para la formulación de los antecedentes es necesario explicar cómo se originó el proyecto y las motivaciones que existen para su diseño e implementación. Se trata de detallar las circunstancias, contextos y condiciones que han permitido arribar a su formulación. En la medida en que el proyecto surge con el objetivo de solucionar un problema es necesario mostrar la necesidad, el vacío o la carencia detectada. Así, la descripción de los antecedentes contribuye a situarnos en el problema, por lo que deberá demostrarse que se ha investigado y profundizado en la especialidad, contextos y motivaciones del proyecto. Cuando se trata de un proyecto unipersonal y/o de finalidad exclusivamente artística, se sugiere narrar cómo el mismo se inscribe en la carrera profesional del titular o cómo podría contribuir con su desarrollo, de acuerdo a su experiencia y trayectoria en la disciplina o actividad.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="marcoinstitucional">Marco Institucional
+		
+			
+		<campo clase="marcoinstitucional" tipo="parrafo" id="Marco Institucional:Marco institucional">Marco institucional
+			<ayuda>
+				<nombre><![CDATA[Marco institucional]]></nombre>
+				<resumen><![CDATA[Describir cómo concuerda el proyecto con la misión y con los objetivos de la organización que lo impulsa.]]></resumen>
+				<completo><![CDATA[Describir cómo concuerda el proyecto con la misión y con los objetivos de la organización que lo impulsa. En este punto es recomendable mostrar coherencia, alineamiento y congruencia entre la razón de ser de la organización promotora y los objetivos y estrategias particulares del emprendimiento. Se sugiere dedicar especial atención a este punto, sobre todo en los casos en que el proyecto será presentado para su aprobación en una entidad distinta a la que lo formula y ejecuta. Es conveniente indicar la naturaleza de la institución e incluir aspectos directamente relacionados con el proyecto, como por ejemplo: políticas y prioridades de la organización, ejes estratégicos, relaciones con otras instituciones, etc. En caso de tratarse de un proyecto que no se desarrolla en el marco de una institución, puede obviarse este punto.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="alineamiento">Alineamiento
+		
+			
+		<campo clase="alineamiento" tipo="parrafo" id="Alineamiento:Alineamiento">Alineamiento
+			<ayuda>
+				<nombre><![CDATA[Alineamiento]]></nombre>
+				<resumen><![CDATA[Explicitar cómo concuerda la iniciativa con los propósitos y programas de la organización a la que se presenta el proyecto o con las necesidades de la comunidad.]]></resumen>
+				<completo><![CDATA[Explicitar cómo concuerda la iniciativa con los propósitos y programas de la organización a la que se presenta el proyecto o con las necesidades de la comunidad. Aquí se busca dar cuenta del alineamiento y cercanía ideológica y política entre el proyecto y la institución a la que se solicita apoyo. Es decir, deberán alinearse los ejes del discurso propio con los valores y la identidad de la organización con la que se busca trabajar. De este modo, se ponen en evidencia políticas en común, valores compartidos y congruencia en la misión de ambas organizaciones. Para la redacción de este punto, se recomienda analizar documentos institucionales, declaraciones de principios, definición de políticas, tanto organizacionales como de sus referentes, para evidenciar puntos de contacto y referencias en común. De este modo se garantiza que la motivación para el acercamiento y el trabajo conjunto es meditada, consciente y profesional. Se trata de un punto diferencial y de valor agregado a la hora de formular proyectos, puesto que da cuenta de la potencialidad y coherencia del vínculo institucional que se busca establecer.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="referencias">Referencias
+		
+			
+		<campo clase="referencias" tipo="parrafo" id="Referencias:Referencias">Referencias
+			<ayuda>
+				<nombre><![CDATA[Referencias]]></nombre>
+				<resumen><![CDATA[Demostrar un corpus de referencias, lecturas y análisis de experiencias que den cuenta de una investigación exhaustiva en torno al proyecto.]]></resumen>
+				<completo><![CDATA[Demostrar un corpus de referencias, lecturas y análisis de experiencias que den cuenta de una investigación exhaustiva en torno al proyecto. Aquí se recomienda demostrar que se ha consultado una bibliografía pertinente con lo proyectado. Además de lecturas e investigaciones teóricas, este corpus de referencias puede incluir casos, experiencias o proyectos previos que puedan resultar de interés para la definición del proyecto. En la medida en que el campo de la gestión cultural muchas veces presenta déficits de publicaciones e investigaciones especializadas, pueden tomarse experiencias concretas del campo profesional a modo de referencias o casos para su reformulación o relocalización. Ello demuestra seriedad y profesionalismo a la hora de formular proyectos, dando cuenta que, más allá de la motivación personal o grupal, se ha estudiado y profundizado en la temática, antecedentes y referencias previas.
+
+	Ej; Links]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="problematica">Problemática
+		
+			
+		<campo clase="problematica" tipo="parrafo" id="Problemática:Problemática">Problemática
+			<ayuda>
+				<nombre><![CDATA[Problemática]]></nombre>
+				<resumen><![CDATA[Identificar con claridad cuál es el problema, vacío o carencia que motiva el proyecto y qué consecuencias trae.]]></resumen>
+				<completo><![CDATA[Identificar con claridad cuál es el problema, vacío o carencia que motiva el proyecto y qué consecuencias trae. La identificación del problema a partir del cual surge el proyecto conlleva un profundo análisis orientado a identificar y ponderar la naturaleza de la problemática: elementos intervinientes, parámetros que la definen, condiciones para su surgimiento y persistencia, hechos y circunstancias en torno al problema, etc. Se sugiere analizar las dinámicas entre tales factores a fin de comprender las relaciones de causalidad que den cuenta del origen del problema, vacío o carencia. En esta fase, también debe presentarse la metodología que se ha seguido para identificar, analizar y definir el problema. Desde la observación de campo a la implementación de encuestas, de indicadores a vivencias, diversas herramientas pueden llegar a ser valiosas para el desarrollo de este punto. Se sugiere también describir el modo en que la comunidad, el grupo o la institución titular participaron de esta etapa del proceso.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="justificacion">Justificación 
+		
+			
+		<campo clase="justificacion" tipo="parrafo" id="Justificación :Justificación">Justificación
+			<ayuda>
+				<nombre><![CDATA[Justificación]]></nombre>
+				<resumen><![CDATA[Argumentar la o las maneras cómo el proyecto solucionará el problema, vacío o carencia a partir del cual surge.]]></resumen>
+				<completo><![CDATA[Argumentar la o las maneras cómo el proyecto solucionará el problema, vacío o carencia a partir del cual surge. Justificar implica demostrar claramente las capacidades y beneficios del proyecto a la hora de resolver los problemas, necesidades, potencialidades u oportunidades que le dieron origen, en beneficio de ciertas personas, grupos o comunidades. Una vez detallado el problema y las consecuencias que conlleva, la justificación permite avanzar sobre las formas para solucionarlo, es decir, cómo se propone superar el problema o satisfacer la necesidad detectada. La justificación del proyecto incluye también la descripción del impacto directo y esperado para el corto, mediano y largo plazo. Una justificación clara y precisa facilita al proyecto su financiación y, en definitiva, su ejecución.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+	</categoria>
+	<categoria clase="planificacion">Planificación
+	
+		<seccion clase="objetivos">Objetivos
+		
+			<seccion clase="generales">Generales
+			
+				
+		<campo clase="objetivos_generales" tipo="multiples-objetivos-generales" id="Generales:Objetivos Generales">Objetivos Generales
+			<ayuda>
+				<nombre><![CDATA[Objetivos Generales]]></nombre>
+				<resumen><![CDATA[Enunciado claro y preciso de los logros y resultados a los que aspira el proyecto.]]></resumen>
+				<completo><![CDATA[Enunciado claro y preciso de los logros y resultados a los que aspira el proyecto. Los objetivos generales sintetizan de manera global y cualitativa los resultados finales que aspira a alcanzar el proyecto y a partir de los cuales tendrá sentido. Se formulan como expectativas amplias e integrales. Este propósito puede o no ser cuantificable en la medida en que sólo establece los fines que se esperan alcanzar. Deben ser formulados con anticipación y consenso para poder avanzar hacia su concreción. Es deseable no abundar en numerosos objetivos generales (no más de tres o cuatro), de modo de brindar mayor certeza y alcance a su concreción. Es un aspecto central de la formulación del proyecto y servirá para evaluar su éxito o su fracaso.]]></completo>
+				<ejemplos><![CDATA[Objetivo general: Estimular el consumo teatral de la ciudad de Lima.]]></ejemplos>
+			</ayuda>
+		</campo>
+			</seccion>
+			<seccion clase="especificos">Específicos
+			
+				
+		<campo clase="objetivos_especificos" tipo="multiples-objetivos-especificos" id="Específicos:Objetivos Específicos">Objetivos Específicos
+			<ayuda>
+				<nombre><![CDATA[Objetivos Específicos]]></nombre>
+				<resumen><![CDATA[Representan una manifestación operativa para dotar de mayor concreción a los objetivos generales.]]></resumen>
+				<completo><![CDATA[Representan una manifestación operativa para dotar de mayor concreción a los objetivos generales. Los objetivos específicos señalan las acciones y actividades que se van a realizar en cada uno de los pasos o etapas del proyecto, e inciden directamente en el logro de resultados. Como requieren mayor concreción que los generales, deben ser formulados en términos operativos. Estos propósitos, al igual que las metas, podrían ser cuantificables. Debemos detallar qué se busca lograr con la realización del proyecto, como así también los plazos para conseguir tales logros. Deben ser formulados con anticipación, consenso y considerando medida, tiempo y viabilidad, de modo de poder traducirse en resultados concretos. Cada objetivo específico debe referirse al menos a un objetivo general y, aún en su multiplicidad, no deben resultar contradictorios entre sí.]]></completo>
+				<ejemplos><![CDATA[Objetivo general: Estimular el consumo teatral de la ciudad de Lima.]]></ejemplos>
+			</ayuda>
+		</campo>
+			</seccion>
+			<seccion clase="metas">Metas
+			
+				
+		<campo clase="metas" tipo="multiples-metas" id="Metas:Metas">Metas
+			<ayuda>
+				<nombre><![CDATA[Metas]]></nombre>
+				<resumen><![CDATA[Representan la manifestación cuantificada de los objetivos.]]></resumen>
+				<completo><![CDATA[Representan la manifestación cuantificada de los objetivos. Por ende, poseen marcas de asignación temporal y viabilidad económica y técnica para transformarse en resultados; deben ser mensurables, consistentes y operativos. Al establecer cuánto, cuándo y dónde se materializarán los objetivos formulados, contribuyen a definir la naturaleza de los insumos, estrategias y actividades de las operaciones necesarias para implementar dichas actividades y dotar de concreción a los objetivos. (editar Gra)]]></completo>
+				<ejemplos><![CDATA[Objetivo general: Estimular el consumo teatral de la ciudad de Lima.
+
+	Objetivo específico: Implementar a lo largo de 2015 una agenda mensual para ampliar la divulgación y promoción de las producciones teatrales de creadores locales.
+
+	Meta: Publicar a lo largo de 2015, 12 números de la Revista Agenda Teatral Lima, con una tirada de 5.000 ejemplares de 20 páginas a color por cada número.]]></ejemplos>
+			</ayuda>
+		</campo>
+			</seccion>
+		</seccion>
+		<seccion clase="localizacion">Localización
+		
+			<seccion clase="ubicacion">Ubicación
+			
+				
+		<campo clase="ubicacion" tipo="texto" id="Ubicación:Ubicación">Ubicación
+			<ayuda>
+				<nombre><![CDATA[Ubicación]]></nombre>
+				<resumen><![CDATA[Indicar la ubicación geográfica del proyecto dentro de un área determinada.]]></resumen>
+				<completo><![CDATA[Indicar la ubicación geográfica del proyecto dentro de un área determinada. Es necesario delimitar claramente la localización del proyecto: región, ciudad, barrio, manzana, cuadra, una propiedad concreta, etc. Se trata de mostrar precisión, análisis y definición concreta acera de la zona que cubrirá el proyecto en cuanto a la prestación de servicios o su área de influencia. En este apartado se sugiere la utilización de mapas, croquis y planos.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="ubicaciongeografica" tipo="multiples-ubicaciones-geograficas" id="Ubicación:Ubicación geográfica ">Ubicación geográfica 
+			<ayuda>
+				<nombre><![CDATA[Ubicación geográfica]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			</seccion>
+			<seccion clase="espacio">Espacio
+			
+				
+		<campo clase="espacios" tipo="multiples-espacios" id="Espacio:Espacios">Espacios
+			<ayuda>
+				<nombre><![CDATA[Espacios]]></nombre>
+				<resumen><![CDATA[Brindar información detallada con relación a las características del espacio físico requerido para el proyecto.]]></resumen>
+				<completo><![CDATA[Brindar información detallada con relación a las características del espacio físico requerido para el proyecto. En este apartado deberán detallarse las características generales del espacio físico, atendiendo a sus diversos variables, usos y aplicaciones. Se sugiere ampliar la información relativa a las dimensiones del escenario, su disposición, medidas y vinculación con el aforo; los espacios conexos al escénico (camarines, capilla, hombros de escenario, etc.); y los espacios de trabajo (talleres, depósitos, montajes, oficinas, etc.). Es recomendable adjuntar a la explicación todo plano, boceto, gráfico o planta que colabore con la descripción clara de las condiciones espaciales requeridas (planos, plantas, mapas, croquis, etc.).]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			</seccion>
+			<seccion clase="infraestructura">Infraestructura
+			
+				
+		<campo clase="infraestructura" tipo="parrafo" id="Infraestructura:Infraestructura">Infraestructura
+			<ayuda>
+				<nombre><![CDATA[Infraestructura]]></nombre>
+				<resumen><![CDATA[Brindar información detallada con relación a las necesidades materiales y de infraestructura requeridas por el proyecto.]]></resumen>
+				<completo><![CDATA[Brindar información detallada con relación a las necesidades materiales y de infraestructura requeridas por el proyecto. Deben describirse aquellas condiciones y necesidades de infraestructura que el proyecto requiere para su correcta implementación. Se sugiere detallar con claridad aspectos de infraestructura (vallados, estructuras, baños químicos, rampas, carpas, mobiliario, instalaciones, escenografía), técnica (carga y distribución de energía, instalaciones, tableros, grupos electrógenos), titularidad o tipo de contratación para tales servicios y recursos (propios, rentados, adquiridos, prestados, aportados, acordados vía canje), necesidades derivadas de su uso (mantenimiento, traslados, recepción y devolución, seguros), servicios complementarios (limpieza, mantenimiento, montaje, instalaciones), entre otros. Es importante señalar que este tipo de requerimientos surgen del diseño de actividades y, por ende, deberá exponerse con claridad el momento, la duración, la etapa, el responsable y las vinculaciones operativas para tales necesidades.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			</seccion>
+			<seccion clase="equipamiento">Equipamiento
+			
+				
+		<campo clase="equipamientos" tipo="parrafo" id="Equipamiento:Equipamiento">Equipamiento
+			<ayuda>
+				<nombre><![CDATA[Equipamiento]]></nombre>
+				<resumen><![CDATA[Brindar información detallada con relación al conjunto de instalaciones, materiales y equipos técnicos requeridos por el proyecto.]]></resumen>
+				<completo><![CDATA[Brindar información detallada con relación al conjunto de instalaciones y equipos técnicos requeridos por el proyecto. En este punto se recomienda describir el conjunto, características y especificaciones del equipamiento requerido para el desarrollo del proyecto, ya sea en términos de tecnología, informática, maquinaria, técnica y recursos humanos especializados. Aquí es preciso describir toda necesidad relativa a las necesidades de sonido (sistemas, equipos, consolas, microfonía, procesadores, instrumentos, etc.), iluminación (parrilla, planos, distribución escénica, artefactos, lámparas, filtros, etc.), proyecciones (pantallas, proyectores, efectos especiales, filmaciones, registros, etc.), utilería (decorados, vestuario, accesorios, maquillaje, peluquería, etc.), producción (herramientas, armado, montaje, mantenimiento, desmontaje, etc.), necesidades de equipamiento en general (raider técnico, planos, distribución escénica, monitoreo, etc.) y equipo técnico requerido para el desarrollo óptimo de la actividad.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			</seccion>
+			<seccion clase="seguridad">Seguridad
+			
+				
+		<campo clase="seguridad" tipo="parrafo" id="Seguridad:Seguridad">Seguridad
+			<ayuda>
+				<nombre><![CDATA[Seguridad]]></nombre>
+				<resumen><![CDATA[Brindar información detallada acerca de las estrategias y/o condiciones de seguridad contempladas por el proyecto.]]></resumen>
+				<completo><![CDATA[Brindar información detallada acerca de las estrategias y/o condiciones de seguridad contempladas por el proyecto. Se trata de un aspecto central para el desarrollo de actividades artísticas, sobre todo en aquellas que tienen lugar en espacios no convencionales o predios al aire libre. La información incluida en este punto debe apuntar principalmente a dar cuenta de una planificación del proyecto que ha evaluado y planificado la posibilidad de imprevistos y emergencias y, sobre todo, dar cuenta de los planes de acción o las estrategias ante eventuales dificultades. Las principales cuestiones a detallar giran en torno a las condiciones de seguridad del predio, su definición y características, sus vías de acceso y circulación, la proyección estimada de participantes, horarios y duración de la actividad, etc. En base a dichas características deberá conformarse el plan de seguridad del proyecto que contemple, al menos, las siguientes variables: cantidad y perfil del público asistente; zonificación de áreas públicas y de trabajo; superficies y definición del predio (accesos, camarines, oficinas, escenarios, estructuras, etc.); condiciones de habilitación, planes de evacuación y extintores; carpas de atención y/o servicios públicos implicados; asistencia médica; etc. Se sugiere contar con el asesoramiento de especialistas en la materia para una mejor definición de tales condiciones.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			</seccion>
+		</seccion>
+		<seccion clase="participantes">Participantes
+		
+			<seccion clase="integrantes">Integrantes
+			
+				<seccion clase="Áreasdetrabajo">Áreas de trabajo
+				
+					
+		<campo clase="areasdetrabajo" tipo="multiples-areas-de-trabajo" id="Áreas de trabajo:Áreas de trabajo">Áreas de trabajo
+			<ayuda>
+				<nombre><![CDATA[Áreas de trabajo]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				</seccion>
+				
+		<campo clase="personas" tipo="multiples-personas" id="Integrantes:Integrantes">Integrantes
+			<ayuda>
+				<nombre><![CDATA[Integrantes]]></nombre>
+				<resumen><![CDATA[Detallar la información relativa a las personas que intervienen activamente en el desarrollo del proyecto.]]></resumen>
+				<completo><![CDATA[Detallar la información relativa a las personas que intervienen activamente en el desarrollo del proyecto. Debe brindarse los datos personales y profesionales de las personas que intervienen activamente en el proyecto: el equipo desarrollador. Sus integrantes comparten objetivos, metas y estrategias del proyecto. Los integrantes del equipo son interdependientes, es decir, se necesitan mutuamente para alcanzar los objetivos del proyecto. Para ello, acuerdan en que deben alcanzar niveles de eficacia y trabajo conjunto para arribar a las metas programadas.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			</seccion>
+			<seccion clase="organigrama">Organigrama
+			
+				
+		<campo clase="graficoorganigrama" tipo="grafico-organigrama" id="Organigrama:Organigrama">Organigrama
+			<ayuda>
+				<nombre><![CDATA[Organigrama]]></nombre>
+				<resumen><![CDATA[Representación gráfica de la estructura organizacional que indica niveles jerárquicos, relaciones e intedependencias entre los integrantes del proyecto. ]]></resumen>
+				<completo><![CDATA[Representación gráfica de la estructura organizacional del proyecto. El organigrama es un modelo abstracto, sintético y gráfico que permite transmitir claramente la estructura formal del proyecto u organización. Para ello, debe incluir información certera acerca de los niveles jerárquicos, las competencias, relaciones e interdependencias entre los integrantes del proyecto. En la medida en que desempeña un rol informativo, esta representación gráfica debe facilitar una comprensión sencilla, clara y sintética para la comprensión y el análisis de la estructura organizacional. Es importante tener en cuenta que ningún organigrama se mantiene fijo o estático: se trata de una fotografía de la estructura organizativa en un momento particular del proyecto. Por ende, cuando la estructura, relaciones y jerarquías de un proyecto van cambiando, se deberá actualizar su representación para mantener el organigrama vigente. (EDITAR)]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			</seccion>
+			<seccion clase="beneficiariosdirectos">Beneficiarios Directos
+			
+				
+		<campo clase="beneficiariosdirectos" tipo="multiples-beneficiarios-directos" id="Beneficiarios Directos:Beneficiarios Directos">Beneficiarios Directos
+			<ayuda>
+				<nombre><![CDATA[Beneficiarios Directos]]></nombre>
+				<resumen><![CDATA[Describir las personas o grupos de personas favorecidas por el proyecto. Identificar las principales características correspondientes a los beneficiarios primarios (los directamente favorecidos por el proyecto). ]]></resumen>
+				<completo><![CDATA[Describir las personas o grupos de personas, reunidas bajo ciertas características comunes, a las que se dirige el proyecto. Se trata de los destinatarios que obtendrán algún beneficio derivado de su realización. Los beneficios a percibir por los destinatarios podrán ser de orden educativo, social, económico, cultural, artístico, etc.
+
+	Es recomendable distinguir entre dos tipos de beneficiarios: primarios, aquellos directamente favorecidos por el proyecto, y secundarios, aquellos que se benefician de manera indirecta. Algunas convocatorias pueden requerir explicitar los criterios utilizados para la selección de beneficiarios; ello se debe a que los beneficios derivados de un proyecto no son infinitos ni elásticos. De allí que sea deseable describir el perfil de beneficiarios y los criterios para su definición y selección. Es deseable indagar acerca de sus características y perfiles: situación general, nivel de formación, características sociales y laborales, acceso a los servicios, hábitos de consumo cultural, motivaciones para con el proyecto, etc. Adicionalmente, pueden incluirse actividades para la sensibilización y captación de potenciales beneficiarios.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			</seccion>
+			<seccion clase="beneficiariosindirectos">Beneficiarios Indirectos
+			
+				
+		<campo clase="beneficiarios-indirectos" tipo="parrafo" id="Beneficiarios Indirectos:Beneficiarios Indirectos">Beneficiarios Indirectos
+			<ayuda>
+				<nombre><![CDATA[Beneficiarios Indirectos]]></nombre>
+				<resumen><![CDATA[Describir las personas o grupos de personas favorecidas por el proyecto indirectamente.
+	
+		Identificar las principales caracteristicas de los beneficiarios secundarios (aquellos que se benefician de manera indirecta). 
+	
+		 
+	
+		
+		 ]]></resumen>
+				<completo><![CDATA[Describir las personas o grupos de personas, reunidas bajo ciertas características comunes, a las que se dirige el proyecto. Se trata de los destinatarios que obtendrán algún beneficio derivado de su realización. Los beneficios a percibir por los destinatarios podrán ser de orden educativo, social, económico, cultural, artístico, etc.
+
+	Es recomendable distinguir entre dos tipos de beneficiarios: primarios, aquellos directamente favorecidos por el proyecto, y secundarios, aquellos que se benefician de manera indirecta. Algunas convocatorias pueden requerir explicitar los criterios utilizados para la selección de beneficiarios; ello se debe a que los beneficios derivados de un proyecto no son infinitos ni elásticos. De allí que sea deseable describir el perfil de beneficiarios y los criterios para su definición y selección. Es deseable indagar acerca de sus características y perfiles: situación general, nivel de formación, características sociales y laborales, acceso a los servicios, hábitos de consumo cultural, motivaciones para con el proyecto, etc. Adicionalmente, pueden incluirse actividades para la sensibilización y captación de potenciales beneficiarios.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			</seccion>
+		</seccion>
+		<seccion clase="estrategias">Estrategias
+		
+			
+		<campo clase="estrategias" tipo="parrafo" id="Estrategias:Estrategia">Estrategia
+			<ayuda>
+				<nombre><![CDATA[Estrategia]]></nombre>
+				<resumen><![CDATA[Definir la ruta más conveniente de acciones coordinadas para transformar los objetivos del proyecto en resultados.]]></resumen>
+				<completo><![CDATA[Definir la ruta más conveniente de acciones coordinadas para transformar los objetivos del proyecto en resultados. En esta definición del rumbo elegido (estrategia) reside gran parte de las posibilidades de éxito para transformar objetivos en resultados. No se trata de una perspectiva u opinión acerca del desglose de tareas; la elección de una estrategia conlleva la responsabilidad profesional de articular y negociar a partir de experiencias, capacidades, competencias, potencialidades, previsiones, análisis y políticas. No hay un solo modo de definir estrategias para el logro de resultados. Tampoco se trata de una secuencia esquemática y lineal que va del pensamiento a la acción, ya que las estrategias pueden surgir también de las acciones, alimentando un proceso cíclico. Por ende, y aunque su formulación forme parte de la planificación, su implementación operativa es un aspecto central de la gestión.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="etapas">Etapas
+		
+			
+		<campo clase="etapas" tipo="multiples-etapas" id="Etapas:Etapas">Etapas
+			<ayuda>
+				<nombre><![CDATA[Etapas]]></nombre>
+				<resumen><![CDATA[Indicar las diversas fases requeridas para la implementación del proyecto.]]></resumen>
+				<completo><![CDATA[Indicar las diversas fases requeridas para la implementación del proyecto. Las etapas son periodos de tiempo, delimitados por instancias previas y posteriores, que agrupan conjuntos de actividades vinculadas entre sí, y que contribuyen al eficaz desarrollo del proyecto. Cada etapa se delimita por un inicio y un final y cuenta con un conjunto de rasgos y características que le son familiares, definitorias y particulares, y se asocian a las acciones que en ella se realizan y promueven. Conlleva necesariamente la idea de sucesión de actividades, decisiones y tareas que se ubican en un orden particular y coherente para el desarrollo viable del proyecto.]]></completo>
+				<ejemplos><![CDATA[Ejemplo: Proyecto Audiovisual
+
+	 
+
+	Etapa: Pre-producción: desde el final de la planificación hasta el momento de inicio del rodaje: concentra gran parte de los esfuerzos productivos y el equipo de producción deberá considerar alternativas, recursos, colaboradores, estrategias y medios precisos para el desarrollo del proyecto.]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="actividades">Actividades
+		
+			
+		<campo clase="actividades" tipo="multiples-actividades" id="Actividades:Actividades">Actividades
+			<ayuda>
+				<nombre><![CDATA[Actividades]]></nombre>
+				<resumen><![CDATA[Detallar las acciones concretas a realizar, en el marco de una estrategia, para asignarles recursos y alcanzar los objetivos del proyecto.]]></resumen>
+				<completo><![CDATA[Detallar las acciones concretas a realizar, en el marco de una estrategia, para luego asignarles recursos y alcanzar los objetivos del proyecto. Se deben definir los grupos de actividades necesarias, en el marco de las estrategias adoptadas, para comenzar a transformar los objetivos en resultados. Se trata de identificar las actividades concretas que hay que realizar, por lo que se sugiere visualizar quién debería realizar qué actividad para comenzar a materializar los objetivos. Son un conjunto ordenado y coherente de acciones y decisiones, consecuentes con los objetivos, estrategias y especialidad del proyecto y, por ende, se derivan de ellos. Estas actividades son reunidas, ya sea por criterios de familiaridad, conveniencia o funcionalidad, con el objeto de identificar la forma gerencial que asume el proyecto y alimentar sus modelos de representación (organigramas).]]></completo>
+				<ejemplos><![CDATA[Ejemplo: Proyecto Audiovisual
+
+	Etapa: Pre-producción
+
+	Actividades: selección y contratación de equipos técnicos y artísticos para el rodaje.]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="cronograma">Cronograma
+		
+			
+		<campo clase="graficocronograma" tipo="grafico-cronograma" id="Cronograma:Cronograma">Cronograma
+			<ayuda>
+				<nombre><![CDATA[Cronograma]]></nombre>
+				<resumen><![CDATA[Representación gráfica de las actividades con relación al tiempo en que se desarrollarán: la duración total del proyecto y de las acciones programadas.]]></resumen>
+				<completo><![CDATA[Describir las actividades con relación al tiempo en que se desarrollarán. No solamente la duración total del proyecto, sino también la de sus distintas etapas y acciones programadas. Es prioritario elaborar un cronograma de cada uno de los pasos a seguir durante la elaboración del proyecto para determinar la duración total del mismo. Ello permite diversos análisis: juzgar factibilidad, evaluar si existe una distribución uniforme del trabajo, analizar si las actividades no se solapan o anulan entre sí, considerar si los plazos son realistas o se otorga el tiempo suficiente para cada tarea, asegurar el desarrollo de los productos básicos que se requieren como insumos para actividades posteriores, chequear si los límites de tiempo asignados para cada actividad son proporcionales entre sí, etc. El cronograma presentado implica un esquema de ejecución ideal, que podrá ir variando con la ejecución del proyecto, pero oficia como una valiosa ayuda para una mejor comprensión del ciclo de vida y las etapas del proyecto.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+	</categoria>
+	<categoria clase="recursos">Recursos
+	
+		<seccion clase="marconormativo">Marco Normativo
+		
+			
+		<campo clase="marconormativo" tipo="parrafo" id="Marco Normativo:Marco Normativo">Marco Normativo
+			<ayuda>
+				<nombre><![CDATA[Marco Normativo]]></nombre>
+				<resumen><![CDATA[Falta F1]]></resumen>
+				<completo><![CDATA[Falta F2]]></completo>
+				<ejemplos><![CDATA[Falta]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="ingresos">Ingresos
+		
+			
+		<campo clase="ingresos" tipo="texto" id="Ingresos:Ingresos">Ingresos
+			<ayuda>
+				<nombre><![CDATA[Ingresos]]></nombre>
+				<resumen><![CDATA[Detallar los recursos económicos que se recibirán, aportarán o generarán para la realización del proyecto.]]></resumen>
+				<completo><![CDATA[Detallar los recursos económicos que se recibirán, aportarán o generarán para la realización del proyecto. Se debe explicitar toda partida u operación que afecte los resultados del proyecto aumentando las utilidades o disminuyendo las pérdidas. El término ingreso tiene, básicamente, dos acepciones: las cantidades que recibiremos del conjunto de apoyos económicos recibidos de terceros o aportados por los mismos socios y miembros, y aquellas sumas generadas por la venta de productos o servicios derivados del proyecto.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			
+		<campo clase="unidadesdemedidad" tipo="multiples-unidades-de-medida" id="Ingresos:Unidades de medida">Unidades de medida
+			<ayuda>
+				<nombre><![CDATA[Unidades de medida]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			
+		<campo clase="ingresosgeneracion" tipo="multiples-ingresos" id="Ingresos:Ingresos generación propia">Ingresos generación propia
+			<ayuda>
+				<nombre><![CDATA[Ingresos generación propia]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			
+		<campo clase="ingresosexternos" tipo="multiples-ingresos" id="Ingresos:Ingresos fuentes externas">Ingresos fuentes externas
+			<ayuda>
+				<nombre><![CDATA[Ingresos fuentes externas]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			
+		<campo clase="costosasociados" tipo="multiples-costos-asociados" id="Ingresos:Costos asociados a ingresos">Costos asociados a ingresos
+			<ayuda>
+				<nombre><![CDATA[Costos asociados a ingresos]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			
+		<campo clase="totalingresoproyectado" tipo="formula" id="Ingresos:Total ingreso proyectado">Total ingreso proyectado
+			<ayuda>
+				<nombre><![CDATA[Total ingreso proyectado]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			
+		<campo clase="subtotaldinerario" tipo="formula" id="Ingresos:Subtotal dinerario">Subtotal dinerario
+			<ayuda>
+				<nombre><![CDATA[Subtotal dinerario]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			
+		<campo clase="subtotalnodinerario" tipo="formula" id="Ingresos:Subtotal no dinerario">Subtotal no dinerario
+			<ayuda>
+				<nombre><![CDATA[Subtotal no dinerario]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			
+		<campo clase="totalingresosportipo" tipo="texto" id="Ingresos:Total de Ingresos por tipo (Dinerarios/NO dinerarios)">Total de Ingresos por tipo (Dinerarios/NO dinerarios)
+			<ayuda>
+				<nombre><![CDATA[Total de Ingresos por tipo (Dinerarios NO dinerarios)]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="costos">Costos
+		
+			
+		<campo clase="multiplesrubroscostos" tipo="multiples-rubros-de-costos" id="Costos:Rubros de costos">Rubros de costos
+			<ayuda>
+				<nombre><![CDATA[Rubros de costos]]></nombre>
+				<resumen><![CDATA[EDITAR F1]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[EDITAR F2]]></ejemplos>
+			</ayuda>
+		</campo>
+			
+		<campo clase="multiplescostos" tipo="multiples-costos" id="Costos:Costos">Costos
+			<ayuda>
+				<nombre><![CDATA[Costos]]></nombre>
+				<resumen><![CDATA[Detallar los recursos que se necesitan aplicar para la realización del proyecto, impliquen o no erogación de dinero. ]]></resumen>
+				<completo><![CDATA[Detallar los recursos que se necesitan aplicar para la realización del proyecto, impliquen o no erogación de dinero. FALTA COMPLETAR F2
+
+	PRESUPUESTOS DE TERCEROS va como parte de la Carga de Costos.
+
+	 
+
+	Adjuntar archivos, que se vinculan y exponen en ANEXOS
+
+	Adjuntar presupuestos emitidos por proveedores o prestadores de servicios.
+
+	 ]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			
+		<campo clase="imprevistos" tipo="multiples-imprevistos" id="Costos:Imprevistos">Imprevistos
+			<ayuda>
+				<nombre><![CDATA[Imprevistos]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			
+		<campo clase="totaldecostos" tipo="formula" id="Costos:Total de costos">Total de costos
+			<ayuda>
+				<nombre><![CDATA[Total de costos]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="presupuestoeconomico">Presupuesto Económico
+		
+			
+		<campo clase="presueco" tipo="grafico-presu-economico" id="Presupuesto Económico:Presupuesto económico">Presupuesto económico
+			<ayuda>
+				<nombre><![CDATA[Presupuesto económico]]></nombre>
+				<resumen><![CDATA[Detalle de la proyección y valoración de los recursos necesarios en cada una de las etapas, desagregados en rubros, para la ejecución del proyecto.]]></resumen>
+				<completo><![CDATA[Detalle de la proyección y valoración de los recursos necesarios en cada una de las etapas y actividades, desagregados en rubros (tipos de gastos) para la ejecución del proyecto. El presupuesto es una previsión de gastos e ingresos para un determinado lapso, y permite establecer prioridades y evaluar la consecución de los objetivos. Para alcanzar los fines del proyecto puede ser necesario incurrir en déficit (que los gastos superen a los ingresos) o, por el contrario, generar un ahorro, en cuyo caso el presupuesto presentará un superávit (los ingresos superan a los gastos). El presupuesto sirve de ayuda para la determinación de metas que sean confrontables a través del tiempo, coordinando y comparando las distintas actividades, su consecución, evitando costos innecesarios y mala utilización de recursos. En la medida en que reúne recursos, fuentes de financiamiento, responsables y objetivos, el presupuesto oficia como síntesis de la planificación y como guía para el proceso de gestión.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			
+		<campo clase="presuecocostos" tipo="grafico-presu-eco-costos" id="Presupuesto Económico:Presupuesto económico Costos">Presupuesto económico Costos
+			<ayuda>
+				<nombre><![CDATA[Presupuesto económico Costos]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="presupuestofinanciero">Presupuesto Financiero
+		
+			
+		<campo clase="presufinanciero" tipo="parrafo" id="Presupuesto Financiero:Presupuesto Financiero">Presupuesto Financiero
+			<ayuda>
+				<nombre><![CDATA[Presupuesto Financiero]]></nombre>
+				<resumen><![CDATA[El presupuesto financiero es la proyección de ingresos y egresos a lo largo de un período determinado.]]></resumen>
+				<completo><![CDATA[El presupuesto financiero es la proyección de ingresos y egresos, de distintos orígenes, a lo largo de un período determinado. Se representa en dos curvas de tiempo: aquella que mide cuándo se producen los ingresos y aquella que mide cuándo tendremos compromisos de pagos. Permite observar la capacidad, o no, de hacer frente a los compromisos, o deudas, es decir, si se contará con los recursos económicos suficientes para operar en el momento oportuno. Por ende, es la herramienta que se ocupa de la estructura financiera del proyecto. Su objetivo se resume en dos factores: observar la liquidez y rentabilidad. Para ello, debe detallar: costos y gastos, compromisos de desembolsos, efectivización de ingresos, flujo de fondos, moneda, inflación, etc. Ello permite aportar claridad y precisión acerca de los momentos en que contaremos con los recursos necesarios para afrontar una erogación y cuándo el proyecto se volverá sostenible y/o mostrará capacidad de financiamiento.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="estrategiasdefinanciamiento">Estrategias de Financiamiento
+		
+			
+		<campo clase="estrategiasfinanciamiento" tipo="parrafo" id="Estrategias de Financiamiento:Estrategia de Financiamiento">Estrategia de Financiamiento
+			<ayuda>
+				<nombre><![CDATA[Estrategia de Financiamiento]]></nombre>
+				<resumen><![CDATA[Detallar los objetivos y alternativas de acción asociadas al desarrollo de los recursos económicos necesarios para implementar el proyecto.]]></resumen>
+				<completo><![CDATA[Detallar los objetivos y alternativas de acción asociadas al desarrollo de los recursos económicos necesarios para implementar el proyecto. Se trata de explicitar aquellas estrategias y alternativas consideradas para asumir las necesidades de efectivo del proyecto, es decir, que financien sus operaciones en el corto y largo plazo. Suelen distinguirse varios tipos de recursos necesarios para la realización de un proyecto, entre ellos: humanos, materiales, inmateriales, técnicos, económicos, financieros. Las estrategias de financiamiento refieren específicamente a la consecución de recursos económicos y financieros. Estos pueden provenir de fuentes propias, públicas y/o privadas. La función del financiamiento consiste en estudiar, desarrollar y gestionar diversas fuentes de recursos (préstamos, créditos, subsidios, aportes propios, fondos concursables, comercialización de productos o servicios, emisión de títulos valores, acciones, etc.) para poder estimar nuestra capacidad de hacer frente a compromisos y seleccionar aquellas más convenientes para el proyecto.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="necesidades">Necesidades
+		
+			
+		<campo clase="necesidades" tipo="parrafo" id="Necesidades:Necesidades">Necesidades
+			<ayuda>
+				<nombre><![CDATA[Necesidades]]></nombre>
+				<resumen><![CDATA[Explicitar concretamente qué apoyo o colaboración se está solicitando para la implementación del proyecto. ]]></resumen>
+				<completo><![CDATA[Explicitar concretamente qué apoyo o colaboración se está solicitando para la implementación del proyecto. En este punto se trata de poner de manifiesto qué solicitud de participación y/o aportación se está solicitando a la organización aliada, financiadora o contraparte. Una vez desarrolladas las estrategias de financiamiento y los presupuestos del proyecto, se está en condiciones de explicitar cuáles son sus necesidades concretas y cómo se proyecta cubrirlas. Asimismo, podrá detallarse con qué recursos cuenta de hecho la organización responsable, si la propuesta incluye la participación de otras organizaciones aliadas, cuáles son los aportes o compromisos del resto de los actores intervinientes y, finalmente, qué necesidad concreta resta cubrir para el desarrollo eficiente de la iniciativa. Se sugiere transmitir con claridad y transparencia el esquema integral de recursos y las necesidades pendientes a cubrir a fin de facilitar una correcta transferencia de valores entre las organizaciones participantes.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="comunicacion">Comunicación
+		
+			<seccion clase="interna">Interna
+			
+				
+		<campo clase="comunicacioninterna" tipo="parrafo" id="Interna:Comunicación Interna">Comunicación Interna
+			<ayuda>
+				<nombre><![CDATA[Comunicación Interna]]></nombre>
+				<resumen><![CDATA[Describir las estrategias y acciones de comunicación orientadas a los diversos públicos internos del proyecto.]]></resumen>
+				<completo><![CDATA[Describir las estrategias y acciones de comunicación orientadas a los diversos públicos internos del proyecto. Más allá del plan de medios y los sistemas de difusión, es preciso que un proyecto desarrolle formas de comunicación, conocimiento y vinculación hacia dentro de sus equipos, miembros y colaboradores. Para poder transmitir hacia afuera un discurso coherente y alineado con sus valores e identidad, el proyecto debe comenzar por comunicarse consigo mismo, y escucharse en forma abierta y dinámica. Por ello, en este punto del desarrollo se busca dar cuenta de la planificación de las actividades de comunicación al seno del propio proyecto y el modo en que se promoverán las relaciones internas de sus equipos de trabajo. Deberán detallarse las acciones de comunicación previstas para con los diversos actores internos del proyecto: directores, socios, coordinadores, personal, asesores, sindicatos, accionistas, contratados, colaboradores, fundaciones y asociaciones de amigos, etc.  ]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			</seccion>
+			<seccion clase="externa">Externa
+			
+				
+		<campo clase="comunicacionexterna" tipo="parrafo" id="Externa:Comunicación Externa">Comunicación Externa
+			<ayuda>
+				<nombre><![CDATA[Comunicación Externa]]></nombre>
+				<resumen><![CDATA[Detallar el conjunto de estrategias y acciones para comunicar el proyecto y abrir espacios de vinculación con sus públicos.]]></resumen>
+				<completo><![CDATA[Detallar el conjunto de estrategias y acciones para comunicar el proyecto y abrir espacios de vinculación con sus públicos. El Plan de comunicación externa se desarrolla en intersección y coherencia con los objetivos, metas, estrategias y plan de implementación del proyecto. Aquí se trata de formular y construir, por un lado, el conjunto de mensajes que queremos comunicar a (y con) nuestros públicos externos y, por el otro, seleccionar y programar las técnicas, medios y canales que se utilizarán para vehiculizar esos contenidos. El plan de comunicación no sólo se milita a las acciones de difusión, sino que integra y fortalece el conjunto de decisiones, estrategias y acciones asumidas para dar a conocer la propuesta y generar espacios de relacionamiento con sus distintos públicos destinatarios.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			</seccion>
+			<seccion clase="canales">Canales
+			
+				
+		<campo clase="multiplescanales" tipo="multiples-canales" id="Canales:Canales">Canales
+			<ayuda>
+				<nombre><![CDATA[Canales]]></nombre>
+				<resumen><![CDATA[Definir os soportes específicos por donde van a circular los mensajes comunicacionales entre el proyecto y sus diversos públicos.
+
+	NOTA: Posibilidad de escoger en una tabla Canales Predeterminados y desarrollar en un párrafo en qué consiste el desarrollo de cada canal. Es posible asignar tiempos (opcional) y que se cruce con Cronograma?]]></resumen>
+				<completo><![CDATA[Defina los soportes específicos por donde van a circular los mensajes comunicacionales entre el proyecto y sus diversos públicos. Los canales son los procedimientos concretos definidos por las políticas comunicacionales de la organización. Es la definición de los medios a través de los cuales se emitirán los mensajes para difundir, promocionar y convocar a los públicos directos e indirectos para conocer y participar del proyecto. No sólo incluye a los medios de difusión tradicionales (publicidad, relaciones públicas, venta directa, vía pública, etc.) sino también a todos aquellos mecanismos dedicados a fortalecer el carácter de experiencia entre la propuesta y sus múltiples públicos, tanto directos como indirectos (mailing, redes sociales, medios audiovisuales, campañas personalizadas, gestión de prensa, etc.).
+
+	Opciones de Tabla de opciones:
+
+	Prensa
+
+	Mailing
+
+	Web
+
+	Medios gráficos
+
+	TV y Radio
+
+	Vía pública
+
+	Publicidad
+
+	Folletería
+
+	Relaciones públicas
+
+	Medios audiovisuales
+
+	Contacto telefónico
+
+	Correo
+
+	Otros]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			</seccion>
+		</seccion>
+		<seccion clase="modelodegestion">Modelo de Gestión
+		
+			
+		<campo clase="modelogestion" tipo="parrafo" id="Modelo de Gestión:Modelo de Gestión">Modelo de Gestión
+			<ayuda>
+				<nombre><![CDATA[Modelo de Gestión]]></nombre>
+				<resumen><![CDATA[Describir el modelo de gestión, las articulaciones, alianzas y estrategias de intervención previstas para el proyecto.  ]]></resumen>
+				<completo><![CDATA[Describir el modelo de gestión, las articulaciones, alianzas y estrategias de intervención previstas para el proyecto. Deberá explicarse la estrategia de gerenciamiento prevista y detallar el nivel de implicancia y compromiso de otras organizaciones, tanto públicas como privadas, con la actividad. Se sugiere explicitar las características del modelo de gestión, las vinculaciones y la modalidad operativa definida para el proyecto. Podrán caracterizarse a partir de las modalidades de gestión propia, autónoma o directa (proyecto gestionado por la misma organización que lo ideo), gestión transferida o indirecta (proyecto gestionado, total o parcialmente, por una organización distinta a la que ostenta su responsabilidad), gestión compartida o mixta (proyecto co-gestionado entre organizaciones aliadas asumiendo roles, funciones o responsabilidades complementarias), gestión externa o "tercerizada" (sobre todo para la cobertura de ciertas áreas o servicios complementarios), etc. En los casos de articulación con organizaciones aliadas, deberá detallarse el rol asumido por cada parte, los niveles de participación de otros agentes y el carácter asociativo del proyecto, entre otros.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+	</categoria>
+	<categoria clase="sustentabilidad">Sustentabilidad
+	
+		<seccion clase="factoresmultiplicadores">Factores multiplicadores
+		
+			
+		<campo clase="factoresmultiplicadores" tipo="parrafo" id="Factores multiplicadores:Factores Multiplicadores">Factores Multiplicadores
+			<ayuda>
+				<nombre><![CDATA[Factores Multiplicadores]]></nombre>
+				<resumen><![CDATA[Describir los impactos indirectos y/o asociados que podrán producirse a partir del implementación del proyecto.]]></resumen>
+				<completo><![CDATA[Describir los beneficios indirectos y/o asociados que podrán generarse a partir del proyecto. Más allá de los beneficios directos del proyecto, el recurso cultural cuenta con la capacidad estratégica para impactar en otros ámbitos asociados y motorizar beneficios externos de la actividad. No obstante, los factores multiplicadores y las externalidades pueden ser tanto positivos como negativos. Se promueve una externalidad positiva cuando, a causa de la realización de una acción, sujetos de otros ámbitos se hacen acreedores de beneficios derivados. Se arriba a su definición confiable después de analizar rigurosamente las formas en que el proyecto servirá a sus diferentes beneficiarios, directos e indirectos. Una buena definición de las externalidades positivas es un indicador del grado de profundidad al que ha arribado el análisis de probabilidades. Cuanto mayor sean sus líneas de impacto indirecto, el proyecto ganará en solidez, adhesión y sustentabilidad. Es un punto central y de alto valor agregado: en la definición de las externalidades recaen gran parte de los argumentos y motivaciones a la hora de captar adhesiones para un proyecto. (EDITAR Gra)]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="externalidades">Externalidades
+		
+			
+		<campo clase="externalidades" tipo="parrafo" id="Externalidades:Externalidades">Externalidades
+			<ayuda>
+				<nombre><![CDATA[Externalidades]]></nombre>
+				<resumen><![CDATA[Detallar el conjunto de externalidades o efectos indirectos derivados de las actividades de consumo o producción del proyecto.]]></resumen>
+				<completo><![CDATA[Detallar el conjunto de externalidades o efectos indirectos derivados de las actividades de consumo o producción del proyecto. En este punto se deberán describir los efectos sobre agentes externos y distintos de aquellos responsables de la implementación de la iniciativa. Las externalidades, por lo general, son diferenciadas entre externalidades negativas (en caso de que la organización responsable del proyecto no asuma todos sus costos y efectos, trasladando algunos de ellos a otros actores, áreas o comunidades) y externalidades positivas (cuando la organización a cargo no recibe total y excluyentemente todos los beneficios y resultados derivados de la implementación del proyecto). En la medida en que en el segundo caso se promueven beneficios sin costos para actores externos no asociados originalmente a su producción, el proyecto facilita que otros agentes o sectores se beneficien de él sin comprometerse en sus costos. Para el primer caso, se sugiere explicitar estrategias de amortiguación y/o contención de los efectos negativos; para el segundo, detallar concretamente qué comunidades, sectores y/o agentes recibirán beneficios del proyecto y de qué modo se favorecerán. (Edita Gra)]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="contraprestaciones">Contraprestaciones
+		
+			
+		<campo clase="multiplescontraprestaciones" tipo="multiples-contraprestaciones" id="Contraprestaciones:Contraprestaciones">Contraprestaciones
+			<ayuda>
+				<nombre><![CDATA[Contraprestaciones]]></nombre>
+				<resumen><![CDATA[Describir los bienes y/o servicios que serán transferidos a la institución financiadora o colaboradora en carácter de compensación.]]></resumen>
+				<completo><![CDATA[Describir los bienes y/o servicios que serán transferidos a la institución financiadora o colaboradora en carácter de compensación. Suelen ser una buena forma para profundizar una relación, demostrando el interés en trabajar juntos y el establecimiento de objetivos en común. Entre las alternativas de contraprestaciones posibles, suelen figurar porcentajes de becas, entradas o ejemplares; servicios o actividades especiales desarrolladas por la organización titular del proyecto; esquemas de visibilidad o inclusión del colaborador en el plan de comunicación; etc.]]></completo>
+				<ejemplos><![CDATA[Ejemplo: Si se solicitan recursos a la Secretaría de Cultura local para realizar un programa de capacitaciones, puede ofrecerse a dicha dependencia, en carácter de contraprestación, un porcentaje determinado de vacantes para invitar a sus empleados, colaboradores o destinatarios.]]></ejemplos>
+			</ayuda>
+		</campo>
+			
+		<campo clase="categoria" tipo="parrafo" id="Contraprestaciones:Categorías">Categorías
+			<ayuda>
+				<nombre><![CDATA[Categorías]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="accesibilidad">Accesibilidad
+		
+			
+		<campo clase="accesibilidad" tipo="parrafo" id="Accesibilidad:Accesibilidad">Accesibilidad
+			<ayuda>
+				<nombre><![CDATA[Accesibilidad]]></nombre>
+				<resumen><![CDATA[Referir si el proyecto contempla estrategias y medios orientados a promover esquemas de accesibilidad para su implementación.]]></resumen>
+				<completo><![CDATA[Referir si el proyecto contempla estrategias y medios orientados a promover esquemas de accesibilidad para su implementación. Describir condiciones de accesibilidad, tanto desde una perspectiva física, como educativa, edilicia, económica, social, etc. Se sugiere dar cuenta del modo en que se proyecta fomentar e implementar el proyecto a partir de exigencias y valores de accesibilidad en términos de calidad, tecnología y adaptabilidad. Deberán detallarse servicios y productos orientados a la integración, equidad y acceso igualitario más allá de capacidades diferenciales, sociales o constitutivas. Puede incluir condiciones de infraestructura (rampas, señalética, accesos, espacios reservados, sanitarios, etc.), servicios (traducciones, subtitulados, aros magnéticos, paneles informativos, guías y personal especializado, servicios de atención telefónica o web) o estrategias de gestión (vinculación con segmentos postergados, políticas de gratuidad o precios asequibles, formación de públicos, actividades complementarias, de extensión, auditorias, certificaciones, etc.).]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="continuidad">Continuidad
+		
+			
+		<campo clase="continuidad" tipo="parrafo" id="Continuidad:Continuidad">Continuidad
+			<ayuda>
+				<nombre><![CDATA[Continuidad]]></nombre>
+				<resumen><![CDATA[Explicitar si el proyecto contempla, o no, algún esquema para su continuidad y/o desarrollo a futuro.]]></resumen>
+				<completo><![CDATA[Explicitar si el proyecto contempla, o no, algún esquema para su continuidad y/o desarrollo a futuro. La continuidad es una proyección en función de los deseos, las expectativas y los objetivos de la organización en su relación con la comunidad y los grupos de interés del proyecto. Si se piensa en una continuidad, describirla someramente; caso contrario, explicar los motivos de su culminación y sus estrategias de retiro y cierre. En la medida en que un proyecto se argumenta por sus aportes a la solución de problemas o carencias de difícil resolución global, es necesario analizar su continuidad desde una ética profesional y de acuerdo a los objetivos, medios y políticas de la organización a cargo. Esta evaluación de continuidad puede incluir la gestación de emprendimientos derivados, nuevas instancias del mismo proyecto, la implementación de actividades complementarias y/o de desarrollo territorial, o nuevas fases de la propuesta inicial, aunque no necesariamente a cargo de la misma organización gestora.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="viabilidad">Viabilidad
+		
+			
+		<campo clase="multiplesviabilidades" tipo="multiples-viabilidades" id="Viabilidad:Viabilidad">Viabilidad
+			<ayuda>
+				<nombre><![CDATA[Viabilidad]]></nombre>
+				<resumen><![CDATA[Explicitar las estrategias previstas para dotar de viabilidad al proyecto en sus diversas etapas.]]></resumen>
+				<completo><![CDATA[Explicitar las estrategias previstas para dotar de viabilidad al proyecto en sus diversas etapas (inicio, implementación, desarrollo, cierre). En este punto es importante identificar los riesgos potenciales del proyecto y cómo se prevé sortearlos. Más allá del carácter externo de los riesgos, se recomienda desarrollar qué mecanismos se proyectan sino para evitarlos, al menos para moderarlos o revertirlos. Asimismo, se sugiere explicitar los mecanismos para la sustentabilidad o institucionalización del proyecto una vez finalizada la instancia de apoyo económico. Muchos organismos de apoyo y agencias de financiamiento suelen solicitar avales institucionales, cartas de adhesión o declaraciones de interés para confirmar la viabilidad, solvencia y legitimidad institucional de la propuesta. Finalmente, se recomienda señalar qué nivel de transferencias y capacidades instaladas se proyecta legar una vez concluido el proyecto.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="registro">Registro
+		
+			
+		<campo clase="claseregistro" tipo="parrafo" id="Registro:Registro">Registro
+			<ayuda>
+				<nombre><![CDATA[Registro]]></nombre>
+				<resumen><![CDATA[Describir las acciones de sistematización, registro, difusión y diseminación de la experiencia.
+
+	NOTA: Posibilidad de subir archivos / Fotos / vinculado a Anexos]]></resumen>
+				<completo><![CDATA[Describir las acciones de sistematización, registro, difusión y diseminación de la experiencia. Es importante tanto el éxito del proyecto en sí, como su experiencia y replicación en otros contextos. Por ello, se deberá detallar las estrategias y acciones de sistematización, registro, difusión y diseminación previstas por el proyecto. Estas actividades contribuyen a dotar de transparencia a la gestión y, por ende pueden promover adhesiones de nuevos actores potenciales, alimentando a su vez las estrategias de viabilidad del proyecto. Las acciones pueden incluir registros fotográficos y audiovisuales, encuestas, informes de gestión, publicaciones, páginas webs, newsletters, conferencias basadas en la experiencia, etc. Es importante mencionar también cómo estas acciones de registro y transferencia aportarán a los esquemas de sustentabilidad una vez concluida la instancia de apoyo económico.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+		</seccion>
+		<seccion clase="resultados">Resultados
+		
+			<seccion clase="minima">Mínima
+			
+				
+		<campo clase="resultados_minima" tipo="parrafo" id="Mínima:Resultados de mínima">Resultados de mínima
+			<ayuda>
+				<nombre><![CDATA[Resultados de mínima]]></nombre>
+				<resumen><![CDATA[Explicitar la proyección de los resultados del proyecto considerando las condiciones mínimas para su desarrollo.]]></resumen>
+				<completo><![CDATA[Explicitar la proyección de los resultados del proyecto considerando las condiciones mínimas para su desarrollo. Una vez formulado el proyecto, y analizados en profundidad sus diversos aspectos, es posible realizar una proyección de sus resultados "de mínima", es decir, cuáles serían los resultados básicos desde una perspectiva prudente. Los resultados de mínima marcan el "piso" o "base" de los logros proyectados. Se trata de un indicador determinante para definir el éxito o el fracaso de los resultados a los que aspira el proyecto.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			</seccion>
+			<seccion clase="maxima">Máxima
+			
+				
+		<campo clase="resultados_maxima" tipo="parrafo" id="Máxima:Resultados de máxima">Resultados de máxima
+			<ayuda>
+				<nombre><![CDATA[Resultados de máxima]]></nombre>
+				<resumen><![CDATA[Explicitar la proyección de los resultados del proyecto considerando las condiciones óptimas para su desarrollo.]]></resumen>
+				<completo><![CDATA[Explicitar la proyección de los resultados del proyecto considerando las condiciones óptimas para su desarrollo. Una vez formulado el proyecto, y analizados en profundidad sus diversos aspectos, es posible realizar una proyección de sus resultados "de máxima", es decir, cuáles serían sus resultados potenciales dándose las condiciones óptimas para conseguir un rendimiento superlativo de acuerdo a las variables analizadas. Se trata, en definitiva, de avanzar los productos, servicios o desempeños que sirvan para medir el grado de cumplimiento de los objetivos que se plantea el proyecto. La condición de un resultado es que resulte tangible de modo de poder verificar su cumplimiento. Para tal comprobación, los resultados propuestos deberán ajustarse a parámetros predeterminados. Un proyecto puede tener uno o varios resultados. Se sugiere vincular los resultados al desarrollo de las estrategias, etapas y actividades del proyecto, identificando ciertos hitos que permitan evaluar conjuntamente la finalización del resultado y de su fase de pertenencia.
+
+	 
+
+	.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			</seccion>
+		</seccion>
+		<seccion clase="evaluacion">Evaluación
+		
+			<seccion clase="indicadores">Indicadores
+			
+				
+		<campo clase="evaluacion" tipo="parrafo" id="Indicadores:Evaluación">Evaluación
+			<ayuda>
+				<nombre><![CDATA[Evaluación]]></nombre>
+				<resumen><![CDATA[Detallar sucintamente la forma en que el proyecto será evaluado, tanto durante su proceso de implementación, como al momento de su clausura.]]></resumen>
+				<completo><![CDATA[Detallar sucintamente la forma en que el proyecto será evaluado, tanto durante su proceso de implementación, como al momento de su clausura. Aquí se sugiere describir variables e indicadores, metodologías y técnicas a utilizar, instancias de aplicación y seguimiento, responsables a cargo de estos procesos. Debe explicitarse también si se optará por sistemas de auto-evaluación, evaluación interna, externa, o una combinación de tales modelos. Los organismos de apoyo y financiamiento suelen requerir definiciones con relación a los sistemas de evaluación y medición de resultados de los proyectos solicitantes. Más allá de esta necesidad, se sugiere valorar el ejercicio evaluador como una rutina que permite reflexionar, sistematizar, aprender y corregir las decisiones y estrategias propias de la gestión de proyectos. Es por ello que se recomienda especialmente programar la evaluación como una instancia más del desarrollo de un proyecto, dotándola de tiempos, recursos y profesionales que permitan sistematizarla y capitalizar sus beneficios. (Editar Gra)]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+				
+		<campo clase="indicadores" tipo="multiples-indicadores" id="Indicadores:Indicadores">Indicadores
+			<ayuda>
+				<nombre><![CDATA[Indicadores]]></nombre>
+				<resumen><![CDATA[Definir los criterios, instrumentos y variables que permitan evaluar el proceso y los resultados del proyecto.]]></resumen>
+				<completo><![CDATA[Se trata de transmitir claramente qué mecanismos permitirán comprobar con cierta objetividad la progresión hacia las metas propuestas. Ello permitirá conocer en qué medida se han cumplido las metas, evaluar el proceso de gestión del proyecto, y ponderar el proceso de toma de decisiones para promover la mejora continua de cara a futuras ediciones del proyecto o nuevas iniciativas. Los criterios refieren al tipo de evaluación que se busca realizar (evaluar la eficacia, la eficiencia, el impacto, la equidad, la sensibilidad, la sostenibilidad, etc.). Los instrumentos refieren a las herramientas que permiten medir la evaluación (estadísticas, censos, encuestas, entrevistas personales o grupales, medición de ingresos, venta de entradas, observaciones, etc.). Finalmente, los indicadores representan las variables utilizadas a la hora de realizar el seguimiento y la evaluación del proyecto y sus resultados (número de asistentes, desvíos presupuestarios, fechas de estreno o lanzamiento, impacto comunicacional, etc.). No existe un corpus universal de indicadores, cada proyecto debe definir los propios de acuerdo a sus objetivos y metas. Sí resulta prioritario definirlos con antelación: si los indicadores no se establecen durante la fase de diseño del proyecto, su definición posterior los volverá menos confiables.]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+			</seccion>
+		</seccion>
+	</categoria>
+	<categoria clase="anexos">Anexos
+	
+		
+		<campo clase="indiceanexos" tipo="multiples-indices-de-archivo" id="Anexos:Indice">Indice
+			<ayuda>
+				<nombre><![CDATA[Indice]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+		
+		<campo clase="adjuntararchivo" tipo="multiples-archivos" id="Anexos:Adjuntar">Adjuntar
+			<ayuda>
+				<nombre><![CDATA[Adjuntar]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+	</categoria>
+	<categoria clase="informes">Informes
+	
+		
+		<campo clase="informes" tipo="multiples-informes" id="Informes:Informes">Informes
+			<ayuda>
+				<nombre><![CDATA[Informes]]></nombre>
+				<resumen><![CDATA[]]></resumen>
+				<completo><![CDATA[]]></completo>
+				<ejemplos><![CDATA[]]></ejemplos>
+			</ayuda>
+		</campo>
+	</categoria>
+</arbol>

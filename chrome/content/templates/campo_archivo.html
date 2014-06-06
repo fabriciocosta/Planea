@@ -1,0 +1,14 @@
+<div class="campo campo-archivo {CAMPOCONAYUDA}  campo-{CLASE}" id="field_{IDCAMPO}">
+	<div class="titulo">
+			<label class="titulocampo" title="{AYUDARAPIDA}" onmouseover="javascript:ShowHint('{IDCAMPO}');"><span>{NOMBRECAMPO}</span></label>
+			{MARKER}			
+	</div>
+	<div class="entrada">
+		<input id="{IDCAMPO}" type="file" title="{AYUDARAPIDA}" placeholder="{AYUDARAPIDA}" 
+		 onblur="javascript:StopEditField('{PATHCAMPO}','{IDCAMPO}');"
+		 onfocus="javascript:EditField('{PATHCAMPO}','{IDCAMPO}');"
+         onchange="javascript:LoadFile('{PATHCAMPO}','{IDCAMPO}');"/>
+		<button id="archivo_{IDCAMPO}" class="archivo" onclick="attachFile('{PATHCAMPO}','{IDCAMPO}');" > <span id="{IDCAMPO}_filelink" class="filelink">{ARCHIVO} </span> </button>
+		
+	</div>
+</div>

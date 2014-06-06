@@ -1,0 +1,9 @@
+<!ENTITY options.title       "Options">
+
+<!ENTITY paneGeneral.label   "General">
+<!ENTITY datoscreador.label      "Datos del proyecto">
+<!ENTITY creador.label        "Creador:">
+<!ENTITY creador.accesskey    "1">
+<!ENTITY datosproyecto.label      "Section 2">
+<!ENTITY nombre.label        "Nombre del proyecto:">
+<!ENTITY nombre.accesskey    "2">

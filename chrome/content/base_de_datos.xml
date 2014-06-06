@@ -1,0 +1,540 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<arbol>
+	<categoria clase="presentacion">Presentación
+	
+		<seccion clase="titulo">Título
+		
+			<campo clase="titulo" tipo="texto" id="Título:Título"  >Título</campo>
+		</seccion>
+		<seccion clase="marca">Marca
+		
+			<campo clase="marca" tipo="parrafo" id="Marca:Marca"  >Marca</campo>
+		</seccion>
+		<seccion clase="resumenejecutivo">Resumen Ejecutivo
+		
+			<campo clase="resumenejecutivo" tipo="parrafo" id="Resumen Ejecutivo:Resumen Ejecutivo"  >Resumen Ejecutivo</campo>
+		</seccion>
+		<seccion clase="titularidad">Titularidad
+		
+			<seccion clase="organizacion">Organización
+			
+				<campo clase="organizacionnombre" tipo="texto" id="Organización:Nombre de la organización"  >Nombre de la organización</campo>
+				<campo clase="organizacionformajuridica" tipo="texto" id="Organización:Forma jurídica"  >Forma jurídica</campo>
+				<campo clase="organizacionidentificacion" tipo="texto" id="Organización:Número de identificación tributaria"  >Número de identificación tributaria</campo>
+				<campo clase="organizaciondomicilio" tipo="texto" id="Organización:Domicilio"  >Domicilio</campo>
+				<campo clase="organizacionciudad" tipo="texto" id="Organización:Ciudad "  >Ciudad </campo>
+				<campo clase="organizacioncodigopostal" tipo="texto" id="Organización:Código Postal"  >Código Postal</campo>
+				<campo clase="organizacionprovincia" tipo="texto" id="Organización:Provincia"  >Provincia</campo>
+				<campo clase="organizacionpais" tipo="texto" id="Organización:País"  >País</campo>
+				<campo clase="organizaciontelefono" tipo="texto" id="Organización:Teléfono"  >Teléfono</campo>
+				<campo clase="organizacionmail" tipo="texto" id="Organización:Mail"  >Mail</campo>
+				<campo clase="organizacionweb" tipo="texto" id="Organización:Web"  >Web</campo>
+				<campo clase="organizacionredessociales" tipo="texto" id="Organización:Redes Sociales"  >Redes Sociales</campo>
+			</seccion>
+			<seccion clase="personafisica">Persona Física
+			
+				<campo clase="personanombre" tipo="texto" id="Persona Física:Nombre"  >Nombre</campo>
+				<campo clase="apellido" tipo="texto" id="Persona Física:Apellido"  >Apellido</campo>
+				<campo clase="dni" tipo="texto" id="Persona Física:Nº Documento de Identidad"  >Nº Documento de Identidad</campo>
+				<campo clase="nacimiento" tipo="texto" id="Persona Física:Fecha de nacimiento"  >Fecha de nacimiento</campo>
+				<campo clase="domicilio" tipo="texto" id="Persona Física:Domicilio"  >Domicilio</campo>
+				<campo clase="codigo_postal" tipo="texto" id="Persona Física:Código Postal"  >Código Postal</campo>
+				<campo clase="ciudad" tipo="texto" id="Persona Física:Ciudad"  >Ciudad</campo>
+				<campo clase="provincia" tipo="texto" id="Persona Física:Provincia"  >Provincia</campo>
+				<campo clase="pais" tipo="texto" id="Persona Física:País"  >País</campo>
+				<campo clase="telefono" tipo="texto" id="Persona Física:Teléfono"  >Teléfono</campo>
+				<campo clase="web" tipo="texto" id="Persona Física:Web"  >Web</campo>
+			</seccion>
+			<seccion clase="responsable">Responsable
+			
+				<campo clase="responsablenombre" tipo="texto" id="Responsable:Nombre"  >Nombre</campo>
+				<campo clase="responsableapellido" tipo="texto" id="Responsable:Apellido"  >Apellido</campo>
+				<campo clase="responsablemail" tipo="texto" id="Responsable:Mail"  >Mail</campo>
+				<campo clase="responsabletelefono" tipo="texto" id="Responsable:Teléfono"  >Teléfono</campo>
+				<campo clase="responsableweb" tipo="texto" id="Responsable:Web"  >Web</campo>
+				<campo clase="responsableredes" tipo="texto" id="Responsable:Redes Sociales"  >Redes Sociales</campo>
+			</seccion>
+		</seccion>
+	</categoria>
+	<categoria clase="fundamentos">Fundamentos
+	
+		<seccion clase="analisisexterno">Análisis Externo
+		
+			<campo clase="analisisexterno" tipo="parrafo" id="Análisis Externo:Análisis Externo"  >Análisis Externo</campo>
+		</seccion>
+		<seccion clase="analisisinterno">Análisis Interno
+		
+			<campo clase="analisisinterno" tipo="parrafo" id="Análisis Interno:Análisis Interno"  >Análisis Interno</campo>
+		</seccion>
+		<seccion clase="antecedentes">Antecedentes
+		
+			<campo clase="antecedentes" tipo="parrafo" id="Antecedentes:Antecedentes"  >Antecedentes</campo>
+		</seccion>
+		<seccion clase="marcoinstitucional">Marco Institucional
+		
+			<campo clase="marcoinstitucional" tipo="parrafo" id="Marco Institucional:Marco institucional"  >Marco institucional</campo>
+		</seccion>
+		<seccion clase="alineamiento">Alineamiento
+		
+			<campo clase="alineamiento" tipo="parrafo" id="Alineamiento:Alineamiento"  >Alineamiento</campo>
+		</seccion>
+		<seccion clase="referencias">Referencias
+		
+			<campo clase="referencias" tipo="parrafo" id="Referencias:Referencias"  >Referencias</campo>
+		</seccion>
+		<seccion clase="problematica">Problemática
+		
+			<campo clase="problematica" tipo="parrafo" id="Problemática:Problemática"  >Problemática</campo>
+		</seccion>
+		<seccion clase="justificacion">Justificación 
+		
+			<campo clase="justificacion" tipo="parrafo" id="Justificación :Justificación"  >Justificación</campo>
+		</seccion>
+	</categoria>
+	<categoria clase="planificacion">Planificación
+	
+		<seccion clase="objetivos">Objetivos
+		
+			<seccion clase="generales">Generales
+			
+				<campo clase="objetivos_generales" tipo="multiples-objetivos-generales" id="Generales:Objetivos Generales"  >Objetivos Generales
+					<ficha clase="objetivo-general" preview="__orden_alpha__">
+						<campo clase="objetivogral_objetivo" tipo="parrafo" id="TaxonFicha:Objetivo"   >Objetivo</campo>
+					</ficha>
+				</campo>
+			</seccion>
+			<seccion clase="especificos">Específicos
+			
+				<campo clase="objetivos_especificos" tipo="multiples-objetivos-especificos" id="Específicos:Objetivos Específicos"  >Objetivos Específicos
+					<ficha clase="objetivo-especifico" preview="objetivospec_vinculacion::__orden__">
+						<campo clase="objetivospec_vinculacion" tipo="referencia" id="TaxonFicha:Obj. Gen." referencia="objetivo-general"  >Obj. Gen.</campo>
+						<campo clase="objetivospec_objetivo" tipo="parrafo" id="TaxonFicha:Objetivo Específico"   >Objetivo Específico</campo>
+					</ficha>
+				</campo>
+			</seccion>
+			<seccion clase="metas">Metas
+			
+				<campo clase="metas" tipo="multiples-metas" id="Metas:Metas"  >Metas
+					<ficha clase="meta" preview="vinculoespecifico::__orden_alpha__">
+						<campo clase="vinculoespecifico" tipo="referencia" id="TaxonFicha:Vínculo objetivo específico" referencia="objetivo-especifico"  >Vínculo objetivo específico</campo>
+						<campo clase="nombremeta" tipo="parrafo" id="TaxonFicha:Nombre meta"  suma="[NO]"  >Nombre meta</campo>
+					</ficha>
+				</campo>
+			</seccion>
+		</seccion>
+		<seccion clase="localizacion">Localización
+		
+			<seccion clase="ubicacion">Ubicación
+			
+				<campo clase="ubicacion" tipo="texto" id="Ubicación:Ubicación"  >Ubicación</campo>
+				<campo clase="ubicaciongeografica" tipo="multiples-ubicaciones-geograficas" id="Ubicación:Ubicación geográfica "  >Ubicación geográfica 
+					<ficha clase="ubicacion-geografica-" preview="domicilio::ciudad">
+						<campo clase="domicilio" tipo="texto" id="TaxonFicha:Domicilio"  suma="[NO]"  >Domicilio</campo>
+						<campo clase="cp" tipo="texto" id="TaxonFicha:Código Postal"  suma="[NO]"  >Código Postal</campo>
+						<campo clase="ciudad" tipo="texto" id="TaxonFicha:Ciudad"  suma="[NO]"  >Ciudad</campo>
+						<campo clase="provincia" tipo="texto" id="TaxonFicha:Provincia o Estado"  suma="[NO]"  >Provincia o Estado</campo>
+						<campo clase="pais" tipo="texto" id="TaxonFicha:País"  suma="[NO]"  >País</campo>
+						<campo clase="" tipo="imagen" id="TaxonFicha:Mapa"  suma="[NO]"  >Mapa</campo>
+					</ficha>
+				</campo>
+			</seccion>
+			<seccion clase="espacio">Espacio
+			
+				<campo clase="espacios" tipo="multiples-espacios" id="Espacio:Espacios"  >Espacios
+					<ficha clase="espacio" preview="espacio">
+						<campo clase="espacio" tipo="parrafo" id="TaxonFicha:Espacio"   >Espacio</campo>
+						<campo clase="capacidad" tipo="texto" id="TaxonFicha:Capacidad"   >Capacidad</campo>
+						<campo clase="adjuntar:-croquis" tipo="archivo" id="TaxonFicha:Adjuntar: croquis, planos, etc"   >Adjuntar: croquis, planos, etc</campo>
+					</ficha>
+				</campo>
+			</seccion>
+			<seccion clase="infraestructura">Infraestructura
+			
+				<campo clase="infraestructura" tipo="parrafo" id="Infraestructura:Infraestructura"  >Infraestructura</campo>
+			</seccion>
+			<seccion clase="equipamiento">Equipamiento
+			
+				<campo clase="equipamientos" tipo="parrafo" id="Equipamiento:Equipamiento"  >Equipamiento</campo>
+			</seccion>
+			<seccion clase="seguridad">Seguridad
+			
+				<campo clase="seguridad" tipo="parrafo" id="Seguridad:Seguridad"  >Seguridad</campo>
+			</seccion>
+		</seccion>
+		<seccion clase="participantes">Participantes
+		
+			<seccion clase="integrantes">Integrantes
+			
+				<seccion clase="Áreasdetrabajo">Áreas de trabajo
+				
+					<campo clase="areasdetrabajo" tipo="multiples-areas-de-trabajo" id="Áreas de trabajo:Áreas de trabajo"  >Áreas de trabajo
+						<ficha clase="Área-de-trabajo" preview="nombrearea">
+							<campo clase="nombrearea" tipo="texto" id="TaxonFicha:Nombre"   >Nombre</campo>
+							<campo clase="areadescripcion" tipo="parrafo" id="TaxonFicha:Descripción"   >Descripción</campo>
+						</ficha>
+					</campo>
+				</seccion>
+				<campo clase="personas" tipo="multiples-personas" id="Integrantes:Integrantes"  >Integrantes
+					<ficha clase="persona" preview="nombre::apellido">
+						<campo clase="nombre" tipo="texto" id="TaxonFicha:Nombre"   >Nombre</campo>
+						<campo clase="apellido" tipo="texto" id="TaxonFicha:Apellido"   >Apellido</campo>
+						<campo clase="documento" tipo="texto" id="TaxonFicha:Documento"   >Documento</campo>
+						<campo clase="email" tipo="texto" id="TaxonFicha:Email"   >Email</campo>
+						<campo clase="telefono" tipo="texto" id="TaxonFicha:Teléfono"   >Teléfono</campo>
+						<campo clase="redessociales" tipo="multiples-redes-sociales" id="TaxonFicha:Redes sociales"   >Redes sociales
+							<ficha clase="red-social" preview="red::usuario">
+								<campo clase="red" tipo="texto" id="TaxonFicha:Red"   >Red</campo>
+								<campo clase="usuario" tipo="texto" id="TaxonFicha:Usuario"   >Usuario</campo>
+							</ficha>
+						</campo>
+						<campo clase="cv" tipo="archivo" id="TaxonFicha:CV"   >CV</campo>
+						<campo clase="otros" tipo="texto" id="TaxonFicha:Otros datos"   >Otros datos</campo>
+						<campo clase="fotopersona" tipo="imagen" id="TaxonFicha:Foto"   >Foto</campo>
+						<campo clase="web" tipo="texto" id="TaxonFicha:Página web"   >Página web</campo>
+						<campo clase="perfil" tipo="parrafo" id="TaxonFicha:Perfil"   >Perfil</campo>
+						<campo clase="cargo" tipo="texto" id="TaxonFicha:Cargo"   >Cargo</campo>
+						<campo clase="responsabilidad" tipo="parrafo" id="TaxonFicha:Responsabilidad"   >Responsabilidad</campo>
+						<campo clase="misrelaciones" tipo="multiples-relaciones" id="TaxonFicha:Relaciones"   >Relaciones
+							<ficha clase="relacion" preview="tipoderelacion::personarelativa">
+								<campo clase="esresponsabledearea" tipo="lista-si-o-no" id="TaxonFicha:Resp."  suma="[NO]"   opciones="No,Sí">Resp.</campo>
+								<campo clase="relacionarea" tipo="referencia" id="TaxonFicha:Área" referencia="Área-de-trabajo"  >Área</campo>
+								<campo clase="tipoderelacion" tipo="lista-relacion" id="TaxonFicha:Relación"  suma="[NO]"   opciones="Depende de,Asiste a">Relación</campo>
+								<campo clase="personarelativa" tipo="referencia" id="TaxonFicha:Integrante" referencia="persona"  >Integrante</campo>
+								<campo clase="enarea" tipo="referencia" id="TaxonFicha:en area" referencia="Área-de-trabajo"  >en area</campo>
+							</ficha>
+						</campo>
+						<campo clase="pertenecealaorganizacion" tipo="tilde" id="TaxonFicha:Pertenece a la organización"   >Pertenece a la organización</campo>
+					</ficha>
+				</campo>
+			</seccion>
+			<seccion clase="organigrama">Organigrama
+			
+				<campo clase="graficoorganigrama" tipo="grafico-organigrama" id="Organigrama:Organigrama"  >Organigrama</campo>
+			</seccion>
+			<seccion clase="beneficiariosdirectos">Beneficiarios Directos
+			
+				<campo clase="beneficiariosdirectos" tipo="multiples-beneficiarios-directos" id="Beneficiarios Directos:Beneficiarios Directos"  >Beneficiarios Directos
+					<ficha clase="beneficiarios-directos" preview="beneficiariosdirectos">
+						<campo clase="beneficiariosdirectos" tipo="parrafo" id="TaxonFicha:Beneficiarios Directos"  suma="[NO]"  >Beneficiarios Directos</campo>
+						<campo clase="" tipo="texto" id="TaxonFicha:Rango de edad"   >Rango de edad</campo>
+						<campo clase="" tipo="texto" id="TaxonFicha:% Sexo"   >% Sexo</campo>
+						<campo clase="" tipo="texto" id="TaxonFicha:Nivel educativo"   >Nivel educativo</campo>
+						<campo clase="" tipo="texto" id="TaxonFicha:Nivel socio-económico"   >Nivel socio-económico</campo>
+						<campo clase="" tipo="texto" id="TaxonFicha:Otros"   >Otros</campo>
+					</ficha>
+				</campo>
+			</seccion>
+			<seccion clase="beneficiariosindirectos">Beneficiarios Indirectos
+			
+				<campo clase="beneficiarios-indirectos" tipo="parrafo" id="Beneficiarios Indirectos:Beneficiarios Indirectos"  >Beneficiarios Indirectos</campo>
+			</seccion>
+		</seccion>
+		<seccion clase="estrategias">Estrategias
+		
+			<campo clase="estrategias" tipo="parrafo" id="Estrategias:Estrategia"  >Estrategia</campo>
+		</seccion>
+		<seccion clase="etapas">Etapas
+		
+			<campo clase="etapas" tipo="multiples-etapas" id="Etapas:Etapas"  >Etapas
+				<ficha clase="etapa" preview="etapa">
+					<campo clase="etapa" tipo="texto" id="TaxonFicha:Etapa"   >Etapa</campo>
+					<campo clase="descripcion" tipo="texto" id="TaxonFicha:Descripción"   >Descripción</campo>
+				</ficha>
+			</campo>
+		</seccion>
+		<seccion clase="actividades">Actividades
+		
+			<campo clase="actividades" tipo="multiples-actividades" id="Actividades:Actividades"  >Actividades
+				<ficha clase="actividad" preview="actividad">
+					<campo clase="etapas" tipo="referencia" id="TaxonFicha:Etapa" referencia="etapa"  >Etapa</campo>
+					<campo clase="actividad" tipo="texto" id="TaxonFicha:Actividad"   >Actividad</campo>
+					<campo clase="duracion" tipo="natural" id="TaxonFicha:Duración"  suma="[NO]"  >Duración</campo>
+					<campo clase="unidaddetiempo" tipo="lista-de-unidades-de-tiempo" id="TaxonFicha:Unidad de tiempo"    opciones="Días,Semana,Mes,Año,Calendario">Unidad de tiempo</campo>
+					<campo clase="desdeunidad" tipo="natural" id="TaxonFicha:Desde"  suma="[NO]"  >Desde</campo>
+					<campo clase="desde_fecha" tipo="fecha" id="TaxonFicha:Desde (fecha)"   >Desde (fecha)</campo>
+					<campo clase="hasta_fecha" tipo="fecha" id="TaxonFicha:Hasta (fecha)"   >Hasta (fecha)</campo>
+					<campo clase="fechainicio" tipo="fecha" id="TaxonFicha:Fecha de inicio"   >Fecha de inicio</campo>
+					<campo clase="sucedea" tipo="referencia" id="TaxonFicha:Sucede a" referencia="actividad"  >Sucede a</campo>
+					<campo clase="responsable" tipo="referencia" id="TaxonFicha:Responsable" referencia="persona"  >Responsable</campo>
+					<campo clase="eshito" tipo="tilde" id="TaxonFicha:Hito"   >Hito</campo>
+				</ficha>
+			</campo>
+		</seccion>
+		<seccion clase="cronograma">Cronograma
+		
+			<campo clase="graficocronograma" tipo="grafico-cronograma" id="Cronograma:Cronograma"  >Cronograma</campo>
+		</seccion>
+	</categoria>
+	<categoria clase="recursos">Recursos
+	
+		<seccion clase="marconormativo">Marco Normativo
+		
+			<campo clase="marconormativo" tipo="parrafo" id="Marco Normativo:Marco Normativo"  >Marco Normativo</campo>
+		</seccion>
+		<seccion clase="ingresos">Ingresos
+		
+			<campo clase="ingresos" tipo="texto" id="Ingresos:Ingresos"  >Ingresos</campo>
+			<campo clase="unidadesdemedidad" tipo="multiples-unidades-de-medida" id="Ingresos:Unidades de medida"  >Unidades de medida
+				<ficha clase="unidad-de-medida" preview="unidaddemedida">
+					<campo clase="unidaddemedida" tipo="texto" id="TaxonFicha:Unidad de medida"   >Unidad de medida</campo>
+				</ficha>
+			</campo>
+			<campo clase="ingresosgeneracion" tipo="multiples-ingresos" id="Ingresos:Ingresos generación propia"  >Ingresos generación propia
+				<ficha clase="ingreso" preview="ingresonombre">
+					<campo clase="ingresonombre" tipo="texto" id="TaxonFicha:Ingreso nombre"   >Ingreso nombre</campo>
+					<campo clase="cantidadmaxima" tipo="natural" id="TaxonFicha:Cantidad máxima"   >Cantidad máxima</campo>
+					<campo clase="capacidadproyectada" tipo="porcentaje" id="TaxonFicha:%Capacidad proyectada"   >%Capacidad proyectada</campo>
+					<campo clase="cantidadproyectada" tipo="formula" id="TaxonFicha:Cantidad proyectada"   formula="cantidadmaxima*capacidadproyectada*0.01" >Cantidad proyectada</campo>
+					<campo clase="selunidademedida" tipo="referencia" id="TaxonFicha:Unidad de medida" referencia="unidad-de-medida"  >Unidad de medida</campo>
+					<campo clase="valorunitario" tipo="numero" id="TaxonFicha:Valor unitario"   >Valor unitario</campo>
+					<campo clase="ingresoestimado" tipo="formula" id="TaxonFicha:Ingreso estimado"  suma="[YES]"  formula="cantidadproyectada*valorunitario" >Ingreso estimado</campo>
+					<campo clase="tipodeingreso" tipo="lista-tipo-de-ingreso" id="TaxonFicha:MOV $"  suma="[NO]"   opciones="Sí,No">MOV $</campo>
+					<campo clase="actividadasociada" tipo="referencia" id="TaxonFicha:Actividad asociada" referencia="actividad"  >Actividad asociada</campo>
+					<campo clase="seleccionarresponsable" tipo="referencia" id="TaxonFicha:Responsable" referencia="persona"  >Responsable</campo>
+					<campo clase="cuotas" tipo="multiples-cuotas" id="TaxonFicha:Cuotas"   >Cuotas
+						<ficha clase="cuota" preview="unidad::fecha::monto">
+							<campo clase="cuotaunidad" tipo="lista-unidad" id="TaxonFicha:Unidad"    opciones="unidad,fecha">Unidad</campo>
+							<campo clase="fecha" tipo="fecha" id="TaxonFicha:Fecha"   >Fecha</campo>
+							<campo clase="monto" tipo="numero" id="TaxonFicha:Monto"  suma="[YES]"  >Monto</campo>
+						</ficha>
+					</campo>
+					<campo clase="ingresodinerario" tipo="formula" id="TaxonFicha:Ingreso dinerario"  suma="[YES]"  formula="ingresoestimado*CalcDinerario(tipodeingreso)" >Ingreso dinerario</campo>
+					<campo clase="ingresonodinerario" tipo="formula" id="TaxonFicha:Ingreso no dinerario"  suma="[YES]"  formula="ingresoestimado*CalcNoDinerario(tipodeingreso)" >Ingreso no dinerario</campo>
+				</ficha>
+			</campo>
+			<campo clase="ingresosexternos" tipo="multiples-ingresos" id="Ingresos:Ingresos fuentes externas"  >Ingresos fuentes externas
+				<ficha clase="ingreso" preview="ingresonombre">
+					<campo clase="ingresonombre" tipo="texto" id="TaxonFicha:Ingreso nombre"   >Ingreso nombre</campo>
+					<campo clase="cantidadmaxima" tipo="natural" id="TaxonFicha:Cantidad máxima"   >Cantidad máxima</campo>
+					<campo clase="capacidadproyectada" tipo="porcentaje" id="TaxonFicha:%Capacidad proyectada"   >%Capacidad proyectada</campo>
+					<campo clase="cantidadproyectada" tipo="formula" id="TaxonFicha:Cantidad proyectada"   formula="cantidadmaxima*capacidadproyectada*0.01" >Cantidad proyectada</campo>
+					<campo clase="selunidademedida" tipo="referencia" id="TaxonFicha:Unidad de medida" referencia="unidad-de-medida"  >Unidad de medida</campo>
+					<campo clase="valorunitario" tipo="numero" id="TaxonFicha:Valor unitario"   >Valor unitario</campo>
+					<campo clase="ingresoestimado" tipo="formula" id="TaxonFicha:Ingreso estimado"  suma="[YES]"  formula="cantidadproyectada*valorunitario" >Ingreso estimado</campo>
+					<campo clase="tipodeingreso" tipo="lista-tipo-de-ingreso" id="TaxonFicha:MOV $"  suma="[NO]"   opciones="Sí,No">MOV $</campo>
+					<campo clase="actividadasociada" tipo="referencia" id="TaxonFicha:Actividad asociada" referencia="actividad"  >Actividad asociada</campo>
+					<campo clase="seleccionarresponsable" tipo="referencia" id="TaxonFicha:Responsable" referencia="persona"  >Responsable</campo>
+					<campo clase="cuotas" tipo="multiples-cuotas" id="TaxonFicha:Cuotas"   >Cuotas
+						<ficha clase="cuota" preview="unidad::fecha::monto">
+							<campo clase="cuotaunidad" tipo="lista-unidad" id="TaxonFicha:Unidad"    opciones="unidad,fecha">Unidad</campo>
+							<campo clase="fecha" tipo="fecha" id="TaxonFicha:Fecha"   >Fecha</campo>
+							<campo clase="monto" tipo="numero" id="TaxonFicha:Monto"  suma="[YES]"  >Monto</campo>
+						</ficha>
+					</campo>
+					<campo clase="ingresodinerario" tipo="formula" id="TaxonFicha:Ingreso dinerario"  suma="[YES]"  formula="ingresoestimado*CalcDinerario(tipodeingreso)" >Ingreso dinerario</campo>
+					<campo clase="ingresonodinerario" tipo="formula" id="TaxonFicha:Ingreso no dinerario"  suma="[YES]"  formula="ingresoestimado*CalcNoDinerario(tipodeingreso)" >Ingreso no dinerario</campo>
+				</ficha>
+			</campo>
+			<campo clase="costosasociados" tipo="multiples-costos-asociados" id="Ingresos:Costos asociados a ingresos"  >Costos asociados a ingresos
+				<ficha clase="costo-asociado-a-ingreso" preview="nombrecostoasociado">
+					<campo clase="nombrecostoasociado" tipo="texto" id="TaxonFicha:Costo"  suma="[NO]"  >Costo</campo>
+					<campo clase="ingresoasociado" tipo="referencia" id="TaxonFicha:Ingreso asociado" referencia="ingreso"  referenciaclase="ingresoestimado"  >Ingreso asociado</campo>
+					<campo clase="porcentajedelcosto" tipo="porcentaje" id="TaxonFicha:Porcentaje del costo"  suma="[NO]"  >Porcentaje del costo</campo>
+					<campo clase="importedelcosto" tipo="formula" id="TaxonFicha:Importe del costo"  suma="[YES]"  formula="ingresoasociado*porcentajedelcosto*0.01" >Importe del costo</campo>
+					<campo clase="tipodecostoasociado" tipo="lista-mov-din" id="TaxonFicha:MOV $"  suma="[NO]"   opciones="Sí,No">MOV $</campo>
+					<campo clase="costodinerario" tipo="formula" id="TaxonFicha:Costo dinerario"  suma="[YES]"  formula="importedelcosto*CalcDinerario(tipodecostoasociado)" >Costo dinerario</campo>
+					<campo clase="costonodinerario" tipo="formula" id="TaxonFicha:Costo no dinerario"  suma="[YES]"  formula="importedelcosto*CalcNoDinerario(tipodecostoasociado)" >Costo no dinerario</campo>
+				</ficha>
+			</campo>
+			<campo clase="totalingresoproyectado" tipo="formula" id="Ingresos:Total ingreso proyectado" formula="{[arbol:Recursos:Ingresos:Ingresos generación propia]:ingresoestimado} 
++ {[arbol:Recursos:Ingresos:Ingresos fuentes externas]:ingresoestimado}
+- {[arbol:Recursos:Ingresos:Costos asociados a ingresos]:importedelcosto}" >Total ingreso proyectado</campo>
+			<campo clase="subtotaldinerario" tipo="formula" id="Ingresos:Subtotal dinerario" formula="{[arbol:Recursos:Ingresos:Ingresos generación propia]:ingresodinerario} 
++ {[arbol:Recursos:Ingresos:Ingresos fuentes externas]:ingresodinerario}
+- {[arbol:Recursos:Ingresos:Costos asociados a ingresos]:costodinerario}" >Subtotal dinerario</campo>
+			<campo clase="subtotalnodinerario" tipo="formula" id="Ingresos:Subtotal no dinerario" formula="{[arbol:Recursos:Ingresos:Ingresos generación propia]:ingresonodinerario} 
++ {[arbol:Recursos:Ingresos:Ingresos fuentes externas]:ingresonodinerario}
+- {[arbol:Recursos:Ingresos:Costos asociados a ingresos]:costonodinerario}" >Subtotal no dinerario</campo>
+			<campo clase="totalingresosportipo" tipo="texto" id="Ingresos:Total de Ingresos por tipo (Dinerarios/NO dinerarios)" formula="TotalIngresosPorTipo()" >Total de Ingresos por tipo (Dinerarios/NO dinerarios)</campo>
+		</seccion>
+		<seccion clase="costos">Costos
+		
+			<campo clase="multiplesrubroscostos" tipo="multiples-rubros-de-costos" id="Costos:Rubros de costos"  >Rubros de costos
+				<ficha clase="rubro" preview="nombrerubro">
+					<campo clase="nombrerubro" tipo="texto" id="TaxonFicha:Nombre rubro"   >Nombre rubro</campo>
+				</ficha>
+			</campo>
+			<campo clase="multiplescostos" tipo="multiples-costos" id="Costos:Costos"  >Costos
+				<ficha clase="costo" preview="nombrecosto">
+					<campo clase="rubro" tipo="referencia" id="TaxonFicha:Rubro" referencia="rubro"  >Rubro</campo>
+					<campo clase="nombrecosto" tipo="texto" id="TaxonFicha:Nombre del costo"   >Nombre del costo</campo>
+					<campo clase="descripcioncosto" tipo="texto" id="TaxonFicha:Descripción"   >Descripción</campo>
+					<campo clase="proveedor" tipo="texto" id="TaxonFicha:Prov."  suma="[NO]"  >Prov.</campo>
+					<campo clase="cantidadcosto" tipo="natural" id="TaxonFicha:Cant."  suma="[NO]"  >Cant.</campo>
+					<campo clase="unidaddemedida" tipo="referencia" id="TaxonFicha:Unidad medida" referencia="unidad-de-medida"  >Unidad medida</campo>
+					<campo clase="valorunitario" tipo="numero" id="TaxonFicha:Valor unit."  suma="[NO]"  >Valor unit.</campo>
+					<campo clase="costoestimado" tipo="formula" id="TaxonFicha:Costo estimado"  suma="[YES]"  formula="cantidadcosto*valorunitario" >Costo estimado</campo>
+					<campo clase="tipodecosto" tipo="lista-mov-din" id="TaxonFicha:MOV $"  suma="[NO]"   opciones="Sí,No">MOV $</campo>
+					<campo clase="prioridad" tipo="lista-prioridad" id="TaxonFicha:Prio- ridad"  suma="[NO]"   opciones="Primario,Secundario">Prio- ridad</campo>
+					<campo clase="actividad" tipo="referencia" id="TaxonFicha:Actividad" referencia="actividad"  >Actividad</campo>
+					<campo clase="responsable" tipo="referencia" id="TaxonFicha:Resp." referencia="persona"  >Resp.</campo>
+					<campo clase="cuotas" tipo="multiples-cuotas" id="TaxonFicha:Cuotas"   >Cuotas
+						<ficha clase="cuota" preview="unidad::fecha::monto">
+							<campo clase="cuotaunidad" tipo="lista-unidad" id="TaxonFicha:Unidad"    opciones="unidad,fecha">Unidad</campo>
+							<campo clase="fecha" tipo="fecha" id="TaxonFicha:Fecha"   >Fecha</campo>
+							<campo clase="monto" tipo="numero" id="TaxonFicha:Monto"  suma="[YES]"  >Monto</campo>
+						</ficha>
+					</campo>
+					<campo clase="presuterceros" tipo="archivo" id="TaxonFicha:+ INFO"  suma="[NO]"  >+ INFO</campo>
+					<campo clase="costodinerario" tipo="formula" id="TaxonFicha:Costo dinerario"  suma="[YES]"  formula="costoestimado*CalcDinerario(tipodecosto)" >Costo dinerario</campo>
+					<campo clase="costonodinerario" tipo="formula" id="TaxonFicha:Costo no dinerario"  suma="[YES]"  formula="costoestimado*CalcNoDinerario(tipodecosto)" >Costo no dinerario</campo>
+				</ficha>
+			</campo>
+			<campo clase="imprevistos" tipo="multiples-imprevistos" id="Costos:Imprevistos"  >Imprevistos
+				<ficha clase="imprevisto" preview="imprevisto">
+					<campo clase="imprevisto" tipo="texto" id="TaxonFicha:Imprevisto"  suma="[NO]"  >Imprevisto</campo>
+					<campo clase="imprevistoestimado" tipo="numero" id="TaxonFicha:Imprevisto estimado"  suma="[YES]"  >Imprevisto estimado</campo>
+					<campo clase="tipodecosto" tipo="lista-mov-din" id="TaxonFicha:Tipo de costo"  suma="[NO]"   opciones="Sí,No">Tipo de costo</campo>
+					<campo clase="costodinerario" tipo="formula" id="TaxonFicha:Costo dinerario"  suma="[YES]"  formula="imprevistoestimado*CalcDinerario(tipodecosto)" >Costo dinerario</campo>
+					<campo clase="costonodinerario" tipo="formula" id="TaxonFicha:Costo no dinerario"  suma="[YES]"  formula="imprevistoestimado*CalcNoDinerario(tipodecosto)" >Costo no dinerario</campo>
+				</ficha>
+			</campo>
+			<campo clase="totaldecostos" tipo="formula" id="Costos:Total de costos" formula="{[arbol:Recursos:Costos:Costos]:costoestimado}
++{[arbol:Recursos:Costos:Imprevistos]:imprevistoestimado} " >Total de costos</campo>
+		</seccion>
+		<seccion clase="presupuestoeconomico">Presupuesto Económico
+		
+			<campo clase="presueco" tipo="grafico-presu-economico" id="Presupuesto Económico:Presupuesto económico"  >Presupuesto económico</campo>
+			<campo clase="presuecocostos" tipo="grafico-presu-eco-costos" id="Presupuesto Económico:Presupuesto económico Costos"  >Presupuesto económico Costos</campo>
+		</seccion>
+		<seccion clase="presupuestofinanciero">Presupuesto Financiero
+		
+			<campo clase="presufinanciero" tipo="parrafo" id="Presupuesto Financiero:Presupuesto Financiero"  >Presupuesto Financiero</campo>
+		</seccion>
+		<seccion clase="estrategiasdefinanciamiento">Estrategias de Financiamiento
+		
+			<campo clase="estrategiasfinanciamiento" tipo="parrafo" id="Estrategias de Financiamiento:Estrategia de Financiamiento"  >Estrategia de Financiamiento</campo>
+		</seccion>
+		<seccion clase="necesidades">Necesidades
+		
+			<campo clase="necesidades" tipo="parrafo" id="Necesidades:Necesidades"  >Necesidades</campo>
+		</seccion>
+		<seccion clase="comunicacion">Comunicación
+		
+			<seccion clase="interna">Interna
+			
+				<campo clase="comunicacioninterna" tipo="parrafo" id="Interna:Comunicación Interna"  >Comunicación Interna</campo>
+			</seccion>
+			<seccion clase="externa">Externa
+			
+				<campo clase="comunicacionexterna" tipo="parrafo" id="Externa:Comunicación Externa"  >Comunicación Externa</campo>
+			</seccion>
+			<seccion clase="canales">Canales
+			
+				<campo clase="multiplescanales" tipo="multiples-canales" id="Canales:Canales"  >Canales
+					<ficha clase="canal" preview="nombrecanal::descripcioncanal">
+						<campo clase="nombrecanal" tipo="texto" id="TaxonFicha:Canal"   >Canal</campo>
+						<campo clase="descripcioncanal" tipo="parrafo" id="TaxonFicha:Descripción"   >Descripción</campo>
+					</ficha>
+				</campo>
+			</seccion>
+		</seccion>
+		<seccion clase="modelodegestion">Modelo de Gestión
+		
+			<campo clase="modelogestion" tipo="parrafo" id="Modelo de Gestión:Modelo de Gestión"  >Modelo de Gestión</campo>
+		</seccion>
+	</categoria>
+	<categoria clase="sustentabilidad">Sustentabilidad
+	
+		<seccion clase="factoresmultiplicadores">Factores multiplicadores
+		
+			<campo clase="factoresmultiplicadores" tipo="parrafo" id="Factores multiplicadores:Factores Multiplicadores"  >Factores Multiplicadores</campo>
+		</seccion>
+		<seccion clase="externalidades">Externalidades
+		
+			<campo clase="externalidades" tipo="parrafo" id="Externalidades:Externalidades"  >Externalidades</campo>
+		</seccion>
+		<seccion clase="contraprestaciones">Contraprestaciones
+		
+			<campo clase="multiplescontraprestaciones" tipo="multiples-contraprestaciones" id="Contraprestaciones:Contraprestaciones"  >Contraprestaciones
+				<ficha clase="contraprestacion" preview="nombrecontraprestacion">
+					<campo clase="categoria" tipo="referencia" id="TaxonFicha:Categoría" referencia="etapa"  >Categoría</campo>
+					<campo clase="nombrecontraprestacion" tipo="texto" id="TaxonFicha:Nombre"  suma="[NO]"  >Nombre</campo>
+					<campo clase="descripcioncontraprestacion" tipo="parrafo" id="TaxonFicha:Descripción"  suma="[NO]"  >Descripción</campo>
+					<campo clase="costosasociado" tipo="referencia" id="TaxonFicha:Costo asociado" referencia="costo"  >Costo asociado</campo>
+					<campo clase="ingresoderivado" tipo="referencia" id="TaxonFicha:Ingreso derivado" referencia="ingreso"  >Ingreso derivado</campo>
+					<campo clase="impactocomunicacion" tipo="referencia" id="TaxonFicha:Tiene impacto en comunicación" referencia="canal"  >Tiene impacto en comunicación</campo>
+				</ficha>
+			</campo>
+			<campo clase="categoria" tipo="parrafo" id="Contraprestaciones:Categorías"  >Categorías</campo>
+		</seccion>
+		<seccion clase="accesibilidad">Accesibilidad
+		
+			<campo clase="accesibilidad" tipo="parrafo" id="Accesibilidad:Accesibilidad"  >Accesibilidad</campo>
+		</seccion>
+		<seccion clase="continuidad">Continuidad
+		
+			<campo clase="continuidad" tipo="parrafo" id="Continuidad:Continuidad"  >Continuidad</campo>
+		</seccion>
+		<seccion clase="viabilidad">Viabilidad
+		
+			<campo clase="multiplesviabilidades" tipo="multiples-viabilidades" id="Viabilidad:Viabilidad"  >Viabilidad
+				<ficha clase="viabilidad" preview="viabilidadplanificacion">
+					<campo clase="etapaviabilidad" tipo="referencia" id="TaxonFicha:Etapa" referencia="etapa"  >Etapa</campo>
+					<campo clase="viabilidadplanificacion" tipo="parrafo" id="TaxonFicha:Viabilidad de planificación"  suma="[NO]"  >Viabilidad de planificación</campo>
+					<campo clase="viabilidadecofinanciera" tipo="parrafo" id="TaxonFicha:Viabilidad económica financiera"  suma="[NO]"  >Viabilidad económica financiera</campo>
+					<campo clase="viabilidadinstitucional" tipo="parrafo" id="TaxonFicha:Viabilidad institucional"  suma="[NO]"  >Viabilidad institucional</campo>
+					<campo clase="viabilidadarchivo" tipo="archivo" id="TaxonFicha:Adjuntar"  suma="[NO]"  >Adjuntar</campo>
+				</ficha>
+			</campo>
+		</seccion>
+		<seccion clase="registro">Registro
+		
+			<campo clase="claseregistro" tipo="parrafo" id="Registro:Registro"  >Registro</campo>
+		</seccion>
+		<seccion clase="resultados">Resultados
+		
+			<seccion clase="minima">Mínima
+			
+				<campo clase="resultados_minima" tipo="parrafo" id="Mínima:Resultados de mínima"  >Resultados de mínima</campo>
+			</seccion>
+			<seccion clase="maxima">Máxima
+			
+				<campo clase="resultados_maxima" tipo="parrafo" id="Máxima:Resultados de máxima"  >Resultados de máxima</campo>
+			</seccion>
+		</seccion>
+		<seccion clase="evaluacion">Evaluación
+		
+			<seccion clase="indicadores">Indicadores
+			
+				<campo clase="evaluacion" tipo="parrafo" id="Indicadores:Evaluación"  >Evaluación</campo>
+				<campo clase="indicadores" tipo="multiples-indicadores" id="Indicadores:Indicadores"  >Indicadores
+					<ficha clase="indicadores" preview="indicador">
+						<campo clase="indicador" tipo="texto" id="TaxonFicha:Indicador"  suma="[NO]"  >Indicador</campo>
+						<campo clase="descripcionindicador" tipo="parrafo" id="TaxonFicha:Descripción"  suma="[NO]"  >Descripción</campo>
+						<campo clase="objetivoindicador" tipo="referencia" id="TaxonFicha:Objetivo" referencia="objetivo-general"  >Objetivo</campo>
+						<campo clase="tipoindicador" tipo="lista-tipo-de-indicador" id="TaxonFicha:Tipo de indicador"  suma="[NO]"   opciones="Cualitativo,Cuantitativo">Tipo de indicador</campo>
+						<campo clase="instrumentosdemedicion" tipo="texto" id="TaxonFicha:Instrumentos de medición"  suma="[NO]"  >Instrumentos de medición</campo>
+						<campo clase="unidadindicador" tipo="referencia" id="TaxonFicha:Unidad de medida" referencia="unidad-de-medida"  >Unidad de medida</campo>
+						<campo clase="resultadoproyectado" tipo="texto" id="TaxonFicha:Resultado proyectado"  suma="[NO]"  >Resultado proyectado</campo>
+					</ficha>
+				</campo>
+			</seccion>
+		</seccion>
+	</categoria>
+	<categoria clase="anexos">Anexos
+	
+		<campo clase="indiceanexos" tipo="multiples-indices-de-archivo" id="Anexos:Indice"  >Indice
+			<ficha clase="indice-archivo" preview="__orden__::indiceseccion::archivoseccion">
+				<campo clase="indiceseccion" tipo="referencia-a-seccion" id="TaxonFicha:Seccion que referencia"  suma="[NO]"  >Seccion que referencia</campo>
+				<campo clase="archivoseccion" tipo="archivo" id="TaxonFicha:Archivo"  suma="[NO]"  >Archivo</campo>
+			</ficha>
+		</campo>
+		<campo clase="adjuntararchivo" tipo="multiples-archivos" id="Anexos:Adjuntar"  >Adjuntar
+			<ficha clase="indice-archivo" preview="__orden__::indiceseccion::archivoseccion">
+				<campo clase="indiceseccion" tipo="referencia-a-seccion" id="TaxonFicha:Seccion que referencia"  suma="[NO]"  >Seccion que referencia</campo>
+				<campo clase="archivoseccion" tipo="archivo" id="TaxonFicha:Archivo"  suma="[NO]"  >Archivo</campo>
+			</ficha>
+		</campo>
+	</categoria>
+	<categoria clase="informes">Informes
+	
+		<campo clase="informes" tipo="multiples-informes" id="Informes:Informes"  >Informes
+			<ficha clase="informe" preview="titulo">
+				<campo clase="titulo" tipo="texto" id="TaxonFicha:Título"   >Título</campo>
+				<campo clase="descripcion" tipo="parrafo" id="TaxonFicha:Descripción"   >Descripción</campo>
+				<campo clase="seleccion" tipo="arbolseleccion" id="TaxonFicha:Selección de campos del reporte"   >Selección de campos del reporte</campo>
+			</ficha>
+		</campo>
+	</categoria>
+</arbol>

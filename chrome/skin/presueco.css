@@ -1,0 +1,295 @@
+
+.capacidadproyectada,
+.ingresoasociado,
+.porcentajedelcosto,
+.actividadasociada,
+.seleccionarresponsable,
+.cantidadmaxima {
+	display: none;
+}
+
+/*COSTOS DINERARIOS*/
+.select_reference>table {
+	width: 100%;
+}
+
+.rubro {
+	width: 150px;
+}
+
+.ingresonombre,
+.nombrecosto {
+	width: 300px;
+}
+
+
+.selunidaddemedida,
+.valorunitario,
+.porcentajedelcosto,
+.cantidadproyectada {
+	width: 70px;
+}
+
+
+.selunidademedida {
+	width: 150px;
+}
+
+.ingresonombre {
+	width: 250px;
+}
+
+
+.ingresodinerario,
+.costodinerario {
+	display: none;
+}
+.ingresonodinerario,
+.costonodinerario {
+	display: none;
+}
+.costoestimado,
+.imprevistoestimado,
+.ingresoestimado,
+.importedelcosto {
+	width: 100px;
+}
+
+.tipodecostoasociado,
+.tipodecosto,
+.tipodeingreso {
+	width: 50px;
+}
+
+.tipodecostoasociado {
+	padding-right: 330px;
+}
+
+.seleccionarresponsable,
+.actividadasociada {
+	width: 150px;
+}
+
+
+
+table td.cuotas  {
+	display: none !important;
+	position: block;
+}
+
+
+
+
+/*TOTALES INGRESOS*/
+
+.campo-totaldecostos,
+.campo-totalingresosportipo,
+.campo-subtotaldinerario,
+.campo-subtotalnodinerario,
+.campo-totalingresoproyectado {
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.campo-totalingresosportipo {
+	display: none;
+}
+
+.campo-totaldecostos  label.titulocampo,
+.campo-subtotaldinerario  label.titulocampo,
+.campo-subtotalnodinerario  label.titulocampo,
+.campo-totalingresoproyectado  label.titulocampo {
+	text-align: left;
+	border-top: solid 1px #0B0;
+	
+}
+
+.campo-totaldecostos   .marker,
+.campo-subtotaldinerario .marker,
+.campo-subtotalnodinerario .marker,
+.campo-totalingresoproyectado .marker {
+	display: none;
+}
+
+.campo-totaldecostos .entrada,
+.campo-subtotaldinerario .entrada,
+.campo-subtotalnodinerario .entrada,
+.campo-totalingresoproyectado .entrada {
+	display: block;
+	position: absolute;
+	float: left;
+	left: 650px;
+	width: 110px;
+	height: 35px;
+	top: 0px;
+}
+
+.campo-totaldecostos .entrada input,
+.campo-subtotaldinerario .entrada input,
+.campo-subtotalnodinerario .entrada input,
+.campo-totalingresoproyectado .entrada input {
+	height: 100%;
+}
+
+#dbformulario_33_ >div.campo-multiplesrubroscostos {
+	display: none;
+}
+
+.campo-imprevistos .tipodecosto {
+	padding-right: 280px;
+}
+
+.imprevisto {
+	width: 630px;
+}
+
+.imprevistoestimado  {
+	
+}
+
+.duracion {
+	width: 50px;
+}
+
+.etapas {
+	width: 100px;
+}
+
+.actividad {
+	width: 200px;
+}
+
+/*PRESUPUESTO*/
+.campo-presueco table {
+	border: 0px;
+}
+
+.campo-presueco,
+.campo-presuecocostos {
+	padding-bottom: 100px;
+}
+
+.campo-presueco table,
+.campo-presuecocostos table {
+	font-size: 14px;
+	font-family: planeafont;
+	padding: 5px;
+}
+
+.campo-presueco .actividadasociada,
+.campo-presueco .seleccionarresponsable {
+	display: none;
+}
+
+.campo-presueco .ingresonombre {
+	width: 500px;
+}
+
+.campo-presueco .cantidadproyectada,
+.campo-presueco .unidaddemedida,
+.campo-presueco .valorunitario,
+.campo-presueco .ingresoestimado,
+.campo-presueco .tipodeingreso {
+	width: 90px;
+}
+
+
+
+.ingresosgeneracion_titulo,
+.ingresosexternos_titulo,
+.costosasociados_titulo,
+.multiplescostos_titulo {
+	background-color: #0ecc7a;
+	color: #FFF;
+	height: 35px;
+	text-align: center;
+	font-size: 15px;
+	font-family: planeafont;
+	text-transform: uppercase;
+	padding: 8px;
+	letter-spacing: 4px;
+}
+
+.campo-presueco table>thead>tr>td,
+.campo-presuecocostos table>thead>tr>td {
+	color: #0ecc7a;
+	background-color: #FFFFFF;
+	height: 50px;
+	font-size: 14px;
+	text-transform: uppercase;
+	vertical-align: top;
+	padding-left: 8px;
+	
+}
+.campo-presuecocostos table>thead>tr>td {
+ color: #37b9d4;
+}
+
+.campo-presueco  .cantidadmaxima,
+.campo-presueco  .capacidadproyectada {
+	display: none;
+}
+
+.multiplescostos_titulo ,
+.costosasociados_titulo {
+ background-color: #37b9d4;
+}
+
+.multiplescostos_titulo    table>thead>tr>td,
+.costosasociados_titulo    table>thead>tr>td {
+ color: #37b9d4;
+}
+
+.campo-presueco .ingresoasociado {
+	width: 200px;
+}
+
+.campo-presueco .nombrecostoasociado,
+.campo-presueco .porcentajedelcosto {
+	display: none;
+}
+
+.campo-imprevistos table.multiple>thead>tr>td,
+.campo-multiplescostos table.multiple>thead>tr>td {
+ color: #37b9d4;
+}
+
+
+
+.refreshgraph {
+	display: block;
+	position: absolute;
+	right: 300px;
+	left: 0px;
+	width: 22px;
+	height: 22px;
+	bakground-color: #0F0;
+}
+
+.edittools .savenow  {
+	display: none;
+}
+
+.descripcionindicador .edittools {
+	display: none;
+}
+
+.campo-espacios .edittools,
+.campo-personas .edittools,
+.campo-multiplescontraprestaciones .edittools,
+.campo-multiplesviabilidades .edittools {
+	display: none;
+}
+
+td.espacio {
+	width: 200px;
+}
+
+.seccion-titulo .campo-titulo textarea {
+	font-size: 17px;
+	font-weight: bold;
+}
+
+.campos-costosasociados .search_multiple {
+	display: none;
+}

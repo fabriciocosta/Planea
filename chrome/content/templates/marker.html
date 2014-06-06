@@ -1,0 +1,30 @@
+<div class="marker">
+			<div  id="markers_{IDCAMPO}" class="markers">
+							<a class="marker-selected"><div id="marcar_{IDCAMPO}_selected" class="marker-{SELECTEDMARKER} marker-selected"
+												onclick="javascript:togglediv('marcar_{IDCAMPO}_options');">
+												</div>
+							</a>
+												
+							<div class="marker_options" id="marcar_{IDCAMPO}_options">
+
+										<div id="marcar_{IDCAMPO}_options_blanco" value="blanco" class="marker-blanco marker-option" onclick="javascript:SetMarker( '{PATHCAMPO}', '{IDCAMPO}', 'blanco' );">
+										</div>
+							
+										<div id="marcar_{IDCAMPO}_options_verde" value="verde" class="marker-verde marker-option" onclick="javascript:SetMarker( '{PATHCAMPO}', '{IDCAMPO}', 'verde' );">
+										</div>
+															
+										<div id="marcar_{IDCAMPO}_options_amarillo" value="amarillo" class="marker-amarillo marker-option" onclick="javascript:SetMarker( '{PATHCAMPO}', '{IDCAMPO}', 'amarillo' );">
+										</div>
+										<!--			
+										<div id="marcar_{IDCAMPO}_options_rojo" value="rojo" class="marker-rojo marker-option" onclick="javascript:SetMarker( '{PATHCAMPO}', '{IDCAMPO}', 'rojo' );">
+										</div>-->
+										
+							</div>
+							<!--
+							<a class="marker-button">
+								<div class="marker_button" id="marcar_{IDCAMPO}_" onclick="javascript:togglediv('marcar_{IDCAMPO}_options');">
+								</div>
+							</a>-->
+			</div>
+
+</div>

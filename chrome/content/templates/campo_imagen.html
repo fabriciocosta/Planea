@@ -1,0 +1,14 @@
+<div class="campo campo-imagen {CAMPOCONAYUDA}  campo-{CLASE}" id="field_{IDCAMPO}">
+	<div class="titulo">
+			<label class="titulocampo" title="{AYUDARAPIDA}" onmouseover="javascript:ShowHint('{IDCAMPO}');"><span>{NOMBRECAMPO}</span></label>
+			{MARKER}			
+	</div>
+	<div class="entrada">		
+	<!--style="background-image:url({VALOR});background-size:contain;"-->
+		<img id="{IDCAMPO}_img" height="80px" class="picture" src="{VALOR}"  onload="javascript:loadedImage('{IDCAMPO}_img');" onclick="javascript:openImage( '{IDCAMPO}_img')"/>
+		<input id="{IDCAMPO}" type="file" title="{AYUDARAPIDA}" placeholder="{AYUDARAPIDA}"
+		  onfocus="javascript:EditField('{PATHCAMPO}','{IDCAMPO}');"
+          onchange="javascript:LoadImageFile('{PATHCAMPO}','{IDCAMPO}');"/>
+		 <button id="{IDCAMPO}_loadbutton" class="imagen" onclick="javascript:attachFile('{PATHCAMPO}','{IDCAMPO}');" > </button>
+	</div>
+</div>

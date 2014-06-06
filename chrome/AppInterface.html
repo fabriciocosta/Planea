@@ -1,0 +1,1407 @@
+<!doctype html><html lang="es"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"><title>AppInterface</title><link href="skin/site2.css" rel="stylesheet" media="screen"><script type="text/javascript" src="content/js/wiwe.js"></script><script type="text/javascript" src="content/dbnavigation.js"></script><script type="text/javascript" src="content/dbhelp.js"></script><script type="text/javascript" src="content/tools.js"></script><script type="text/javascript" src="content/js/jquery-1.10.2.js"></script><script type="text/javascript" src="content/html_test.js"></script><style>{STYLE}</style></head><body class="apphtml"><div xmlns:html="http://www.w3.org/1999/xhtml" class="header" id="header">
+					
+					
+				
+				<table width="100%" height="140" cellspacing="0" cellpadding="0" border="0">
+					<tr>
+
+						<td width="100%" valign="top" align="left" class="tdtoc">
+								<div class="logo" onmousemove="javascript:dragWindowMove(this, event)" onmouseup="javascript:stopWindowDrag(this, event);" onmousedown="javascript:startWindowDrag(this, event);" ondblclick="javascript:winMaximize(this, event);">
+										<span xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" id="projectfilepath" class="projectfilepath">C:\Users\fabricio\untitled.pla</span>
+								</div>
+								<input type="range" id="zoomscale" value="100" min="50" max="120" onchange="javascript:changeZoom(this);"/>
+								<div id="minmaxclose" class="minmaxclose">
+									<div id="minimizewin" class="minimizewin" onclick="javascript:winMinimize(this, event);">
+									</div>
+									<div id="maximizewin" class="maximizewin" onclick="javascript:winMaximize(this, event);">
+									</div> 
+									<div id="closewin" class="closewin" onclick="javascript:winClose(this, event);">
+									</div> 
+								</div>
+								
+								
+								<div class="sidebar">
+										
+									<div class="help">
+																		
+										<div id="modo" class="modo modo-noguiado" onclick="javascript:showhidehelps('completa_frente');">
+											<div class="ayudab">
+
+											</div>
+										</div>
+										<div class="buscador">
+											<input type="text" value="buscar" onkeyup="javascript:searchText(this, event);"/>
+										</div>
+									
+										
+									</div>
+																	
+								</div>
+								
+								
+								<div id="dbtree" class="tree css-treeview"><ul id="tabmenu" class="categoria categoria-menu item-0 level-0">
+<li class="categoria item-0 first padre categoria-expanded">
+	<a href="#" onclick="javascript:openclose('menu_app_cuerpo','menu_app_cuerpo');">Archivo</a>
+	<ul id="menu_app_cuerpo" class="secciones deep-0" style="display: block;">
+		<li class="seccion item-0 nuevo first" onclick="javascript:newProject();"><span>Nuevo</span></li>
+		<li class="seccion item-1 abrir" onclick="javascript:openProject();"><span>Abrir</span></li>
+		<li class="seccion item-2 guardar" onclick="javascript:saveProject();"><span>Guardar</span></li>
+		<li class="seccion item-3 guardarcomo" onclick="javascript:saveProjectAs();"><span>Guardar como</span></li>
+		<li class="seccion item-4 imprimir" onclick="javascript:printProject();"><span>Imprimir</span></li>
+		<li class="seccion" onclick="javascript:updateScheme();"><span>Actualizar plantilla</span></li>
+		<li class="seccion" onclick="javascript:restoreScheme();"><span>Restaurar plantilla</span></li>
+		<li class="seccion" onclick="javascript:window.openDialog('chrome://inspector/content/inspector.xul','', 'chrome,dialog=no,resizable=yes');"><span>DOM INSPECTOR<br/></span>
+			
+			</li>
+		
+	</ul>
+</li>
+	<li id="categoria_1_padre" class="categoria item-0 first padre categoria-collapsed">
+<a id="a_categoria_1" title="" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Presentación');openclose('categoria_1_cuerpo','arbol:Presentación');">		 Presentación</a> 				
+		<ul id="categoria_1_cuerpo" class="secciones deep-0 depth-2" style="display: none;">
+			<li id="seccion_1_padre" class="seccion padre-collapsed titulo secdepth-3">
+<a id="a_seccion_1" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Presentación:Título');openclose('seccion_1_cuerpo','arbol:Presentación:Título');">Título</a>				 				 
+				<ul id="seccion_1_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_2_padre" class="seccion padre-collapsed marca secdepth-3">
+<a id="a_seccion_2" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Presentación:Marca');openclose('seccion_2_cuerpo','arbol:Presentación:Marca');">Marca</a>				 				 
+				<ul id="seccion_2_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_3_padre" class="seccion padre-collapsed resumenejecutivo secdepth-3">
+<a id="a_seccion_3" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Presentación:Resumen Ejecutivo');openclose('seccion_3_cuerpo','arbol:Presentación:Resumen Ejecutivo');">Resumen Ejecutivo</a>				 				 
+				<ul id="seccion_3_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_4_padre" class="seccion padre-collapsed titularidad secdepth-3">
+<a id="a_seccion_4" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Presentación:Titularidad');openclose('seccion_4_cuerpo','arbol:Presentación:Titularidad');">Titularidad</a>				 				 
+				<ul id="seccion_4_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+			<li id="seccion_5_padre" class="seccion padre-collapsed organizacion secdepth-4">
+<a id="a_seccion_5" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Presentación:Titularidad:Organización');openclose('seccion_5_cuerpo','arbol:Presentación:Titularidad:Organización');">Organización</a>				 				 
+				<ul id="seccion_5_cuerpo" class="secciones deep-4 depth-4" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_6_padre" class="seccion padre-collapsed personafisica secdepth-4">
+<a id="a_seccion_6" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Presentación:Titularidad:Persona Física');openclose('seccion_6_cuerpo','arbol:Presentación:Titularidad:Persona Física');">Persona Física</a>				 				 
+				<ul id="seccion_6_cuerpo" class="secciones deep-4 depth-4" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_7_padre" class="seccion padre-collapsed responsable secdepth-4">
+<a id="a_seccion_7" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Presentación:Titularidad:Responsable');openclose('seccion_7_cuerpo','arbol:Presentación:Titularidad:Responsable');">Responsable</a>				 				 
+				<ul id="seccion_7_cuerpo" class="secciones deep-4 depth-4" style="display: block;">
+				</ul>
+			</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+
+	<li id="categoria_2_padre" class="categoria item-0 first padre categoria-collapsed">
+<a id="a_categoria_2" title="" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Fundamentos');openclose('categoria_2_cuerpo','arbol:Fundamentos');">		 Fundamentos</a> 				
+		<ul id="categoria_2_cuerpo" class="secciones deep-0 depth-2" style="display: none;">
+			<li id="seccion_8_padre" class="seccion padre-collapsed analisisexterno secdepth-3">
+<a id="a_seccion_8" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Fundamentos:Análisis Externo');openclose('seccion_8_cuerpo','arbol:Fundamentos:Análisis Externo');">Análisis Externo</a>				 				 
+				<ul id="seccion_8_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_9_padre" class="seccion padre-collapsed analisisinterno secdepth-3">
+<a id="a_seccion_9" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Fundamentos:Análisis Interno');openclose('seccion_9_cuerpo','arbol:Fundamentos:Análisis Interno');">Análisis Interno</a>				 				 
+				<ul id="seccion_9_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_10_padre" class="seccion padre-collapsed antecedentes secdepth-3">
+<a id="a_seccion_10" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Fundamentos:Antecedentes');openclose('seccion_10_cuerpo','arbol:Fundamentos:Antecedentes');">Antecedentes</a>				 				 
+				<ul id="seccion_10_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_11_padre" class="seccion padre-collapsed marcoinstitucional secdepth-3">
+<a id="a_seccion_11" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Fundamentos:Marco Institucional');openclose('seccion_11_cuerpo','arbol:Fundamentos:Marco Institucional');">Marco Institucional</a>				 				 
+				<ul id="seccion_11_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_12_padre" class="seccion padre-collapsed alineamiento secdepth-3">
+<a id="a_seccion_12" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Fundamentos:Alineamiento');openclose('seccion_12_cuerpo','arbol:Fundamentos:Alineamiento');">Alineamiento</a>				 				 
+				<ul id="seccion_12_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_13_padre" class="seccion padre-collapsed referencias secdepth-3">
+<a id="a_seccion_13" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Fundamentos:Referencias');openclose('seccion_13_cuerpo','arbol:Fundamentos:Referencias');">Referencias</a>				 				 
+				<ul id="seccion_13_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_14_padre" class="seccion padre-collapsed problematica secdepth-3">
+<a id="a_seccion_14" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Fundamentos:Problemática');openclose('seccion_14_cuerpo','arbol:Fundamentos:Problemática');">Problemática</a>				 				 
+				<ul id="seccion_14_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_15_padre" class="seccion padre-collapsed justificacion secdepth-3">
+<a id="a_seccion_15" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Fundamentos:Justificación');openclose('seccion_15_cuerpo','arbol:Fundamentos:Justificación');">Justificación</a>				 				 
+				<ul id="seccion_15_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+		</ul>
+	</li>
+
+	<li id="categoria_3_padre" class="categoria item-0 first padre categoria-collapsed">
+<a id="a_categoria_3" title="" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Planificación');openclose('categoria_3_cuerpo','arbol:Planificación');">		 Planificación</a> 				
+		<ul id="categoria_3_cuerpo" class="secciones deep-0 depth-2" style="display: none;">
+			<li id="seccion_16_padre" class="seccion padre-collapsed objetivos secdepth-3">
+<a id="a_seccion_16" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Planificación:Objetivos');openclose('seccion_16_cuerpo','arbol:Planificación:Objetivos');">Objetivos</a>				 				 
+				<ul id="seccion_16_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+			<li id="seccion_17_padre" class="seccion padre-collapsed generales secdepth-4">
+<a id="a_seccion_17" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Planificación:Objetivos:Generales');openclose('seccion_17_cuerpo','arbol:Planificación:Objetivos:Generales');">Generales</a>				 				 
+				<ul id="seccion_17_cuerpo" class="secciones deep-4 depth-4" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_18_padre" class="seccion padre-collapsed especificos secdepth-4">
+<a id="a_seccion_18" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Planificación:Objetivos:Específicos');openclose('seccion_18_cuerpo','arbol:Planificación:Objetivos:Específicos');">Específicos</a>				 				 
+				<ul id="seccion_18_cuerpo" class="secciones deep-4 depth-4" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_19_padre" class="seccion padre-collapsed metas secdepth-4">
+<a id="a_seccion_19" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Planificación:Objetivos:Metas');openclose('seccion_19_cuerpo','arbol:Planificación:Objetivos:Metas');">Metas</a>				 				 
+				<ul id="seccion_19_cuerpo" class="secciones deep-4 depth-4" style="display: block;">
+				</ul>
+			</li>
+				</ul>
+			</li>
+			<li id="seccion_20_padre" class="seccion padre-collapsed localizacion secdepth-3">
+<a id="a_seccion_20" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Planificación:Localización');openclose('seccion_20_cuerpo','arbol:Planificación:Localización');">Localización</a>				 				 
+				<ul id="seccion_20_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+			<li id="seccion_21_padre" class="seccion padre-collapsed ubicacion secdepth-4">
+<a id="a_seccion_21" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Planificación:Localización:Ubicación');openclose('seccion_21_cuerpo','arbol:Planificación:Localización:Ubicación');">Ubicación</a>				 				 
+				<ul id="seccion_21_cuerpo" class="secciones deep-4 depth-4" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_22_padre" class="seccion padre-collapsed espacio secdepth-4">
+<a id="a_seccion_22" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Planificación:Localización:Espacio');openclose('seccion_22_cuerpo','arbol:Planificación:Localización:Espacio');">Espacio</a>				 				 
+				<ul id="seccion_22_cuerpo" class="secciones deep-4 depth-4" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_23_padre" class="seccion padre-collapsed infraestructura secdepth-4">
+<a id="a_seccion_23" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Planificación:Localización:Infraestructura');openclose('seccion_23_cuerpo','arbol:Planificación:Localización:Infraestructura');">Infraestructura</a>				 				 
+				<ul id="seccion_23_cuerpo" class="secciones deep-4 depth-4" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_24_padre" class="seccion padre-collapsed equipamiento secdepth-4">
+<a id="a_seccion_24" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Planificación:Localización:Equipamiento');openclose('seccion_24_cuerpo','arbol:Planificación:Localización:Equipamiento');">Equipamiento</a>				 				 
+				<ul id="seccion_24_cuerpo" class="secciones deep-4 depth-4" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_25_padre" class="seccion padre-collapsed seguridad secdepth-4">
+<a id="a_seccion_25" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Planificación:Localización:Seguridad');openclose('seccion_25_cuerpo','arbol:Planificación:Localización:Seguridad');">Seguridad</a>				 				 
+				<ul id="seccion_25_cuerpo" class="secciones deep-4 depth-4" style="display: block;">
+				</ul>
+			</li>
+				</ul>
+			</li>
+			<li id="seccion_26_padre" class="seccion padre-collapsed participantes secdepth-3">
+<a id="a_seccion_26" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Planificación:Participantes');openclose('seccion_26_cuerpo','arbol:Planificación:Participantes');">Participantes</a>				 				 
+				<ul id="seccion_26_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+			<li id="seccion_27_padre" class="seccion padre-collapsed integrantes secdepth-4">
+<a id="a_seccion_27" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Planificación:Participantes:Integrantes');openclose('seccion_27_cuerpo','arbol:Planificación:Participantes:Integrantes');">Integrantes</a>				 				 
+				<ul id="seccion_27_cuerpo" class="secciones deep-4 depth-4" style="display: block;">
+			<li id="seccion_28_padre" class="seccion padre-collapsed Áreasdetrabajo secdepth-5">
+<a id="a_seccion_28" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Planificación:Participantes:Integrantes:Áreas de trabajo');openclose('seccion_28_cuerpo','arbol:Planificación:Participantes:Integrantes:Áreas de trabajo');">Áreas de trabajo</a>				 				 
+				<ul id="seccion_28_cuerpo" class="secciones deep-5 depth-5" style="display: block;">
+				</ul>
+			</li>
+				</ul>
+			</li>
+			<li id="seccion_29_padre" class="seccion padre-collapsed organigrama secdepth-4">
+<a id="a_seccion_29" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Planificación:Participantes:Organigrama');openclose('seccion_29_cuerpo','arbol:Planificación:Participantes:Organigrama');">Organigrama</a>				 				 
+				<ul id="seccion_29_cuerpo" class="secciones deep-4 depth-4" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_30_padre" class="seccion padre-collapsed beneficiariosdirectos secdepth-4">
+<a id="a_seccion_30" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Planificación:Participantes:Beneficiarios Directos');openclose('seccion_30_cuerpo','arbol:Planificación:Participantes:Beneficiarios Directos');">Beneficiarios Directos</a>				 				 
+				<ul id="seccion_30_cuerpo" class="secciones deep-4 depth-4" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_31_padre" class="seccion padre-collapsed beneficiariosindirectos secdepth-4">
+<a id="a_seccion_31" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Planificación:Participantes:Beneficiarios Indirectos');openclose('seccion_31_cuerpo','arbol:Planificación:Participantes:Beneficiarios Indirectos');">Beneficiarios Indirectos</a>				 				 
+				<ul id="seccion_31_cuerpo" class="secciones deep-4 depth-4" style="display: block;">
+				</ul>
+			</li>
+				</ul>
+			</li>
+			<li id="seccion_32_padre" class="seccion padre-collapsed estrategias secdepth-3">
+<a id="a_seccion_32" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Planificación:Estrategias');openclose('seccion_32_cuerpo','arbol:Planificación:Estrategias');">Estrategias</a>				 				 
+				<ul id="seccion_32_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_33_padre" class="seccion padre-collapsed etapas secdepth-3">
+<a id="a_seccion_33" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Planificación:Etapas');openclose('seccion_33_cuerpo','arbol:Planificación:Etapas');">Etapas</a>				 				 
+				<ul id="seccion_33_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_34_padre" class="seccion padre-collapsed actividades secdepth-3">
+<a id="a_seccion_34" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Planificación:Actividades');openclose('seccion_34_cuerpo','arbol:Planificación:Actividades');">Actividades</a>				 				 
+				<ul id="seccion_34_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_35_padre" class="seccion padre-collapsed cronograma secdepth-3">
+<a id="a_seccion_35" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Planificación:Cronograma');openclose('seccion_35_cuerpo','arbol:Planificación:Cronograma');">Cronograma</a>				 				 
+				<ul id="seccion_35_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+		</ul>
+	</li>
+
+	<li id="categoria_4_padre" class="categoria item-0 first padre categoria-collapsed">
+<a id="a_categoria_4" title="" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Recursos');openclose('categoria_4_cuerpo','arbol:Recursos');">		 Recursos</a> 				
+		<ul id="categoria_4_cuerpo" class="secciones deep-0 depth-2" style="display: none;">
+			<li id="seccion_36_padre" class="seccion padre-collapsed marconormativo secdepth-3">
+<a id="a_seccion_36" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Recursos:Marco Normativo');openclose('seccion_36_cuerpo','arbol:Recursos:Marco Normativo');">Marco Normativo</a>				 				 
+				<ul id="seccion_36_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_37_padre" class="seccion padre-collapsed ingresos secdepth-3">
+<a id="a_seccion_37" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Recursos:Ingresos');openclose('seccion_37_cuerpo','arbol:Recursos:Ingresos');">Ingresos</a>				 				 
+				<ul id="seccion_37_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_38_padre" class="seccion padre-collapsed costos secdepth-3">
+<a id="a_seccion_38" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Recursos:Costos');openclose('seccion_38_cuerpo','arbol:Recursos:Costos');">Costos</a>				 				 
+				<ul id="seccion_38_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_39_padre" class="seccion padre-collapsed presupuestoeconomico secdepth-3">
+<a id="a_seccion_39" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Recursos:Presupuesto Económico');openclose('seccion_39_cuerpo','arbol:Recursos:Presupuesto Económico');">Presupuesto Económico</a>				 				 
+				<ul id="seccion_39_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_40_padre" class="seccion padre-collapsed presupuestofinanciero secdepth-3">
+<a id="a_seccion_40" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Recursos:Presupuesto Financiero');openclose('seccion_40_cuerpo','arbol:Recursos:Presupuesto Financiero');">Presupuesto Financiero</a>				 				 
+				<ul id="seccion_40_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_41_padre" class="seccion padre-collapsed estrategiasdefinanciamiento secdepth-3">
+<a id="a_seccion_41" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Recursos:Estrategias de Financiamiento');openclose('seccion_41_cuerpo','arbol:Recursos:Estrategias de Financiamiento');">Estrategias de Financiamiento</a>				 				 
+				<ul id="seccion_41_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_42_padre" class="seccion padre-collapsed necesidades secdepth-3">
+<a id="a_seccion_42" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Recursos:Necesidades');openclose('seccion_42_cuerpo','arbol:Recursos:Necesidades');">Necesidades</a>				 				 
+				<ul id="seccion_42_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_43_padre" class="seccion padre-collapsed comunicacion secdepth-3">
+<a id="a_seccion_43" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Recursos:Comunicación');openclose('seccion_43_cuerpo','arbol:Recursos:Comunicación');">Comunicación</a>				 				 
+				<ul id="seccion_43_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+			<li id="seccion_44_padre" class="seccion padre-collapsed interna secdepth-4">
+<a id="a_seccion_44" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Recursos:Comunicación:Interna');openclose('seccion_44_cuerpo','arbol:Recursos:Comunicación:Interna');">Interna</a>				 				 
+				<ul id="seccion_44_cuerpo" class="secciones deep-4 depth-4" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_45_padre" class="seccion padre-collapsed externa secdepth-4">
+<a id="a_seccion_45" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Recursos:Comunicación:Externa');openclose('seccion_45_cuerpo','arbol:Recursos:Comunicación:Externa');">Externa</a>				 				 
+				<ul id="seccion_45_cuerpo" class="secciones deep-4 depth-4" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_46_padre" class="seccion padre-collapsed canales secdepth-4">
+<a id="a_seccion_46" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Recursos:Comunicación:Canales');openclose('seccion_46_cuerpo','arbol:Recursos:Comunicación:Canales');">Canales</a>				 				 
+				<ul id="seccion_46_cuerpo" class="secciones deep-4 depth-4" style="display: block;">
+				</ul>
+			</li>
+				</ul>
+			</li>
+			<li id="seccion_47_padre" class="seccion padre-collapsed modelodegestion secdepth-3">
+<a id="a_seccion_47" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Recursos:Modelo de Gestión');openclose('seccion_47_cuerpo','arbol:Recursos:Modelo de Gestión');">Modelo de Gestión</a>				 				 
+				<ul id="seccion_47_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+		</ul>
+	</li>
+
+	<li id="categoria_5_padre" class="categoria item-0 first padre categoria-collapsed">
+<a id="a_categoria_5" title="" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Sustentabilidad');openclose('categoria_5_cuerpo','arbol:Sustentabilidad');">		 Sustentabilidad</a> 				
+		<ul id="categoria_5_cuerpo" class="secciones deep-0 depth-2" style="display: none;">
+			<li id="seccion_48_padre" class="seccion padre-collapsed factoresmultiplicadores secdepth-3">
+<a id="a_seccion_48" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Sustentabilidad:Factores multiplicadores');openclose('seccion_48_cuerpo','arbol:Sustentabilidad:Factores multiplicadores');">Factores multiplicadores</a>				 				 
+				<ul id="seccion_48_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_49_padre" class="seccion padre-collapsed externalidades secdepth-3">
+<a id="a_seccion_49" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Sustentabilidad:Externalidades');openclose('seccion_49_cuerpo','arbol:Sustentabilidad:Externalidades');">Externalidades</a>				 				 
+				<ul id="seccion_49_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_50_padre" class="seccion padre-collapsed contraprestaciones secdepth-3">
+<a id="a_seccion_50" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Sustentabilidad:Contraprestaciones');openclose('seccion_50_cuerpo','arbol:Sustentabilidad:Contraprestaciones');">Contraprestaciones</a>				 				 
+				<ul id="seccion_50_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_51_padre" class="seccion padre-collapsed accesibilidad secdepth-3">
+<a id="a_seccion_51" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Sustentabilidad:Accesibilidad');openclose('seccion_51_cuerpo','arbol:Sustentabilidad:Accesibilidad');">Accesibilidad</a>				 				 
+				<ul id="seccion_51_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_52_padre" class="seccion padre-collapsed continuidad secdepth-3">
+<a id="a_seccion_52" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Sustentabilidad:Continuidad');openclose('seccion_52_cuerpo','arbol:Sustentabilidad:Continuidad');">Continuidad</a>				 				 
+				<ul id="seccion_52_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_53_padre" class="seccion padre-collapsed viabilidad secdepth-3">
+<a id="a_seccion_53" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Sustentabilidad:Viabilidad');openclose('seccion_53_cuerpo','arbol:Sustentabilidad:Viabilidad');">Viabilidad</a>				 				 
+				<ul id="seccion_53_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_54_padre" class="seccion padre-collapsed registro secdepth-3">
+<a id="a_seccion_54" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Sustentabilidad:Registro');openclose('seccion_54_cuerpo','arbol:Sustentabilidad:Registro');">Registro</a>				 				 
+				<ul id="seccion_54_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_55_padre" class="seccion padre-collapsed resultados secdepth-3">
+<a id="a_seccion_55" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Sustentabilidad:Resultados');openclose('seccion_55_cuerpo','arbol:Sustentabilidad:Resultados');">Resultados</a>				 				 
+				<ul id="seccion_55_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+			<li id="seccion_56_padre" class="seccion padre-collapsed minima secdepth-4">
+<a id="a_seccion_56" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Sustentabilidad:Resultados:Mínima');openclose('seccion_56_cuerpo','arbol:Sustentabilidad:Resultados:Mínima');">Mínima</a>				 				 
+				<ul id="seccion_56_cuerpo" class="secciones deep-4 depth-4" style="display: block;">
+				</ul>
+			</li>
+			<li id="seccion_57_padre" class="seccion padre-collapsed maxima secdepth-4">
+<a id="a_seccion_57" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Sustentabilidad:Resultados:Máxima');openclose('seccion_57_cuerpo','arbol:Sustentabilidad:Resultados:Máxima');">Máxima</a>				 				 
+				<ul id="seccion_57_cuerpo" class="secciones deep-4 depth-4" style="display: block;">
+				</ul>
+			</li>
+				</ul>
+			</li>
+			<li id="seccion_58_padre" class="seccion padre-collapsed evaluacion secdepth-3">
+<a id="a_seccion_58" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Sustentabilidad:Evaluación');openclose('seccion_58_cuerpo','arbol:Sustentabilidad:Evaluación');">Evaluación</a>				 				 
+				<ul id="seccion_58_cuerpo" class="secciones deep-3 depth-3" style="display: block;">
+			<li id="seccion_59_padre" class="seccion padre-collapsed indicadores secdepth-4">
+<a id="a_seccion_59" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Sustentabilidad:Evaluación:Indicadores');openclose('seccion_59_cuerpo','arbol:Sustentabilidad:Evaluación:Indicadores');">Indicadores</a>				 				 
+				<ul id="seccion_59_cuerpo" class="secciones deep-4 depth-4" style="display: block;">
+				</ul>
+			</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+
+	<li id="categoria_6_padre" class="categoria item-0 first padre categoria-collapsed">
+<a id="a_categoria_6" title="" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Anexos');openclose('categoria_6_cuerpo','arbol:Anexos');">		 Anexos</a> 				
+		<ul id="categoria_6_cuerpo" class="secciones deep-0 depth-2" style="display: none;">
+		</ul>
+	</li>
+
+	<li id="categoria_7_padre" class="categoria item-0 first padre categoria-collapsed">
+<a id="a_categoria_7" title="" class="{MARKER}" href="#" onclick="javascript:loadFields('arbol:Informes');openclose('categoria_7_cuerpo','arbol:Informes');">		 Informes</a> 				
+		<ul id="categoria_7_cuerpo" class="secciones deep-0 depth-2" style="display: none;">
+		</ul>
+	</li>
+
+</ul>
+</div>
+						</td>
+					</tr>
+				</table>
+				
+				
+					
+
+
+
+
+
+				
+			    </div><div xmlns:html="http://www.w3.org/1999/xhtml" id="container">		
+						
+
+
+				<div class="panel" style="display: block;">
+				
+				
+						<div id="dbmultipage" class="multipage">
+								
+								<div id="dbformularios" class="formularios"/>
+								<div class="formulariosbottom">										
+								</div>
+								<div id="ayudaguia-frente" class="drag contenedor" style="display: none; top: 50px;">
+									<div id="cerrarayuda" class="close" onclick="javascript:hidediv('ayudaguia-frente');" border="0">
+									</div>
+									<div id="cambiarayuda" class="cambiarayuda" onclick="javascript:cambiarayuda('ayudaguia-frente');" border="0">
+									</div>
+									<div class="textocontenedorscroll" id="ayuda_contenedor_scroll_frente">
+										<span class="textocontenedor" id="ayuda_contenedor_frente"><div xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" class="nombreh">Informes<br/></div><div xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" class="resumenh"><br/></div><div xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" class="cuerpoh"><br/></div></span>
+									</div>
+								</div>
+						<div xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" id="page_0" pageid="0" number="1" class="page  page-vertical"><div id="dbformulario_53_" class="formulario seccion-informes" sectionpath="arbol:Informes" order="53" style="opacity: 1; display: block;"><div class="campo campo-multiple campo-sin-ayuda  campo-informes" id="field_96">
+	<div class="titulo">
+		<label class="titulocampo" title=" " onmouseover="javascript:ShowHint('96');"><span>Informes</span><span class="helper" id="ayuda_96_" onclick="javascript:toggleHelp('arbol:Informes:Informes','96');">
+	<span class="ayuda" style="display: inline;"> </span>
+	<div class="ayudarapida" id="ayudarapida_96" style="display: none;">  </div>
+</span></label>
+		<div class="marker">
+			<div id="markers_96" class="markers">
+							<a class="marker-selected"><div id="marcar_96_selected" class="marker-blanco marker-selected" onclick="javascript:togglediv('marcar_96_options');">
+												</div>
+							</a>
+												
+							<div class="marker_options" id="marcar_96_options">
+
+										<div id="marcar_96_options_blanco" value="blanco" class="marker-blanco marker-option" onclick="javascript:SetMarker( 'arbol:Informes:Informes', '96', 'blanco' );">
+										</div>
+							
+										<div id="marcar_96_options_verde" value="verde" class="marker-verde marker-option" onclick="javascript:SetMarker( 'arbol:Informes:Informes', '96', 'verde' );">
+										</div>
+															
+										<div id="marcar_96_options_amarillo" value="amarillo" class="marker-amarillo marker-option" onclick="javascript:SetMarker( 'arbol:Informes:Informes', '96', 'amarillo' );">
+										</div>
+										<!--			
+										<div id="marcar_96_options_rojo" value="rojo" class="marker-rojo marker-option" onclick="javascript:SetMarker( 'arbol:Informes:Informes', '96', 'rojo' );">
+										</div>-->
+										
+							</div>
+							<!--
+							<a class="marker-button">
+								<div class="marker_button" id="marcar_96_" onclick="javascript:togglediv('marcar_96_options');">
+								</div>
+							</a>-->
+			</div>
+
+</div>
+
+	</div>
+	<div class="entrada">
+<div class="object_records object_records_3" id="informe_records_gral">
+	
+<table cellspacing="0" cellpadding="0" border="0" class="multiple table_records" id="informe_records">
+	<thead>
+		<tr>
+<td class="titulo">Título</td><td class="descripcion">Descripción</td><td class="seleccion">Selección de campos del reporte</td>
+			<td class="record_actions">
+<div class="object_add">
+	<span class="ficha ficha_add" onclick="javascript:showaction(); FocusOut(); setTimeout( function() { AddRecord('informe','arbol:Informes:Informes')}, 100 );" title="Nuevo/a informe"> </span>
+</div></td>
+		</tr>
+	</thead>
+	<tbody>
+	
+<tr id="informe_0" class="object_record editing" onblur="javascript:StopEditRecord('informe_0');" onfocus="javascript:StartEditRecord('informe_0')">
+	<td class="titulo record_field"><div class="campo campo-texto campo-sin-ayuda campo-informes" id="field_informe_0_titulo">
+	<div class="titulo">
+			<label class="titulocampo" title=" " onmouseover="javascript:ShowHint('informe_0_titulo');"><span>Título</span><span class="helper" id="ayuda_informe_0_titulo_" onclick="javascript:toggleHelp('arbol:Informes:Informes:informe_0:titulo','informe_0_titulo');">
+	<span class="ayuda" style="display: inline;"> </span>
+	<div class="ayudarapida" id="ayudarapida_informe_0_titulo" style="display: none;">  </div>
+</span></label>
+			<div class="marker">
+			<div id="markers_informe_0_titulo" class="markers">
+							<a class="marker-selected"><div id="marcar_informe_0_titulo_selected" class="marker-blanco marker-selected" onclick="javascript:togglediv('marcar_informe_0_titulo_options');">
+												</div>
+							</a>
+												
+							<div class="marker_options" id="marcar_informe_0_titulo_options">
+
+										<div id="marcar_informe_0_titulo_options_blanco" value="blanco" class="marker-blanco marker-option" onclick="javascript:SetMarker( 'arbol:Informes:Informes:informe_0:titulo', 'informe_0_titulo', 'blanco' );">
+										</div>
+							
+										<div id="marcar_informe_0_titulo_options_verde" value="verde" class="marker-verde marker-option" onclick="javascript:SetMarker( 'arbol:Informes:Informes:informe_0:titulo', 'informe_0_titulo', 'verde' );">
+										</div>
+															
+										<div id="marcar_informe_0_titulo_options_amarillo" value="amarillo" class="marker-amarillo marker-option" onclick="javascript:SetMarker( 'arbol:Informes:Informes:informe_0:titulo', 'informe_0_titulo', 'amarillo' );">
+										</div>
+										<!--			
+										<div id="marcar_informe_0_titulo_options_rojo" value="rojo" class="marker-rojo marker-option" onclick="javascript:SetMarker( 'arbol:Informes:Informes:informe_0:titulo', 'informe_0_titulo', 'rojo' );">
+										</div>-->
+										
+							</div>
+							<!--
+							<a class="marker-button">
+								<div class="marker_button" id="marcar_informe_0_titulo_" onclick="javascript:togglediv('marcar_informe_0_titulo_options');">
+								</div>
+							</a>-->
+			</div>
+
+</div>
+			
+	</div>
+	<div class="entrada">
+		
+		<input type="text" class="texto editing" id="informe_0_titulo" value="" title=" " placeholder=" " onfocus="javascript:OpenHelp('arbol:Informes:Informes:informe_0:titulo');EditField('arbol:Informes:Informes:informe_0:titulo','informe_0_titulo');" onclick="EditField('arbol:Informes:Informes:informe_0:titulo','informe_0_titulo');" onblur="javascript:SaveField('arbol:Informes:Informes:informe_0:titulo','informe_0_titulo');StopEditField('arbol:Informes:Informes:informe_0:titulo','informe_0_titulo');"/>
+			
+			<!--
+		 <textarea class="parrafo" id="informe_0_titulo"  title=" " placeholder=" " style="display: block;" rows="2"
+		  onblur="javascript:SaveField('arbol:Informes:Informes:informe_0:titulo','informe_0_titulo');StopEditField('arbol:Informes:Informes:informe_0:titulo','informe_0_titulo');"
+		  onfocus="javascript:EditField('arbol:Informes:Informes:informe_0:titulo','informe_0_titulo');"
+		  onchange="javascript:SaveField('arbol:Informes:Informes:informe_0:titulo','informe_0_titulo');"
+		  formula="{FORMULA}"
+		></textarea><cleartxtarea/>-->
+		
+		 <!--
+		 <input type="text"  id="input_informe_0_titulo" type="text" value="" title=" " placeholder=" " onfocus="javascript:OpenHelp('arbol:Informes:Informes:informe_0:titulo');"
+         onchange="javascript:SaveField('arbol:Informes:Informes:informe_0:titulo','input_informe_0_titulo');"
+         />-->
+	</div>
+</div>
+<div class="record_actions"><span class="delete" onclick="javascript:DeleteRecord('informe','informe_0');" title="Eliminar"> </span>
+<div class="object_add">
+	<span class="ficha ficha_add" onclick="javascript:showaction(); FocusOut(); setTimeout( function() { AddRecord('informe','arbol:Informes:Informes')}, 100 );" title="Nuevo/a informe"> </span>
+</div><span class="order" onclick="javascript:OrderRecord('informe','informe_0');" title="Eliminar"> </span><!--<span class="execute executeTXT" onclick="javascript:ExecuteRecord('informe_0');"> </span>--><span class="execute toggletreesel" onclick="javascript:ToggleTreeSel('informe_0');"> </span><span class="execute executeDOCX" onclick="javascript:printDOC('informe_0');"> </span><span class="execute executePDF" onclick="javascript:printPDF('informe_0');"> </span></div><span class="order order-1 order-num">1</span><span class="orderalpha orderalpha-1 order-alpha">A</span></td><td class="descripcion record_field"><div class="campo campo-parrafo campo-sin-ayuda  campo-informes">
+	<div class="titulo">
+		<label class="titulocampo" tootltiptext="Descripción" title=" " onmouseover="javascript:ShowHint('informe_0_descripcion');"><span>Descripción</span><span class="helper" id="ayuda_informe_0_descripcion_" onclick="javascript:toggleHelp('arbol:Informes:Informes:informe_0:descripcion','informe_0_descripcion');">
+	<span class="ayuda" style="display: inline;"> </span>
+	<div class="ayudarapida" id="ayudarapida_informe_0_descripcion" style="display: none;">  </div>
+</span></label>
+		<div class="marker">
+			<div id="markers_informe_0_descripcion" class="markers">
+							<a class="marker-selected"><div id="marcar_informe_0_descripcion_selected" class="marker-blanco marker-selected" onclick="javascript:togglediv('marcar_informe_0_descripcion_options');">
+												</div>
+							</a>
+												
+							<div class="marker_options" id="marcar_informe_0_descripcion_options">
+
+										<div id="marcar_informe_0_descripcion_options_blanco" value="blanco" class="marker-blanco marker-option" onclick="javascript:SetMarker( 'arbol:Informes:Informes:informe_0:descripcion', 'informe_0_descripcion', 'blanco' );">
+										</div>
+							
+										<div id="marcar_informe_0_descripcion_options_verde" value="verde" class="marker-verde marker-option" onclick="javascript:SetMarker( 'arbol:Informes:Informes:informe_0:descripcion', 'informe_0_descripcion', 'verde' );">
+										</div>
+															
+										<div id="marcar_informe_0_descripcion_options_amarillo" value="amarillo" class="marker-amarillo marker-option" onclick="javascript:SetMarker( 'arbol:Informes:Informes:informe_0:descripcion', 'informe_0_descripcion', 'amarillo' );">
+										</div>
+										<!--			
+										<div id="marcar_informe_0_descripcion_options_rojo" value="rojo" class="marker-rojo marker-option" onclick="javascript:SetMarker( 'arbol:Informes:Informes:informe_0:descripcion', 'informe_0_descripcion', 'rojo' );">
+										</div>-->
+										
+							</div>
+							<!--
+							<a class="marker-button">
+								<div class="marker_button" id="marcar_informe_0_descripcion_" onclick="javascript:togglediv('marcar_informe_0_descripcion_options');">
+								</div>
+							</a>-->
+			</div>
+
+</div>
+
+	</div>
+	<div class="entrada">
+		<div class="ayudarapida_editor ayudarapida_editor_false" id="ayudarapida_informe_0_descripcion_editor" style="display: block;" onclick="javascript:hidediv('ayudarapida_informe_0_descripcion_editor');document.getElementById('informe_0_descripcion').click();">  </div>
+		<editor class="parrafo" id="informe_0_descripcion" title=" " placeholder=" " src="data:text/html;charset=UTF-8,%3Chtml%3E%3Chead%3E%3Cstyle%3E*%20%7B%20font-family%3A%20Arial%3B%20color%3A%20%23555%3B%20%7D%3C%2Fstyle%3E%3C%2Fhead%3E%3Cbody%3E%3C%2Fbody%3E%3C%2Fhtml%3E" editortype="html" onfocus="EditField('arbol:Informes:Informes:informe_0:descripcion','informe_0_descripcion');javascript:hidediv('ayudarapida_informe_0_descripcion_editor');" onclick="javascript:log('check: editor click ' + this.contentDocument.documentElement); this.makeEditable('html'); var sed = this.contentDocument.documentElement; setTimeout( function() {sed.focus();}, 100); EditField('arbol:Informes:Informes:informe_0:descripcion','informe_0_descripcion');javascript:hidediv('ayudarapida_informe_0_descripcion_editor');" onkeydown="var sed = this.contentDocument.documentElement; setTimeout( function() {sed.focus();}, 100);"/>
+				<div class="edittools">
+				<button class="bold" onclick="javascript:  var editor = document.getElementById('informe_0_descripcion'); editor.contentDocument.execCommand('bold', false, null); "/>
+				<button class="italic" onclick="javascript:  var editor = document.getElementById('informe_0_descripcion'); editor.contentDocument.execCommand('italic', false, null);"/>
+				<button class="underline" onclick="javascript:  var editor = document.getElementById('informe_0_descripcion'); editor.contentDocument.execCommand('underline', false, null);"/>
+				<button class="jleft" onclick="javascript:  var editor = document.getElementById('informe_0_descripcion'); editor.contentDocument.execCommand('JustifyLeft', false, null);"/>
+				<button class="jcenter" onclick="javascript:  var editor = document.getElementById('informe_0_descripcion'); editor.contentDocument.execCommand('JustifyCenter', false, null);"/>
+				<button class="jright" onclick="javascript:  var editor = document.getElementById('informe_0_descripcion'); editor.contentDocument.execCommand('JustifyRight', false, null);"/>
+				<button class="savenow" onclick="javascript: var editor = document.getElementById('informe_0_descripcion'); SaveField('arbol:Informes:Informes:informe_0:descripcion','informe_0_descripcion');"/>
+				</div>
+		
+	</div>
+</div>
+<div class="record_actions"><span class="delete" onclick="javascript:DeleteRecord('informe','informe_0');" title="Eliminar"> </span>
+<div class="object_add">
+	<span class="ficha ficha_add" onclick="javascript:showaction(); FocusOut(); setTimeout( function() { AddRecord('informe','arbol:Informes:Informes')}, 100 );" title="Nuevo/a informe"> </span>
+</div><span class="order" onclick="javascript:OrderRecord('informe','informe_0');" title="Eliminar"> </span><!--<span class="execute executeTXT" onclick="javascript:ExecuteRecord('informe_0');"> </span>--><span class="execute toggletreesel" onclick="javascript:ToggleTreeSel('informe_0');"> </span><span class="execute executeDOCX" onclick="javascript:printDOC('informe_0');"> </span><span class="execute executePDF" onclick="javascript:printPDF('informe_0');"> </span></div><span class="order order-1 order-num">1</span><span class="orderalpha orderalpha-1 order-alpha">A</span></td><td class="seleccion record_field"><div class="campo campo-arbolseleccion campo-sin-ayuda  campo-informes">
+	<div class="titulo">
+		<label class="titulocampo" title=" " onmouseover="javascript:ShowHint('informe_0_seleccion');"><span>Selección de campos del reporte</span></label>
+		<div class="marker">
+			<div id="markers_informe_0_seleccion" class="markers">
+							<a class="marker-selected"><div id="marcar_informe_0_seleccion_selected" class="marker-blanco marker-selected" onclick="javascript:togglediv('marcar_informe_0_seleccion_options');">
+												</div>
+							</a>
+												
+							<div class="marker_options" id="marcar_informe_0_seleccion_options">
+
+										<div id="marcar_informe_0_seleccion_options_blanco" value="blanco" class="marker-blanco marker-option" onclick="javascript:SetMarker( 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion', 'blanco' );">
+										</div>
+							
+										<div id="marcar_informe_0_seleccion_options_verde" value="verde" class="marker-verde marker-option" onclick="javascript:SetMarker( 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion', 'verde' );">
+										</div>
+															
+										<div id="marcar_informe_0_seleccion_options_amarillo" value="amarillo" class="marker-amarillo marker-option" onclick="javascript:SetMarker( 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion', 'amarillo' );">
+										</div>
+										<!--			
+										<div id="marcar_informe_0_seleccion_options_rojo" value="rojo" class="marker-rojo marker-option" onclick="javascript:SetMarker( 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion', 'rojo' );">
+										</div>-->
+										
+							</div>
+							<!--
+							<a class="marker-button">
+								<div class="marker_button" id="marcar_informe_0_seleccion_" onclick="javascript:togglediv('marcar_informe_0_seleccion_options');">
+								</div>
+							</a>-->
+			</div>
+
+</div>
+
+	</div>
+	<div class="entrada reporte" id="arbolseleccion_informe_0_seleccion">
+	<div id="informe_0_seleccion_valores" style="display: none;"/>
+	<ul class="categoria item-0 level-0">
+	<li id="categoria_1_padre" class="categoria item-0 first padre categoria-collapsed">
+		 <input type="checkbox" id="categoria_1_sel" pathsel="arbol:Presentación" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>		 <a id="a_categoria_1" class="calc-marker-blanco" title="">Presentación</a>
+		<ul id="categoria_1_cuerpo_sel" class="secciones  deep-0" style="display: block;">
+			<li id="seccion_1_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_1_sel" pathsel="arbol:Presentación:Título" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_1" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_1_cuerpo_sel');">Título</a>
+				<ul id="seccion_1_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_1_sel" pathsel="arbol:Presentación:Título:Título" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_1" class="calc-marker-blanco">Título</a></li>
+				</ul>
+			</li>
+			<li id="seccion_2_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_2_sel" pathsel="arbol:Presentación:Marca" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_2" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_2_cuerpo_sel');">Marca</a>
+				<ul id="seccion_2_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_2_sel" pathsel="arbol:Presentación:Marca:Marca" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_2" class="calc-marker-blanco">Marca</a></li>
+				</ul>
+			</li>
+			<li id="seccion_3_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_3_sel" pathsel="arbol:Presentación:Resumen Ejecutivo" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_3" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_3_cuerpo_sel');">Resumen Ejecutivo</a>
+				<ul id="seccion_3_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_3_sel" pathsel="arbol:Presentación:Resumen Ejecutivo:Resumen Ejecutivo" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_3" class="calc-marker-blanco">Resumen Ejecutivo</a></li>
+				</ul>
+			</li>
+			<li id="seccion_4_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_4_sel" pathsel="arbol:Presentación:Titularidad" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_4" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_4_cuerpo_sel');">Titularidad</a>
+				<ul id="seccion_4_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="seccion_5_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_5_sel" pathsel="arbol:Presentación:Titularidad:Organización" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_5" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_5_cuerpo_sel');">Organización</a>
+				<ul id="seccion_5_cuerpo_sel" class="secciones deep-4" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_4_sel" pathsel="arbol:Presentación:Titularidad:Organización:Nombre de la organización" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_4" class="calc-marker-blanco">Nombre de la organización</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_5_sel" pathsel="arbol:Presentación:Titularidad:Organización:Forma jurídica" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_5" class="calc-marker-blanco">Forma jurídica</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_6_sel" pathsel="arbol:Presentación:Titularidad:Organización:Número de identificación tributaria" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_6" class="calc-marker-blanco">Número de identificación tributaria</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_7_sel" pathsel="arbol:Presentación:Titularidad:Organización:Domicilio" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_7" class="calc-marker-blanco">Domicilio</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_8_sel" pathsel="arbol:Presentación:Titularidad:Organización:Ciudad" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_8" class="calc-marker-blanco">Ciudad</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_9_sel" pathsel="arbol:Presentación:Titularidad:Organización:Código Postal" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_9" class="calc-marker-blanco">Código Postal</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_10_sel" pathsel="arbol:Presentación:Titularidad:Organización:Provincia" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_10" class="calc-marker-blanco">Provincia</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_11_sel" pathsel="arbol:Presentación:Titularidad:Organización:País" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_11" class="calc-marker-blanco">País</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_12_sel" pathsel="arbol:Presentación:Titularidad:Organización:Teléfono" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_12" class="calc-marker-blanco">Teléfono</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_13_sel" pathsel="arbol:Presentación:Titularidad:Organización:Mail" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_13" class="calc-marker-blanco">Mail</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_14_sel" pathsel="arbol:Presentación:Titularidad:Organización:Web" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_14" class="calc-marker-blanco">Web</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_15_sel" pathsel="arbol:Presentación:Titularidad:Organización:Redes Sociales" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_15" class="calc-marker-blanco">Redes Sociales</a></li>
+				</ul>
+			</li>
+			<li id="seccion_6_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_6_sel" pathsel="arbol:Presentación:Titularidad:Persona Física" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_6" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_6_cuerpo_sel');">Persona Física</a>
+				<ul id="seccion_6_cuerpo_sel" class="secciones deep-4" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_16_sel" pathsel="arbol:Presentación:Titularidad:Persona Física:Nombre" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_16" class="calc-marker-blanco">Nombre</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_17_sel" pathsel="arbol:Presentación:Titularidad:Persona Física:Apellido" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_17" class="calc-marker-blanco">Apellido</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_18_sel" pathsel="arbol:Presentación:Titularidad:Persona Física:Nº Documento de Identidad" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_18" class="calc-marker-blanco">Nº Documento de Identidad</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_19_sel" pathsel="arbol:Presentación:Titularidad:Persona Física:Fecha de nacimiento" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_19" class="calc-marker-blanco">Fecha de nacimiento</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_20_sel" pathsel="arbol:Presentación:Titularidad:Persona Física:Domicilio" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_20" class="calc-marker-blanco">Domicilio</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_21_sel" pathsel="arbol:Presentación:Titularidad:Persona Física:Código Postal" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_21" class="calc-marker-blanco">Código Postal</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_22_sel" pathsel="arbol:Presentación:Titularidad:Persona Física:Ciudad" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_22" class="calc-marker-blanco">Ciudad</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_23_sel" pathsel="arbol:Presentación:Titularidad:Persona Física:Provincia" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_23" class="calc-marker-blanco">Provincia</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_24_sel" pathsel="arbol:Presentación:Titularidad:Persona Física:País" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_24" class="calc-marker-blanco">País</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_25_sel" pathsel="arbol:Presentación:Titularidad:Persona Física:Teléfono" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_25" class="calc-marker-blanco">Teléfono</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_26_sel" pathsel="arbol:Presentación:Titularidad:Persona Física:Web" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_26" class="calc-marker-blanco">Web</a></li>
+				</ul>
+			</li>
+			<li id="seccion_7_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_7_sel" pathsel="arbol:Presentación:Titularidad:Responsable" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_7" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_7_cuerpo_sel');">Responsable</a>
+				<ul id="seccion_7_cuerpo_sel" class="secciones deep-4" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_27_sel" pathsel="arbol:Presentación:Titularidad:Responsable:Nombre" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_27" class="calc-marker-blanco">Nombre</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_28_sel" pathsel="arbol:Presentación:Titularidad:Responsable:Apellido" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_28" class="calc-marker-blanco">Apellido</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_29_sel" pathsel="arbol:Presentación:Titularidad:Responsable:Mail" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_29" class="calc-marker-blanco">Mail</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_30_sel" pathsel="arbol:Presentación:Titularidad:Responsable:Teléfono" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_30" class="calc-marker-blanco">Teléfono</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_31_sel" pathsel="arbol:Presentación:Titularidad:Responsable:Web" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_31" class="calc-marker-blanco">Web</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_32_sel" pathsel="arbol:Presentación:Titularidad:Responsable:Redes Sociales" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_32" class="calc-marker-blanco">Redes Sociales</a></li>
+				</ul>
+			</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+
+	<li id="categoria_2_padre" class="categoria item-0 first padre categoria-collapsed">
+		 <input type="checkbox" id="categoria_2_sel" pathsel="arbol:Fundamentos" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>		 <a id="a_categoria_2" class="calc-marker-blanco" title="">Fundamentos</a>
+		<ul id="categoria_2_cuerpo_sel" class="secciones  deep-0" style="display: block;">
+			<li id="seccion_8_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_8_sel" pathsel="arbol:Fundamentos:Análisis Externo" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_8" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_8_cuerpo_sel');">Análisis Externo</a>
+				<ul id="seccion_8_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_33_sel" pathsel="arbol:Fundamentos:Análisis Externo:Análisis Externo" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_33" class="calc-marker-blanco">Análisis Externo</a></li>
+				</ul>
+			</li>
+			<li id="seccion_9_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_9_sel" pathsel="arbol:Fundamentos:Análisis Interno" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_9" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_9_cuerpo_sel');">Análisis Interno</a>
+				<ul id="seccion_9_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_34_sel" pathsel="arbol:Fundamentos:Análisis Interno:Análisis Interno" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_34" class="calc-marker-blanco">Análisis Interno</a></li>
+				</ul>
+			</li>
+			<li id="seccion_10_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_10_sel" pathsel="arbol:Fundamentos:Antecedentes" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_10" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_10_cuerpo_sel');">Antecedentes</a>
+				<ul id="seccion_10_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_35_sel" pathsel="arbol:Fundamentos:Antecedentes:Antecedentes" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_35" class="calc-marker-blanco">Antecedentes</a></li>
+				</ul>
+			</li>
+			<li id="seccion_11_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_11_sel" pathsel="arbol:Fundamentos:Marco Institucional" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_11" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_11_cuerpo_sel');">Marco Institucional</a>
+				<ul id="seccion_11_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_36_sel" pathsel="arbol:Fundamentos:Marco Institucional:Marco institucional" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_36" class="calc-marker-blanco">Marco institucional</a></li>
+				</ul>
+			</li>
+			<li id="seccion_12_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_12_sel" pathsel="arbol:Fundamentos:Alineamiento" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_12" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_12_cuerpo_sel');">Alineamiento</a>
+				<ul id="seccion_12_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_37_sel" pathsel="arbol:Fundamentos:Alineamiento:Alineamiento" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_37" class="calc-marker-blanco">Alineamiento</a></li>
+				</ul>
+			</li>
+			<li id="seccion_13_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_13_sel" pathsel="arbol:Fundamentos:Referencias" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_13" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_13_cuerpo_sel');">Referencias</a>
+				<ul id="seccion_13_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_38_sel" pathsel="arbol:Fundamentos:Referencias:Referencias" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_38" class="calc-marker-blanco">Referencias</a></li>
+				</ul>
+			</li>
+			<li id="seccion_14_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_14_sel" pathsel="arbol:Fundamentos:Problemática" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_14" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_14_cuerpo_sel');">Problemática</a>
+				<ul id="seccion_14_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_39_sel" pathsel="arbol:Fundamentos:Problemática:Problemática" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_39" class="calc-marker-blanco">Problemática</a></li>
+				</ul>
+			</li>
+			<li id="seccion_15_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_15_sel" pathsel="arbol:Fundamentos:Justificación" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_15" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_15_cuerpo_sel');">Justificación</a>
+				<ul id="seccion_15_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_40_sel" pathsel="arbol:Fundamentos:Justificación:Justificación" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_40" class="calc-marker-blanco">Justificación</a></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+
+	<li id="categoria_3_padre" class="categoria item-0 first padre categoria-collapsed">
+		 <input type="checkbox" id="categoria_3_sel" pathsel="arbol:Planificación" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>		 <a id="a_categoria_3" class="calc-marker-blanco" title="">Planificación</a>
+		<ul id="categoria_3_cuerpo_sel" class="secciones  deep-0" style="display: block;">
+			<li id="seccion_16_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_16_sel" pathsel="arbol:Planificación:Objetivos" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_16" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_16_cuerpo_sel');">Objetivos</a>
+				<ul id="seccion_16_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="seccion_17_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_17_sel" pathsel="arbol:Planificación:Objetivos:Generales" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_17" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_17_cuerpo_sel');">Generales</a>
+				<ul id="seccion_17_cuerpo_sel" class="secciones deep-4" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_41_sel" pathsel="arbol:Planificación:Objetivos:Generales:Objetivos Generales" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_41" class="calc-marker-blanco">Objetivos Generales</a></li>
+				</ul>
+			</li>
+			<li id="seccion_18_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_18_sel" pathsel="arbol:Planificación:Objetivos:Específicos" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_18" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_18_cuerpo_sel');">Específicos</a>
+				<ul id="seccion_18_cuerpo_sel" class="secciones deep-4" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_42_sel" pathsel="arbol:Planificación:Objetivos:Específicos:Objetivos Específicos" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_42" class="calc-marker-blanco">Objetivos Específicos</a></li>
+				</ul>
+			</li>
+			<li id="seccion_19_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_19_sel" pathsel="arbol:Planificación:Objetivos:Metas" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_19" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_19_cuerpo_sel');">Metas</a>
+				<ul id="seccion_19_cuerpo_sel" class="secciones deep-4" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_43_sel" pathsel="arbol:Planificación:Objetivos:Metas:Metas" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_43" class="calc-marker-blanco">Metas</a></li>
+				</ul>
+			</li>
+				</ul>
+			</li>
+			<li id="seccion_20_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_20_sel" pathsel="arbol:Planificación:Localización" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_20" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_20_cuerpo_sel');">Localización</a>
+				<ul id="seccion_20_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="seccion_21_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_21_sel" pathsel="arbol:Planificación:Localización:Ubicación" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_21" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_21_cuerpo_sel');">Ubicación</a>
+				<ul id="seccion_21_cuerpo_sel" class="secciones deep-4" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_44_sel" pathsel="arbol:Planificación:Localización:Ubicación:Ubicación" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_44" class="calc-marker-blanco">Ubicación</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_45_sel" pathsel="arbol:Planificación:Localización:Ubicación:Ubicación geográfica" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_45" class="calc-marker-blanco">Ubicación geográfica</a></li>
+				</ul>
+			</li>
+			<li id="seccion_22_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_22_sel" pathsel="arbol:Planificación:Localización:Espacio" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_22" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_22_cuerpo_sel');">Espacio</a>
+				<ul id="seccion_22_cuerpo_sel" class="secciones deep-4" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_46_sel" pathsel="arbol:Planificación:Localización:Espacio:Espacios" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_46" class="calc-marker-blanco">Espacios</a></li>
+				</ul>
+			</li>
+			<li id="seccion_23_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_23_sel" pathsel="arbol:Planificación:Localización:Infraestructura" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_23" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_23_cuerpo_sel');">Infraestructura</a>
+				<ul id="seccion_23_cuerpo_sel" class="secciones deep-4" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_47_sel" pathsel="arbol:Planificación:Localización:Infraestructura:Infraestructura" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_47" class="calc-marker-blanco">Infraestructura</a></li>
+				</ul>
+			</li>
+			<li id="seccion_24_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_24_sel" pathsel="arbol:Planificación:Localización:Equipamiento" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_24" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_24_cuerpo_sel');">Equipamiento</a>
+				<ul id="seccion_24_cuerpo_sel" class="secciones deep-4" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_48_sel" pathsel="arbol:Planificación:Localización:Equipamiento:Equipamiento" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_48" class="calc-marker-blanco">Equipamiento</a></li>
+				</ul>
+			</li>
+			<li id="seccion_25_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_25_sel" pathsel="arbol:Planificación:Localización:Seguridad" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_25" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_25_cuerpo_sel');">Seguridad</a>
+				<ul id="seccion_25_cuerpo_sel" class="secciones deep-4" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_49_sel" pathsel="arbol:Planificación:Localización:Seguridad:Seguridad" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_49" class="calc-marker-blanco">Seguridad</a></li>
+				</ul>
+			</li>
+				</ul>
+			</li>
+			<li id="seccion_26_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_26_sel" pathsel="arbol:Planificación:Participantes" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_26" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_26_cuerpo_sel');">Participantes</a>
+				<ul id="seccion_26_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="seccion_27_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_27_sel" pathsel="arbol:Planificación:Participantes:Integrantes" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_27" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_27_cuerpo_sel');">Integrantes</a>
+				<ul id="seccion_27_cuerpo_sel" class="secciones deep-4" style="display: none;">
+			<li id="seccion_28_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_28_sel" pathsel="arbol:Planificación:Participantes:Integrantes:Áreas de trabajo" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_28" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_28_cuerpo_sel');">Áreas de trabajo</a>
+				<ul id="seccion_28_cuerpo_sel" class="secciones deep-5" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_50_sel" pathsel="arbol:Planificación:Participantes:Integrantes:Áreas de trabajo:Áreas de trabajo" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_50" class="calc-marker-blanco">Áreas de trabajo</a></li>
+				</ul>
+			</li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_51_sel" pathsel="arbol:Planificación:Participantes:Integrantes:Integrantes" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_51" class="calc-marker-blanco">Integrantes</a></li>
+				</ul>
+			</li>
+			<li id="seccion_29_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_29_sel" pathsel="arbol:Planificación:Participantes:Organigrama" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_29" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_29_cuerpo_sel');">Organigrama</a>
+				<ul id="seccion_29_cuerpo_sel" class="secciones deep-4" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_52_sel" pathsel="arbol:Planificación:Participantes:Organigrama:Organigrama" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_52" class="calc-marker-blanco">Organigrama</a></li>
+				</ul>
+			</li>
+			<li id="seccion_30_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_30_sel" pathsel="arbol:Planificación:Participantes:Beneficiarios Directos" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_30" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_30_cuerpo_sel');">Beneficiarios Directos</a>
+				<ul id="seccion_30_cuerpo_sel" class="secciones deep-4" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_53_sel" pathsel="arbol:Planificación:Participantes:Beneficiarios Directos:Beneficiarios Directos" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_53" class="calc-marker-blanco">Beneficiarios Directos</a></li>
+				</ul>
+			</li>
+			<li id="seccion_31_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_31_sel" pathsel="arbol:Planificación:Participantes:Beneficiarios Indirectos" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_31" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_31_cuerpo_sel');">Beneficiarios Indirectos</a>
+				<ul id="seccion_31_cuerpo_sel" class="secciones deep-4" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_54_sel" pathsel="arbol:Planificación:Participantes:Beneficiarios Indirectos:Beneficiarios Indirectos" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_54" class="calc-marker-blanco">Beneficiarios Indirectos</a></li>
+				</ul>
+			</li>
+				</ul>
+			</li>
+			<li id="seccion_32_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_32_sel" pathsel="arbol:Planificación:Estrategias" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_32" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_32_cuerpo_sel');">Estrategias</a>
+				<ul id="seccion_32_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_55_sel" pathsel="arbol:Planificación:Estrategias:Estrategia" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_55" class="calc-marker-blanco">Estrategia</a></li>
+				</ul>
+			</li>
+			<li id="seccion_33_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_33_sel" pathsel="arbol:Planificación:Etapas" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_33" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_33_cuerpo_sel');">Etapas</a>
+				<ul id="seccion_33_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_56_sel" pathsel="arbol:Planificación:Etapas:Etapas" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_56" class="calc-marker-blanco">Etapas</a></li>
+				</ul>
+			</li>
+			<li id="seccion_34_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_34_sel" pathsel="arbol:Planificación:Actividades" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_34" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_34_cuerpo_sel');">Actividades</a>
+				<ul id="seccion_34_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_57_sel" pathsel="arbol:Planificación:Actividades:Actividades" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_57" class="calc-marker-blanco">Actividades</a></li>
+				</ul>
+			</li>
+			<li id="seccion_35_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_35_sel" pathsel="arbol:Planificación:Cronograma" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_35" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_35_cuerpo_sel');">Cronograma</a>
+				<ul id="seccion_35_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_58_sel" pathsel="arbol:Planificación:Cronograma:Cronograma" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_58" class="calc-marker-blanco">Cronograma</a></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+
+	<li id="categoria_4_padre" class="categoria item-0 first padre categoria-collapsed">
+		 <input type="checkbox" id="categoria_4_sel" pathsel="arbol:Recursos" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>		 <a id="a_categoria_4" class="calc-marker-blanco" title="">Recursos</a>
+		<ul id="categoria_4_cuerpo_sel" class="secciones  deep-0" style="display: block;">
+			<li id="seccion_36_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_36_sel" pathsel="arbol:Recursos:Marco Normativo" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_36" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_36_cuerpo_sel');">Marco Normativo</a>
+				<ul id="seccion_36_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_59_sel" pathsel="arbol:Recursos:Marco Normativo:Marco Normativo" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_59" class="calc-marker-blanco">Marco Normativo</a></li>
+				</ul>
+			</li>
+			<li id="seccion_37_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_37_sel" pathsel="arbol:Recursos:Ingresos" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_37" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_37_cuerpo_sel');">Ingresos</a>
+				<ul id="seccion_37_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_60_sel" pathsel="arbol:Recursos:Ingresos:Ingresos" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_60" class="calc-marker-blanco">Ingresos</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_61_sel" pathsel="arbol:Recursos:Ingresos:Unidades de medida" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_61" class="calc-marker-blanco">Unidades de medida</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_62_sel" pathsel="arbol:Recursos:Ingresos:Ingresos generación propia" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_62" class="calc-marker-blanco">Ingresos generación propia</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_63_sel" pathsel="arbol:Recursos:Ingresos:Ingresos fuentes externas" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_63" class="calc-marker-blanco">Ingresos fuentes externas</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_64_sel" pathsel="arbol:Recursos:Ingresos:Costos asociados a ingresos" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_64" class="calc-marker-blanco">Costos asociados a ingresos</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_65_sel" pathsel="arbol:Recursos:Ingresos:Total ingreso proyectado" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_65" class="calc-marker-blanco">Total ingreso proyectado</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_66_sel" pathsel="arbol:Recursos:Ingresos:Subtotal dinerario" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_66" class="calc-marker-blanco">Subtotal dinerario</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_67_sel" pathsel="arbol:Recursos:Ingresos:Subtotal no dinerario" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_67" class="calc-marker-blanco">Subtotal no dinerario</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_68_sel" pathsel="arbol:Recursos:Ingresos:Total de Ingresos por tipo (Dinerarios/NO dinerarios)" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_68" class="calc-marker-blanco">Total de Ingresos por tipo (Dinerarios/NO dinerarios)</a></li>
+				</ul>
+			</li>
+			<li id="seccion_38_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_38_sel" pathsel="arbol:Recursos:Costos" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_38" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_38_cuerpo_sel');">Costos</a>
+				<ul id="seccion_38_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_69_sel" pathsel="arbol:Recursos:Costos:Rubros de costos" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_69" class="calc-marker-blanco">Rubros de costos</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_70_sel" pathsel="arbol:Recursos:Costos:Costos" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_70" class="calc-marker-blanco">Costos</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_71_sel" pathsel="arbol:Recursos:Costos:Imprevistos" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_71" class="calc-marker-blanco">Imprevistos</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_72_sel" pathsel="arbol:Recursos:Costos:Total de costos" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_72" class="calc-marker-blanco">Total de costos</a></li>
+				</ul>
+			</li>
+			<li id="seccion_39_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_39_sel" pathsel="arbol:Recursos:Presupuesto Económico" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_39" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_39_cuerpo_sel');">Presupuesto Económico</a>
+				<ul id="seccion_39_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_73_sel" pathsel="arbol:Recursos:Presupuesto Económico:Presupuesto económico" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_73" class="calc-marker-blanco">Presupuesto económico</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_74_sel" pathsel="arbol:Recursos:Presupuesto Económico:Presupuesto económico Costos" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_74" class="calc-marker-blanco">Presupuesto económico Costos</a></li>
+				</ul>
+			</li>
+			<li id="seccion_40_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_40_sel" pathsel="arbol:Recursos:Presupuesto Financiero" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_40" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_40_cuerpo_sel');">Presupuesto Financiero</a>
+				<ul id="seccion_40_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_75_sel" pathsel="arbol:Recursos:Presupuesto Financiero:Presupuesto Financiero" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_75" class="calc-marker-blanco">Presupuesto Financiero</a></li>
+				</ul>
+			</li>
+			<li id="seccion_41_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_41_sel" pathsel="arbol:Recursos:Estrategias de Financiamiento" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_41" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_41_cuerpo_sel');">Estrategias de Financiamiento</a>
+				<ul id="seccion_41_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_76_sel" pathsel="arbol:Recursos:Estrategias de Financiamiento:Estrategia de Financiamiento" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_76" class="calc-marker-blanco">Estrategia de Financiamiento</a></li>
+				</ul>
+			</li>
+			<li id="seccion_42_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_42_sel" pathsel="arbol:Recursos:Necesidades" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_42" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_42_cuerpo_sel');">Necesidades</a>
+				<ul id="seccion_42_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_77_sel" pathsel="arbol:Recursos:Necesidades:Necesidades" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_77" class="calc-marker-blanco">Necesidades</a></li>
+				</ul>
+			</li>
+			<li id="seccion_43_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_43_sel" pathsel="arbol:Recursos:Comunicación" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_43" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_43_cuerpo_sel');">Comunicación</a>
+				<ul id="seccion_43_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="seccion_44_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_44_sel" pathsel="arbol:Recursos:Comunicación:Interna" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_44" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_44_cuerpo_sel');">Interna</a>
+				<ul id="seccion_44_cuerpo_sel" class="secciones deep-4" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_78_sel" pathsel="arbol:Recursos:Comunicación:Interna:Comunicación Interna" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_78" class="calc-marker-blanco">Comunicación Interna</a></li>
+				</ul>
+			</li>
+			<li id="seccion_45_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_45_sel" pathsel="arbol:Recursos:Comunicación:Externa" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_45" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_45_cuerpo_sel');">Externa</a>
+				<ul id="seccion_45_cuerpo_sel" class="secciones deep-4" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_79_sel" pathsel="arbol:Recursos:Comunicación:Externa:Comunicación Externa" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_79" class="calc-marker-blanco">Comunicación Externa</a></li>
+				</ul>
+			</li>
+			<li id="seccion_46_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_46_sel" pathsel="arbol:Recursos:Comunicación:Canales" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_46" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_46_cuerpo_sel');">Canales</a>
+				<ul id="seccion_46_cuerpo_sel" class="secciones deep-4" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_80_sel" pathsel="arbol:Recursos:Comunicación:Canales:Canales" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_80" class="calc-marker-blanco">Canales</a></li>
+				</ul>
+			</li>
+				</ul>
+			</li>
+			<li id="seccion_47_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_47_sel" pathsel="arbol:Recursos:Modelo de Gestión" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_47" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_47_cuerpo_sel');">Modelo de Gestión</a>
+				<ul id="seccion_47_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_81_sel" pathsel="arbol:Recursos:Modelo de Gestión:Modelo de Gestión" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_81" class="calc-marker-blanco">Modelo de Gestión</a></li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+
+	<li id="categoria_5_padre" class="categoria item-0 first padre categoria-collapsed">
+		 <input type="checkbox" id="categoria_5_sel" pathsel="arbol:Sustentabilidad" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>		 <a id="a_categoria_5" class="calc-marker-blanco" title="">Sustentabilidad</a>
+		<ul id="categoria_5_cuerpo_sel" class="secciones  deep-0" style="display: block;">
+			<li id="seccion_48_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_48_sel" pathsel="arbol:Sustentabilidad:Factores multiplicadores" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_48" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_48_cuerpo_sel');">Factores multiplicadores</a>
+				<ul id="seccion_48_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_82_sel" pathsel="arbol:Sustentabilidad:Factores multiplicadores:Factores Multiplicadores" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_82" class="calc-marker-blanco">Factores Multiplicadores</a></li>
+				</ul>
+			</li>
+			<li id="seccion_49_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_49_sel" pathsel="arbol:Sustentabilidad:Externalidades" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_49" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_49_cuerpo_sel');">Externalidades</a>
+				<ul id="seccion_49_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_83_sel" pathsel="arbol:Sustentabilidad:Externalidades:Externalidades" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_83" class="calc-marker-blanco">Externalidades</a></li>
+				</ul>
+			</li>
+			<li id="seccion_50_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_50_sel" pathsel="arbol:Sustentabilidad:Contraprestaciones" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_50" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_50_cuerpo_sel');">Contraprestaciones</a>
+				<ul id="seccion_50_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_84_sel" pathsel="arbol:Sustentabilidad:Contraprestaciones:Contraprestaciones" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_84" class="calc-marker-blanco">Contraprestaciones</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_85_sel" pathsel="arbol:Sustentabilidad:Contraprestaciones:Categorías" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_85" class="calc-marker-blanco">Categorías</a></li>
+				</ul>
+			</li>
+			<li id="seccion_51_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_51_sel" pathsel="arbol:Sustentabilidad:Accesibilidad" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_51" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_51_cuerpo_sel');">Accesibilidad</a>
+				<ul id="seccion_51_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_86_sel" pathsel="arbol:Sustentabilidad:Accesibilidad:Accesibilidad" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_86" class="calc-marker-blanco">Accesibilidad</a></li>
+				</ul>
+			</li>
+			<li id="seccion_52_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_52_sel" pathsel="arbol:Sustentabilidad:Continuidad" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_52" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_52_cuerpo_sel');">Continuidad</a>
+				<ul id="seccion_52_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_87_sel" pathsel="arbol:Sustentabilidad:Continuidad:Continuidad" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_87" class="calc-marker-blanco">Continuidad</a></li>
+				</ul>
+			</li>
+			<li id="seccion_53_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_53_sel" pathsel="arbol:Sustentabilidad:Viabilidad" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_53" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_53_cuerpo_sel');">Viabilidad</a>
+				<ul id="seccion_53_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_88_sel" pathsel="arbol:Sustentabilidad:Viabilidad:Viabilidad" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_88" class="calc-marker-blanco">Viabilidad</a></li>
+				</ul>
+			</li>
+			<li id="seccion_54_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_54_sel" pathsel="arbol:Sustentabilidad:Registro" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_54" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_54_cuerpo_sel');">Registro</a>
+				<ul id="seccion_54_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_89_sel" pathsel="arbol:Sustentabilidad:Registro:Registro" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_89" class="calc-marker-blanco">Registro</a></li>
+				</ul>
+			</li>
+			<li id="seccion_55_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_55_sel" pathsel="arbol:Sustentabilidad:Resultados" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_55" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_55_cuerpo_sel');">Resultados</a>
+				<ul id="seccion_55_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="seccion_56_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_56_sel" pathsel="arbol:Sustentabilidad:Resultados:Mínima" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_56" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_56_cuerpo_sel');">Mínima</a>
+				<ul id="seccion_56_cuerpo_sel" class="secciones deep-4" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_90_sel" pathsel="arbol:Sustentabilidad:Resultados:Mínima:Resultados de mínima" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_90" class="calc-marker-blanco">Resultados de mínima</a></li>
+				</ul>
+			</li>
+			<li id="seccion_57_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_57_sel" pathsel="arbol:Sustentabilidad:Resultados:Máxima" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_57" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_57_cuerpo_sel');">Máxima</a>
+				<ul id="seccion_57_cuerpo_sel" class="secciones deep-4" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_91_sel" pathsel="arbol:Sustentabilidad:Resultados:Máxima:Resultados de máxima" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_91" class="calc-marker-blanco">Resultados de máxima</a></li>
+				</ul>
+			</li>
+				</ul>
+			</li>
+			<li id="seccion_58_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_58_sel" pathsel="arbol:Sustentabilidad:Evaluación" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_58" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_58_cuerpo_sel');">Evaluación</a>
+				<ul id="seccion_58_cuerpo_sel" class="secciones deep-3" style="display: none;">
+			<li id="seccion_59_padre" class="seccion padre-collapsed informes">
+				 <input type="checkbox" id="seccion_59_sel" pathsel="arbol:Sustentabilidad:Evaluación:Indicadores" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>				 <a id="a_seccion_59" class="calc-marker-blanco" onclick="javascript:openclosesel('seccion_59_cuerpo_sel');">Indicadores</a>
+				<ul id="seccion_59_cuerpo_sel" class="secciones deep-4" style="display: none;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_92_sel" pathsel="arbol:Sustentabilidad:Evaluación:Indicadores:Evaluación" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_92" class="calc-marker-blanco">Evaluación</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_93_sel" pathsel="arbol:Sustentabilidad:Evaluación:Indicadores:Indicadores" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_93" class="calc-marker-blanco">Indicadores</a></li>
+				</ul>
+			</li>
+				</ul>
+			</li>
+		</ul>
+	</li>
+
+	<li id="categoria_6_padre" class="categoria item-0 first padre categoria-collapsed">
+		 <input type="checkbox" id="categoria_6_sel" pathsel="arbol:Anexos" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>		 <a id="a_categoria_6" class="calc-marker-blanco" title="">Anexos</a>
+		<ul id="categoria_6_cuerpo_sel" class="secciones  deep-0" style="display: block;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_94_sel" pathsel="arbol:Anexos:Indice" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_94" class="calc-marker-blanco">Indice</a></li>
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_95_sel" pathsel="arbol:Anexos:Adjuntar" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_95" class="calc-marker-blanco">Adjuntar</a></li>
+		</ul>
+	</li>
+
+	<li id="categoria_7_padre" class="categoria item-0 first padre categoria-collapsed">
+		 <input type="checkbox" id="categoria_7_sel" pathsel="arbol:Informes" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/>		 <a id="a_categoria_7" class="calc-marker-blanco" title="">Informes</a>
+		<ul id="categoria_7_cuerpo_sel" class="secciones  deep-0" style="display: block;">
+			<li id="campo_{dID}_padre" class="campo">
+				 <input type="checkbox" id="campo_96_sel" pathsel="arbol:Informes:Informes" onchange="javascript:SelectField(this, 'arbol:Informes:Informes:informe_0:seleccion', 'informe_0_seleccion');"/><a id="a_seccion_96" class="calc-marker-blanco">Informes</a></li>
+		</ul>
+	</li>
+
+</ul>
+
+	</div>
+</div>
+<div class="record_actions"><span class="delete" onclick="javascript:DeleteRecord('informe','informe_0');" title="Eliminar"> </span>
+<div class="object_add">
+	<span class="ficha ficha_add" onclick="javascript:showaction(); FocusOut(); setTimeout( function() { AddRecord('informe','arbol:Informes:Informes')}, 100 );" title="Nuevo/a informe"> </span>
+</div><span class="order" onclick="javascript:OrderRecord('informe','informe_0');" title="Eliminar"> </span><!--<span class="execute executeTXT" onclick="javascript:ExecuteRecord('informe_0');"> </span>--><span class="execute toggletreesel" onclick="javascript:ToggleTreeSel('informe_0');"> </span><span class="execute executeDOCX" onclick="javascript:printDOC('informe_0');"> </span><span class="execute executePDF" onclick="javascript:printPDF('informe_0');"> </span></div><span class="order order-1 order-num">1</span><span class="orderalpha orderalpha-1 order-alpha">A</span></td>
+	<td class="record_actions"><div class="record_actions"><span class="delete" onclick="javascript:DeleteRecord('informe','informe_0');" title="Eliminar"> </span>
+<div class="object_add">
+	<span class="ficha ficha_add" onclick="javascript:showaction(); FocusOut(); setTimeout( function() { AddRecord('informe','arbol:Informes:Informes')}, 100 );" title="Nuevo/a informe"> </span>
+</div><span class="order" onclick="javascript:OrderRecord('informe','informe_0');" title="Eliminar"> </span><!--<span class="execute executeTXT" onclick="javascript:ExecuteRecord('informe_0');"> </span>--><span class="execute toggletreesel" onclick="javascript:ToggleTreeSel('informe_0');"> </span><span class="execute executeDOCX" onclick="javascript:printDOC('informe_0');"> </span><span class="execute executePDF" onclick="javascript:printPDF('informe_0');"> </span></div><span class="order order-1 order-num">1</span><span class="orderalpha orderalpha-1 order-alpha">A</span></td>
+</tr>
+	
+	</tbody>
+	<tfoot>
+		<tr>
+<td class="titulo" id="total_informe_titulo"/><td class="descripcion" id="total_informe_descripcion"/><td class="seleccion" id="total_informe_seleccion"/>
+		<td class="record_totals"> </td>
+		</tr>
+	</tfoot>
+</table>
+</div></div>
+</div>
+</div></div></div>
+
+						<div id="popuprelational" class="popuprelational">
+						</div>
+				
+				<input type="text" style="display: block; position: fixed; right: 4000px;" id="OutFocus" value=""/>
+				</div>	
+			</div><div xmlns:html="http://www.w3.org/1999/xhtml" id="footer_status">
+				<div id="project_zoom">
+					
+					<select id="zoompage" class="zoompage" onchange="javascript:zoomPage(this,event);">
+						<option value="50">50%</option>
+						<option value="60">60%</option>
+						<option value="70">70%</option>
+						<option value="80">80%</option>
+						<option value="90">90%</option>
+						<option selected="selected" value="100">100%</option>
+						<option value="110">110%</option>
+						<option value="120">120%</option>
+						<option value="130">130%</option>
+						<option value="140">140%</option>
+						<option value="150">150%</option>
+					</select>
+				</div>
+				<div id="project_progress">
+					<span xmlns:html="http://www.w3.org/1999/xhtml" class="avances" id="avances">AVANCES</span>
+				<ul class="categoria-progress item-0 level-0">
+<li id="categoria_1_padreprogressbar" class="categoria item-0 first padre categoria-collapsed nsubs-4">
+<ul id="categoria_1_cuerpo_selprogressbar" class="secciones  deep-0 nsubs-4" style="display: block;">
+<li id="seccion_1_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_1_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Presentación:Título');" onmouseover="javascript:showProgress('Título')"> </a><ul id="seccion_1_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_2_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_2_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Presentación:Marca');" onmouseover="javascript:showProgress('Marca')"> </a><ul id="seccion_2_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_3_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_3_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Presentación:Resumen Ejecutivo');" onmouseover="javascript:showProgress('Resumen Ejecutivo')"> </a><ul id="seccion_3_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_4_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-3">
+<a id="a_seccion_4_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Presentación:Titularidad');" onmouseover="javascript:showProgress('Titularidad')"> </a><ul id="seccion_4_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-3" style="display: block;">
+<li id="seccion_5_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-4 {MARKED} nsubs-0">
+<a id="a_seccion_5_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Presentación:Titularidad:Organización');" onmouseover="javascript:showProgress('Organización')"> </a><ul id="seccion_5_cuerpoprogressbar" class="secciones deep-4 depth-4 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_6_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-4 {MARKED} nsubs-0">
+<a id="a_seccion_6_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Presentación:Titularidad:Persona Física');" onmouseover="javascript:showProgress('Persona Física')"> </a><ul id="seccion_6_cuerpoprogressbar" class="secciones deep-4 depth-4 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_7_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-4 {MARKED} nsubs-0">
+<a id="a_seccion_7_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Presentación:Titularidad:Responsable');" onmouseover="javascript:showProgress('Responsable')"> </a><ul id="seccion_7_cuerpoprogressbar" class="secciones deep-4 depth-4 nsubs-0" style="display: block;">
+</ul></li>
+</ul></li>
+</ul></li><li id="categoria_2_padreprogressbar" class="categoria item-0 first padre categoria-collapsed nsubs-8">
+<ul id="categoria_2_cuerpo_selprogressbar" class="secciones  deep-0 nsubs-8" style="display: block;">
+<li id="seccion_8_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_8_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Fundamentos:Análisis Externo');" onmouseover="javascript:showProgress('Análisis Externo')"> </a><ul id="seccion_8_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_9_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_9_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Fundamentos:Análisis Interno');" onmouseover="javascript:showProgress('Análisis Interno')"> </a><ul id="seccion_9_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_10_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_10_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Fundamentos:Antecedentes');" onmouseover="javascript:showProgress('Antecedentes')"> </a><ul id="seccion_10_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_11_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_11_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Fundamentos:Marco Institucional');" onmouseover="javascript:showProgress('Marco Institucional')"> </a><ul id="seccion_11_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_12_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_12_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Fundamentos:Alineamiento');" onmouseover="javascript:showProgress('Alineamiento')"> </a><ul id="seccion_12_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_13_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_13_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Fundamentos:Referencias');" onmouseover="javascript:showProgress('Referencias')"> </a><ul id="seccion_13_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_14_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_14_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Fundamentos:Problemática');" onmouseover="javascript:showProgress('Problemática')"> </a><ul id="seccion_14_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_15_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_15_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Fundamentos:Justificación');" onmouseover="javascript:showProgress('Justificación')"> </a><ul id="seccion_15_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+</ul></li><li id="categoria_3_padreprogressbar" class="categoria item-0 first padre categoria-collapsed nsubs-7">
+<ul id="categoria_3_cuerpo_selprogressbar" class="secciones  deep-0 nsubs-7" style="display: block;">
+<li id="seccion_16_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-3">
+<a id="a_seccion_16_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Planificación:Objetivos');" onmouseover="javascript:showProgress('Objetivos')"> </a><ul id="seccion_16_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-3" style="display: block;">
+<li id="seccion_17_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-4 {MARKED} nsubs-0">
+<a id="a_seccion_17_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Planificación:Objetivos:Generales');" onmouseover="javascript:showProgress('Generales')"> </a><ul id="seccion_17_cuerpoprogressbar" class="secciones deep-4 depth-4 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_18_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-4 {MARKED} nsubs-0">
+<a id="a_seccion_18_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Planificación:Objetivos:Específicos');" onmouseover="javascript:showProgress('Específicos')"> </a><ul id="seccion_18_cuerpoprogressbar" class="secciones deep-4 depth-4 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_19_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-4 {MARKED} nsubs-0">
+<a id="a_seccion_19_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Planificación:Objetivos:Metas');" onmouseover="javascript:showProgress('Metas')"> </a><ul id="seccion_19_cuerpoprogressbar" class="secciones deep-4 depth-4 nsubs-0" style="display: block;">
+</ul></li>
+</ul></li>
+<li id="seccion_20_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-5">
+<a id="a_seccion_20_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Planificación:Localización');" onmouseover="javascript:showProgress('Localización')"> </a><ul id="seccion_20_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-5" style="display: block;">
+<li id="seccion_21_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-4 {MARKED} nsubs-0">
+<a id="a_seccion_21_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Planificación:Localización:Ubicación');" onmouseover="javascript:showProgress('Ubicación')"> </a><ul id="seccion_21_cuerpoprogressbar" class="secciones deep-4 depth-4 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_22_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-4 {MARKED} nsubs-0">
+<a id="a_seccion_22_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Planificación:Localización:Espacio');" onmouseover="javascript:showProgress('Espacio')"> </a><ul id="seccion_22_cuerpoprogressbar" class="secciones deep-4 depth-4 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_23_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-4 {MARKED} nsubs-0">
+<a id="a_seccion_23_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Planificación:Localización:Infraestructura');" onmouseover="javascript:showProgress('Infraestructura')"> </a><ul id="seccion_23_cuerpoprogressbar" class="secciones deep-4 depth-4 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_24_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-4 {MARKED} nsubs-0">
+<a id="a_seccion_24_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Planificación:Localización:Equipamiento');" onmouseover="javascript:showProgress('Equipamiento')"> </a><ul id="seccion_24_cuerpoprogressbar" class="secciones deep-4 depth-4 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_25_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-4 {MARKED} nsubs-0">
+<a id="a_seccion_25_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Planificación:Localización:Seguridad');" onmouseover="javascript:showProgress('Seguridad')"> </a><ul id="seccion_25_cuerpoprogressbar" class="secciones deep-4 depth-4 nsubs-0" style="display: block;">
+</ul></li>
+</ul></li>
+<li id="seccion_26_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-4">
+<a id="a_seccion_26_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Planificación:Participantes');" onmouseover="javascript:showProgress('Participantes')"> </a><ul id="seccion_26_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-4" style="display: block;">
+<li id="seccion_27_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-4 {MARKED} nsubs-1">
+<a id="a_seccion_27_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Planificación:Participantes:Integrantes');" onmouseover="javascript:showProgress('Integrantes')"> </a><ul id="seccion_27_cuerpoprogressbar" class="secciones deep-4 depth-4 nsubs-1" style="display: block;">
+<li id="seccion_28_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-5 {MARKED} nsubs-0">
+<a id="a_seccion_28_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Planificación:Participantes:Integrantes:Áreas de trabajo');" onmouseover="javascript:showProgress('Áreas de trabajo')"> </a><ul id="seccion_28_cuerpoprogressbar" class="secciones deep-5 depth-5 nsubs-0" style="display: block;">
+</ul></li>
+</ul></li>
+<li id="seccion_29_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-4 {MARKED} nsubs-0">
+<a id="a_seccion_29_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Planificación:Participantes:Organigrama');" onmouseover="javascript:showProgress('Organigrama')"> </a><ul id="seccion_29_cuerpoprogressbar" class="secciones deep-4 depth-4 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_30_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-4 {MARKED} nsubs-0">
+<a id="a_seccion_30_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Planificación:Participantes:Beneficiarios Directos');" onmouseover="javascript:showProgress('Beneficiarios Directos')"> </a><ul id="seccion_30_cuerpoprogressbar" class="secciones deep-4 depth-4 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_31_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-4 {MARKED} nsubs-0">
+<a id="a_seccion_31_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Planificación:Participantes:Beneficiarios Indirectos');" onmouseover="javascript:showProgress('Beneficiarios Indirectos')"> </a><ul id="seccion_31_cuerpoprogressbar" class="secciones deep-4 depth-4 nsubs-0" style="display: block;">
+</ul></li>
+</ul></li>
+<li id="seccion_32_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_32_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Planificación:Estrategias');" onmouseover="javascript:showProgress('Estrategias')"> </a><ul id="seccion_32_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_33_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_33_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Planificación:Etapas');" onmouseover="javascript:showProgress('Etapas')"> </a><ul id="seccion_33_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_34_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_34_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Planificación:Actividades');" onmouseover="javascript:showProgress('Actividades')"> </a><ul id="seccion_34_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_35_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_35_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Planificación:Cronograma');" onmouseover="javascript:showProgress('Cronograma')"> </a><ul id="seccion_35_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+</ul></li><li id="categoria_4_padreprogressbar" class="categoria item-0 first padre categoria-collapsed nsubs-9">
+<ul id="categoria_4_cuerpo_selprogressbar" class="secciones  deep-0 nsubs-9" style="display: block;">
+<li id="seccion_36_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_36_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Recursos:Marco Normativo');" onmouseover="javascript:showProgress('Marco Normativo')"> </a><ul id="seccion_36_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_37_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_37_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Recursos:Ingresos');" onmouseover="javascript:showProgress('Ingresos')"> </a><ul id="seccion_37_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_38_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_38_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Recursos:Costos');" onmouseover="javascript:showProgress('Costos')"> </a><ul id="seccion_38_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_39_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_39_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Recursos:Presupuesto Económico');" onmouseover="javascript:showProgress('Presupuesto Económico')"> </a><ul id="seccion_39_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_40_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_40_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Recursos:Presupuesto Financiero');" onmouseover="javascript:showProgress('Presupuesto Financiero')"> </a><ul id="seccion_40_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_41_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_41_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Recursos:Estrategias de Financiamiento');" onmouseover="javascript:showProgress('Estrategias de Financiamiento')"> </a><ul id="seccion_41_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_42_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_42_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Recursos:Necesidades');" onmouseover="javascript:showProgress('Necesidades')"> </a><ul id="seccion_42_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_43_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-3">
+<a id="a_seccion_43_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Recursos:Comunicación');" onmouseover="javascript:showProgress('Comunicación')"> </a><ul id="seccion_43_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-3" style="display: block;">
+<li id="seccion_44_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-4 {MARKED} nsubs-0">
+<a id="a_seccion_44_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Recursos:Comunicación:Interna');" onmouseover="javascript:showProgress('Interna')"> </a><ul id="seccion_44_cuerpoprogressbar" class="secciones deep-4 depth-4 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_45_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-4 {MARKED} nsubs-0">
+<a id="a_seccion_45_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Recursos:Comunicación:Externa');" onmouseover="javascript:showProgress('Externa')"> </a><ul id="seccion_45_cuerpoprogressbar" class="secciones deep-4 depth-4 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_46_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-4 {MARKED} nsubs-0">
+<a id="a_seccion_46_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Recursos:Comunicación:Canales');" onmouseover="javascript:showProgress('Canales')"> </a><ul id="seccion_46_cuerpoprogressbar" class="secciones deep-4 depth-4 nsubs-0" style="display: block;">
+</ul></li>
+</ul></li>
+<li id="seccion_47_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_47_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Recursos:Modelo de Gestión');" onmouseover="javascript:showProgress('Modelo de Gestión')"> </a><ul id="seccion_47_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+</ul></li><li id="categoria_5_padreprogressbar" class="categoria item-0 first padre categoria-collapsed nsubs-9">
+<ul id="categoria_5_cuerpo_selprogressbar" class="secciones  deep-0 nsubs-9" style="display: block;">
+<li id="seccion_48_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_48_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Sustentabilidad:Factores multiplicadores');" onmouseover="javascript:showProgress('Factores multiplicadores')"> </a><ul id="seccion_48_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_49_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_49_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Sustentabilidad:Externalidades');" onmouseover="javascript:showProgress('Externalidades')"> </a><ul id="seccion_49_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_50_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_50_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Sustentabilidad:Contraprestaciones');" onmouseover="javascript:showProgress('Contraprestaciones')"> </a><ul id="seccion_50_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_51_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_51_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Sustentabilidad:Accesibilidad');" onmouseover="javascript:showProgress('Accesibilidad')"> </a><ul id="seccion_51_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_52_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_52_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Sustentabilidad:Continuidad');" onmouseover="javascript:showProgress('Continuidad')"> </a><ul id="seccion_52_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_53_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_53_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Sustentabilidad:Viabilidad');" onmouseover="javascript:showProgress('Viabilidad')"> </a><ul id="seccion_53_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_54_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-0">
+<a id="a_seccion_54_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Sustentabilidad:Registro');" onmouseover="javascript:showProgress('Registro')"> </a><ul id="seccion_54_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_55_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-2">
+<a id="a_seccion_55_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Sustentabilidad:Resultados');" onmouseover="javascript:showProgress('Resultados')"> </a><ul id="seccion_55_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-2" style="display: block;">
+<li id="seccion_56_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-4 {MARKED} nsubs-0">
+<a id="a_seccion_56_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Sustentabilidad:Resultados:Mínima');" onmouseover="javascript:showProgress('Mínima')"> </a><ul id="seccion_56_cuerpoprogressbar" class="secciones deep-4 depth-4 nsubs-0" style="display: block;">
+</ul></li>
+<li id="seccion_57_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-4 {MARKED} nsubs-0">
+<a id="a_seccion_57_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Sustentabilidad:Resultados:Máxima');" onmouseover="javascript:showProgress('Máxima')"> </a><ul id="seccion_57_cuerpoprogressbar" class="secciones deep-4 depth-4 nsubs-0" style="display: block;">
+</ul></li>
+</ul></li>
+<li id="seccion_58_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-3 {MARKED} nsubs-1">
+<a id="a_seccion_58_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Sustentabilidad:Evaluación');" onmouseover="javascript:showProgress('Evaluación')"> </a><ul id="seccion_58_cuerpoprogressbar" class="secciones deep-3 depth-3 nsubs-1" style="display: block;">
+<li id="seccion_59_padreprogressbar" class="seccion padre-collapsed {CLASE} secdepth-4 {MARKED} nsubs-0">
+<a id="a_seccion_59_progressbar" class="calc-marker-blanco" href="#" onclick="javascript:showMarkedSection('arbol:Sustentabilidad:Evaluación:Indicadores');" onmouseover="javascript:showProgress('Indicadores')"> </a><ul id="seccion_59_cuerpoprogressbar" class="secciones deep-4 depth-4 nsubs-0" style="display: block;">
+</ul></li>
+</ul></li>
+</ul></li><li id="categoria_6_padreprogressbar" class="categoria item-0 first padre categoria-collapsed nsubs-0">
+<ul id="categoria_6_cuerpo_selprogressbar" class="secciones  deep-0 nsubs-0" style="display: block;">
+</ul></li><li id="categoria_7_padreprogressbar" class="categoria item-0 first padre categoria-collapsed nsubs-0">
+<ul id="categoria_7_cuerpo_selprogressbar" class="secciones  deep-0 nsubs-0" style="display: block;">
+</ul></li></ul>
+</div>
+			</div></body></html>

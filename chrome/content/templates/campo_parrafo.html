@@ -1,0 +1,30 @@
+<div class="campo campo-parrafo {CAMPOCONAYUDA}  campo-{CLASE}">
+	<div class="titulo">
+		<label class="titulocampo" tootltiptext="{NOMBRECAMPO}" title="{AYUDARAPIDA}"  onmouseover="javascript:ShowHint('{IDCAMPO}');"><span>{NOMBRECAMPO}</span>{HELPER}</label>
+		{MARKER}
+	</div>
+	<div class="entrada">
+		<div class="ayudarapida_editor ayudarapida_editor_{TIENEVALOR}" id="ayudarapida_{IDCAMPO}_editor" style="display: block;" 
+		onclick="javascript:hidediv('ayudarapida_{IDCAMPO}_editor');document.getElementById('{IDCAMPO}').click();">{AYUDARAPIDA} </div>
+		<editor class="parrafo" 
+				id="{IDCAMPO}"  title="{AYUDARAPIDA}"
+				placeholder="{AYUDARAPIDA}"
+				src="{VALOR}" 
+				editortype="html"
+				
+				onfocus="EditField('{PATHCAMPO}','{IDCAMPO}');javascript:hidediv('ayudarapida_{IDCAMPO}_editor');"
+				onclick="javascript:log('check: editor click ' + this.contentDocument.documentElement); this.makeEditable('html'); var sed = this.contentDocument.documentElement; setTimeout( function() {sed.focus();}, 100); EditField('{PATHCAMPO}','{IDCAMPO}');javascript:hidediv('ayudarapida_{IDCAMPO}_editor');"
+				onkeydown="var sed = this.contentDocument.documentElement; setTimeout( function() {sed.focus();}, 100);"
+				></editor>
+				<div class="edittools">
+				<button class="bold" onclick="javascript:  var editor = document.getElementById('{IDCAMPO}'); editor.contentDocument.execCommand('bold', false, null); "></button>
+				<button class="italic" onclick="javascript:  var editor = document.getElementById('{IDCAMPO}'); editor.contentDocument.execCommand('italic', false, null);" ></button>
+				<button class="underline" onclick="javascript:  var editor = document.getElementById('{IDCAMPO}'); editor.contentDocument.execCommand('underline', false, null);"></button>
+				<button  class="jleft" onclick="javascript:  var editor = document.getElementById('{IDCAMPO}'); editor.contentDocument.execCommand('JustifyLeft', false, null);"></button>
+				<button  class="jcenter" onclick="javascript:  var editor = document.getElementById('{IDCAMPO}'); editor.contentDocument.execCommand('JustifyCenter', false, null);"></button>
+				<button  class="jright" onclick="javascript:  var editor = document.getElementById('{IDCAMPO}'); editor.contentDocument.execCommand('JustifyRight', false, null);"></button>
+				<button  class="savenow" onclick="javascript: var editor = document.getElementById('{IDCAMPO}'); SaveField('{PATHCAMPO}','{IDCAMPO}');"></button>
+				</div>
+		{FIELDACTIONS}
+	</div>
+</div>

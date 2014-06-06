@@ -1,0 +1,19 @@
+<div class="campo campo-parrafo {CAMPOCONAYUDA}  campo-{CLASE}">
+	<div class="titulo">
+		<label class="titulocampo" tootltiptext="{NOMBRECAMPO}" title="{AYUDARAPIDA}"  onmouseover="javascript:ShowHint('{IDCAMPO}');"><span>{NOMBRECAMPO}</span>{HELPER}</label>
+		{MARKER}
+	</div>
+	<div class="entrada">
+		<textarea class="parrafo" id="{IDCAMPO}"  title="{AYUDARAPIDA}" placeholder="{AYUDARAPIDA}" style="display: block;" rows="4"
+		  onfocus="javascript:EditField('{PATHCAMPO}','{IDCAMPO}');"
+		  onblur="javascript:StopEditField('{PATHCAMPO}','{IDCAMPO}');"
+		  onchange="javascript:SaveField('{PATHCAMPO}','{IDCAMPO}');"
+		  formula="{FORMULA}"
+		>{VALOR}</textarea><cleartxtarea/>
+		{FIELDACTIONS}
+		<!--
+		<editor editortype="text"  src="about:blank" flex="1" class="parrafo" id="parrafo_{IDCAMPO}"  title="{AYUDARAPIDA}" placeholder="{AYUDARAPIDA}" style="display: block;" 
+		>{VALOR}</editor>
+		-->
+	</div>
+</div>

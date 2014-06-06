@@ -1,0 +1,7 @@
+<!ENTITY app.title	"Planea">
+<!ENTITY app.id		"test">	
+
+<!ENTITY menuHelp.label "Help">
+<!ENTITY menuHelp.accesskey "H">
+<!ENTITY menuitemAbout.label "About planea">
+<!ENTITY menuitemAbout.accesskey "A">

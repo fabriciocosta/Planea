@@ -1,0 +1,447 @@
+﻿<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>d3.js test</title>
+	<script type="text/javascript" src="content/js/d3-master/d3.js"  charset="utf-8"></script>
+		<style>
+			.overlay {
+			  fill: none;
+			  /*pointer-events: all;*/
+			}
+			
+			.node {
+				font: 10px sans-serif;
+			}
+			
+			.linkhide,
+			.nodehide {
+				visibility: hidden;
+			}
+			
+			.node rect {
+				fill: rgba(255, 255, 255, 1);
+				stroke: #000;
+			}
+			
+			.dragging rect {
+				fill: rgba(200, 255, 255, 1);
+				stroke: #000;
+			}
+			
+			.link {
+			  fill: none;
+			  stroke: #ccc;
+			  stroke-width: 1.5px;
+			}
+			
+			.name {
+				stroke: none;
+				fill: #000;
+				font-size: 12px;
+			}
+
+			.area {
+				stroke: none;
+				fill: #888;
+				font-size: 16px;
+				font-weight: bold;
+			}
+			
+			.linkassistant {
+				stroke-dasharray: 0,2 1;
+			}
+		</style>
+	 <script type="text/javascript">
+		window.onload = function() {
+		
+			var width = "100%";
+			var height = "100%";
+			var nodewidth = 200;
+			var nodeheight = 55;
+			var svg = d3.select("#orgchart")
+						.append("svg")
+						.attr("width", width)
+						.attr("height", height);
+						
+			svg.attr("viewBox", "-1500 0 3000 1000");
+
+			function zoomed() {
+			  container.attr("transform", "translate( " + d3.event.translate + ") scale(" + d3.event.scale + ")");
+			}
+			
+			var zoom = d3.behavior.zoom()
+								.scaleExtent([1, 8])
+								.on("zoom", zoomed);
+								
+			var gscale = svg.append("g")
+							.call(zoom);
+			var container = gscale.append("g")
+			
+			
+			container.append("rect")
+					.attr("x",-5000)
+					.attr("y",-5000)
+					.attr("width",10000)
+					.attr("height",10000)
+					.attr("fill","none")
+					.style("pointer-events", "all");
+
+					
+			var root = {
+			'name': 'Organigrama',
+			'children': [
+				{	
+					'name': 'Fabri',
+					'area': 'Gestión',
+					'children': [
+						{
+							'name': 'Jose'
+						},
+						{
+							'name': 'Pedro',
+							'assistant': true
+						}
+					]
+				}, 
+				{	
+					'name': 'Judith',
+					'area': 'Comunicación de todo tipo y color',
+					'cargo': 'novia',
+					'children': [
+						{
+							'name': 'Lola',
+							'area': 'Cartas',
+							'cargo': 'Super super largo cargo'
+						},
+						{
+							'name': 'Palooza',
+							'area': 'Web',
+							'cargo': ''
+						}
+					]
+				},
+				{	
+					'name': 'Luna',
+					'cargo': 'Sobrina',
+				}
+			]
+			};
+
+
+			function NodeName( textElement, d ) {
+				return d.name +"("+d.depth+")";
+			}
+			
+			function NodeArea( textElement, d ) {
+				return d.area;
+				//return d.name;
+			}
+			
+			function NodeCargo( textElement, d ) {
+				return d.cargo;
+				//return d.name;
+			}			
+			
+			function NodeWidth( d ) {
+				//return mtree.nodeSize()[0];
+				return d.width;
+			}
+			
+			function NodeWidth2( d, node ) {
+				//alert( node.width );
+				return node.width;
+			}
+			
+			function NodeHeight( d ) {
+				//return mtree.nodeSize()[1];
+				return d.height;
+			}	
+
+			function NodeHeight2( d, node ) {
+				//alert( node.width );
+				return node.height;
+			}			
+						
+			var drag = d3.behavior.drag()
+						.origin(function(d) { return d; })
+						.on("dragstart", dragstarted)
+						.on("drag", dragmove)	
+						.on("dragend", dragended)
+			
+			var mtree = d3.layout.tree()
+						.nodeSize( [ nodewidth, nodeheight ] )
+						.separation(	function(a, b) { 
+							//alert(a.children);							
+							return (a.parent == b.parent ? 1 : 2)*1.15; 
+							//return (a.parent == b.parent ? 1 : 2) / a.depth;
+						});
+
+						
+			function relations( nodes ) {
+			
+				for(var ndkey in nodes ) {
+					var node = nodes[ndkey];
+					//alert( " key:" + ndkey + " node:" + node + " name:" + node.name + " is assistant:[" + (node.assistant==true) +"]" );
+				}
+			
+			}
+						
+			var nodes = mtree.nodes(root),		//ESTOS SON LOS NODOS (ordenados jerarquicamente???
+				links = mtree.links(nodes),     //ESTAS SON LAS RELACIONES DE DEPENDENCIAS
+				relations = relations(nodes);		//ESTAS SON LAS RELACIONES!!!
+			
+			function dragstarted(d) {
+			  d3.event.sourceEvent.stopPropagation();
+			  d3.select(this).classed("dragging", true);
+			}
+			
+			function dragended(d) {
+			  d3.select(this).classed("dragging", false);
+			}			
+	
+			function dragmove(d) {
+			
+				d3.select(this).attr( "transform", function(d) {
+														d.x = d3.event.x;
+														d.y = d3.event.y;
+														
+														link.attr("d", lineconnection );
+														//node.selectAll("g.node")
+														return "translate( " + d3.event.x 
+																+ "," + d3.event.y + ")";
+														} );				
+			}			
+			
+			container.append("marker")
+				.attr("id", "triangle")
+				.attr("viewBox", "0 -5 10 10")
+				.attr("refX", 10)
+				.attr("refY", 0)
+				.attr("markerWidth", 5)
+				.attr("markerHeight", 5)
+				.attr("orient", "auto")
+				.append("path")
+				.attr("d", "M0,-5L10,0L0,5");
+				
+			var node = container.selectAll("g.node")
+						.data(nodes)
+						.enter()
+						.append("g")
+						.attr("class", function(d) {
+								if (d.depth==0) {
+									return "node nodehide node-"+d.depth;
+								}
+								return "node node-"+d.depth;
+						})
+						.attr("transform",	 function(d) { 
+								//return "translate(" + d.y + ")";
+								//d.x = d.x + 400;
+								//d.y = d.y + d.depth*NodeHeight2(d,d) / 2;
+								//alert(d.width);
+								d.width = nodewidth;
+								d.height = nodeheight;
+								d.x = d.x;
+								d.y = d.y + d.height*d.depth;
+								return "translate("+d.x + "," + d.y + ")";
+						} )
+						.call(drag);
+						/*
+						.attr("transform", function(d) { return "rotate(" + (d.x - 90) + ")translate(" + d.y + ")"; });
+						*/		
+						
+
+			
+			node.append("rect")
+				.attr("class", "nodebox")
+				.attr("x", 0  )
+				.attr("y", 0  )
+				.attr("width", NodeWidth )
+				.attr("height", NodeHeight )
+				.attr("rx", 5)
+				.attr("ry", 5);
+				
+			
+			node.append("text")
+				.attr("class", "name")
+				.attr("x", nodewidth/2)
+				.attr("y", 35)
+				.attr("text-anchor","middle")
+				.text( function( d ) { return NodeName(this,d) } );
+				
+			node.append("text")
+				.attr("class", "area")
+				.attr("x", nodewidth/2)
+				.attr("y", 20)
+				.attr("text-anchor","middle")
+				.text( function( d ) { return NodeArea(this,d) } );
+				
+			node.append("text").attr("class", "cargo")
+				.attr("x", nodewidth/2)
+				.attr("y", 45)
+				.attr("text-anchor","middle")
+				.text(function( d ) { return NodeCargo(this,d) } );
+			
+			var lineconnection = function(d) {
+			
+				if (d.target.assistant) {
+					//alert("is assistant! this:" + d3.select(this).classed("linkassistant",true) );
+					d3.select(this).classed("linkassistant",true)
+				}
+				
+				if (d.source.depth==0) {
+					d3.select(this).classed("linkhide",true)
+				}
+				
+				if ( Math.abs(d.source.y - d.target.y) < NodeHeight2(d, d.source)) {
+					//to horizontal
+					var dsx = d.source.x + NodeWidth2(d, d.target);
+					var dsy = d.source.y + NodeHeight2(d, d.source)/2;	
+					var dtx = d.target.x;
+					var dty = d.target.y + NodeHeight2(d, d.source)/2;
+					
+					if ( d.source.x > d.target.x ) {
+						dsx = d.source.x;
+						dtx = d.target.x + NodeWidth2(d, d.target);
+					}
+					var dx = d.target.x - d.source.x,
+						dy = d.target.y - d.source.y,
+						dr = Math.sqrt(dx * dx + dy * dy);
+					var ipx1 = dsx + (dtx-dsx) / 2;
+					var ipy1 = dsy;
+					
+					var ipx2 = ipx1;
+					var ipy2 = dty;
+				} else {
+					var dsx = d.source.x + NodeWidth2(d, d.source) / 2;
+					var dsy = d.source.y + NodeHeight2(d, d.source);	
+					var dtx = d.target.x + NodeWidth2(d, d.target) / 2;
+					var dty = d.target.y;
+					
+					if ( d.source.y > d.target.y ) {
+						dsy = d.source.y;
+						dty = d.target.y + NodeHeight2(d, d.target);
+					}
+					var dx = d.target.x - d.source.x,
+						dy = d.target.y - d.source.y,
+						dr = Math.sqrt(dx * dx + dy * dy);
+					var ipx1 = dsx;
+					var ipy1 = dsy + (dty-dsy) / 2;
+					
+					var ipx2 = dtx;
+					var ipy2 = ipy1;
+				}
+				
+				return "M " + dsx + " " + dsy + " L " + ipx1 + " " + ipy1 + " L " + ipx2 + " " + ipy2 + " L " + dtx + " " + dty;
+					//return "M" + dsx + "," + dsy + "A" + dr + "," + dr + " 0 0,1 " + dtx + "," + dty;
+			}
+	
+  			var diagonal = d3.svg.diagonal()
+				.projection(
+					function(d) {						
+						return [ d.x, d.y]; 
+					}
+				);
+			
+			var link = container.selectAll("path.link")
+							.data( links )
+							.enter()
+							.append("path")
+							.attr( "class", "link")							
+							.attr( "marker-end", "url(#triangle)" )
+							.attr( "d", lineconnection);
+											
+							
+			function onTick(e) {
+			
+				links.attr("d", function(d) {
+					var dx = d.target.x - d.source.x,
+					dy = d.target.y - d.source.y,
+					dr = Math.sqrt(dx * dx + dy * dy);
+					return "M" + d.source.x + "," + d.source.y + "A" + dr + "," + dr + " 0 0,1 " + d.target.x + "," + d.target.y;
+				});
+				
+				nodes.attr("cx", function(d) { return d.x; })
+					.attr("cy", function(d) { return d.y; })
+					.attr("transform", function(d) { return "translate(" + d.x + "," + d.y + ")"; });
+			} 							
+						
+			function recalculateAllRect() {
+				function recalculateWidth( d ) {
+					
+					var texts = this.parentNode.getElementsByTagName("text");
+					
+					var maxwidth = d.width;
+					for (var item of texts) {
+						var bbox = item.getBBox();
+						//var bbx = item.getAttribute("x");
+						var width = bbox.width+bbox.x*2;
+						
+						//alert((width+bbx));
+						if (width>maxwidth) maxwidth = width;
+					}
+					d.width = maxwidth;
+					return maxwidth;
+				}
+				
+				function recalculateHeight( d ) {
+					var texts = this.parentNode.getElementsByTagName("text");
+					var maxheight = d.height;
+					for (var item of texts) {
+						//alert(item.getAttribute("class"));
+						var bbox = item.getBBox();
+						var height = bbox.height+bbox.y*2;
+						if (height>maxheight) maxheight = height;
+					}
+					d.height = maxheight;
+					return maxheight;
+				}
+				
+				svg.selectAll("rect.nodebox").attr("width", recalculateWidth ).attr("height", recalculateHeight );
+				link.attr("d", lineconnection );
+				
+			}
+			
+			//recalculateAllRect();
+			function recalculateAllTexts() {
+				function adjustTextLength( d ) {
+					//alert(d.area);
+					var bbox = this.getBBox();
+					var twidth = bbox.width+20;
+					if (twidth>d.width) {
+						this.setAttribute("lengthAdjust","spacingAndGlyphs");
+						return d.width-10;
+					}
+					return "";
+				}
+				svg.selectAll("text.area").attr("textLength", adjustTextLength );
+			}
+			recalculateAllTexts();
+			
+							
+			function flatten(root) {
+			  var nodes = [];
+
+			  function recurse(node) {
+				if (node.children) node.children.forEach(recurse);
+				else nodes.push({name: node.name, value: node.size});
+			  }
+
+			  recurse(root);
+			  return {children: nodes};
+			}		
+			
+			
+		}
+			
+
+			
+
+		
+		
+	</script>
+</head>
+<body>
+<div id="orgchart"></div>
+
+</body>
+</html>

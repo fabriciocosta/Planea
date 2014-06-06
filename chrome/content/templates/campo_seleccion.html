@@ -1,0 +1,11 @@
+<div class="campo campo-texto {CAMPOCONAYUDA}  campo-{CLASE}" id="field_{IDCAMPO}">
+	<div class="titulo">
+			<label class="titulocampo" title="{AYUDARAPIDA}" onmouseover="javascript:ShowHint('{IDCAMPO}');"><span>{NOMBRECAMPO}</span></label>
+			{MARKER}			
+	</div>
+	<div class="entrada">		
+		<select id="{IDCAMPO}" title="{AYUDARAPIDA}" placeholder="{AYUDARAPIDA}" onchange="javascript:SaveField('{PATHCAMPO}','{IDCAMPO}');">
+		{VALOR}
+		</select>
+	</div>
+</div>

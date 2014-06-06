@@ -1,0 +1,245 @@
+<?xml version="1.0"?>
+
+
+<?xml-stylesheet href="chrome://planea/skin/planea.css" type="text/css"?>
+<?xml-stylesheet href="chrome://planea/skin/site.css" type="text/css"?>
+<!--
+<?xml-stylesheet href="chrome://planea/content/js/css/ui-lightness/jquery-ui-1.10.4.custom.css" type="text/css"?>
+-->
+<!DOCTYPE window SYSTEM "chrome://planea/locale/planea.dtd">
+
+<window id="main" xmlns="http://www.mozilla.org/keymaster/gatekeeper/there.is.only.xul" xmlns:html="http://www.w3.org/1999/xhtml"
+        title="&title;" titlebar="0"
+		style="min-width: 640px; min-height: 320px; width: 1024px; height:500px;"
+		hidechrome="false" disablechrome="false" chromemargin="-1">
+
+  <preferences>
+    <preference id="creador" name="creador" type="string"/>
+    <preference id="nombreproyecto" name="nombreproyecto" type="string"/>
+  </preferences>
+
+	<script type="text/javascript" src="chrome://planea/content/js/moment.js"></script>
+	
+	<script type="text/javascript" src="chrome://planea/content/js/d3-master/d3.js"></script>
+	<script type="text/javascript" src="chrome://planea/content/js/canvg.js"></script>
+    <script type="text/javascript" src="chrome://planea/content/js/wiwe.js"></script>
+	
+	<script type="application/x-javascript" src="chrome://global/content/printUtils.js"/>
+	<script type="application/x-javascript" src="chrome://planea/content/controller.js"/>
+
+
+    <script type="application/x-javascript" src="chrome://planea/content/tools.js"/>
+	<script type="text/javascript" src="chrome://planea/content/js/FileSaver.js"></script>
+	<script type="text/javascript" src="chrome://planea/content/js/jsPDF/jspdf.js"></script>
+	<script type="text/javascript" src="chrome://planea/content/js/jsPDF/jspdf.plugin.addhtml.js"></script>
+	<script type="text/javascript" src="chrome://planea/content/js/jsPDF/jspdf.plugin.addimage.js"></script>
+	<script type="text/javascript" src="chrome://planea/content/js/jsPDF/jspdf.plugin.autoprint.js"></script>
+	<script type="text/javascript" src="chrome://planea/content/js/jsPDF/jspdf.plugin.cell.js"></script>
+	<script type="text/javascript" src="chrome://planea/content/js/jsPDF/jspdf.plugin.from_html.js"></script>
+	<script type="text/javascript" src="chrome://planea/content/js/jsPDF/jspdf.plugin.javascript.js"></script>
+	<script type="text/javascript" src="chrome://planea/content/js/jsPDF/jspdf.plugin.png_support.js"></script>
+	<script type="text/javascript" src="chrome://planea/content/js/jsPDF/jspdf.plugin.sillysvgrenderer.js"></script>
+	<script type="text/javascript" src="chrome://planea/content/js/jsPDF/jspdf.plugin.split_text_to_size.js"></script>
+	<script type="text/javascript" src="chrome://planea/content/js/jsPDF/jspdf.plugin.standard_fonts_metrics.js"></script>
+	<script type="text/javascript" src="chrome://planea/content/js/jsPDF/jspdf.plugin.total_pages.js"></script>
+	
+	<script type="application/x-javascript" src="chrome://planea/content/filesystem.js"/>
+
+    <script type="application/x-javascript" src="chrome://planea/content/templates.js"/>
+
+	<script type="application/x-javascript" src="chrome://planea/content/dbhelp.js"/>
+	<script type="application/x-javascript" src="chrome://planea/content/dbfield.js"/>
+    <script type="application/x-javascript" src="chrome://planea/content/dbnavigation.js"/>	
+	<script type="application/x-javascript" src="chrome://planea/content/dbtree.js"/>
+	
+	<script type="application/x-javascript" src="chrome://planea/content/dbdocument.js"/>
+	<script type="application/x-javascript" src="chrome://planea/content/planea.js"/>
+
+	<script type="text/javascript" src="chrome://planea/content/js/jquery-1.10.2.js"></script>
+	<!--
+	<script type="text/javascript" src="chrome://planea/content/js/jquery-ui-1.10.4.custom.js"></script>
+	-->
+<!--
+	<script type="text/javascript" src="chrome://planea/content/js/ckeditor/ckeditor_source.js"></script>
+    <script type="text/javascript" src="chrome://planea/content/_source/core/loader.js"></script>
+-->
+	<script type="application/x-javascript" src="chrome://planea/content/js/jszip.js"/>
+	<script type="application/x-javascript" src="chrome://planea/content/js/docx.js"/>
+
+	<commandset id="cmdset_file">
+	<command id="cmd_pageSetup" label="&filePageSetup.label;" oncommand="CommandUpdater.doCommand(this.id);"/>
+	<command id="cmd_print" label="&filePrint.label;" oncommand="CommandUpdater.doCommand(this.id);"/>
+	<command id="cmd_exit" label="&fileExit.label;" oncommand="CommandUpdater.doCommand(this.id);"/>
+	</commandset>
+	<commandset id="cmdset_edit">
+	<command id="cmd_copy" label="&editCopy.label;" oncommand="CommandUpdater.doCommand(this.id);"/>
+	<command id="cmd_selectAll" label="&editSelectAll.label;" oncommand="CommandUpdater.doCommand(this.id);"/>
+	</commandset>
+	<commandset id="cmdset_tools">
+	<command id="cmd_options" label="&toolsOptions.label;" oncommand="CommandUpdater.doCommand(this.id);"/>
+	</commandset>
+	<commandset id="cmdset_help">
+	<command id="cmd_about" label="&helpAbout.label;" oncommand="CommandUpdater.doCommand(this.id);"/>
+	</commandset>
+	<keyset id="keyset_main">
+	<key id="key_copy" key="&editCopy.key;" modifiers="accel" command="cmd_copy"/>
+	<key id="key_selectAll" key="&editSelectAll.key;" modifiers="accel" command="cmd_selectAll"/>
+	<key id="key_print" key="&filePrint.key;" modifiers="accel" command="cmd_print"/>
+	</keyset>
+	<popupset>
+
+
+	</popupset>
+
+	<!--
+	<toolbox>
+
+	
+
+	<toolbar id="main-toolbar" mode="icons">
+
+	</toolbar>
+
+	</toolbox>-->
+	<vbox id="main_box" flex="1">
+		<vbox id="workspace_header" height="123">
+			<html:div class="header" id="header">
+					
+					<!-- BLOQUE MENU / BOTONES -->
+				
+				<html:table cellpadding="0" cellspacing="0" border="0" width="100%" height="140">
+					<html:tr>
+
+						<html:td  class="tdtoc" width="100%" align="left" valign="top">
+								<html:div class="logo" onmousemove="javascript:dragWindowMove(this, event)"
+										onmouseup="javascript:stopWindowDrag(this, event);"
+										onmousedown="javascript:startWindowDrag(this, event);"
+										ondblclick="javascript:winMaximize(this, event);" >
+										<span id="projectfilepath" class="projectfilepath">/</span>
+								</html:div>
+								<html:input type="range" id="zoomscale" value="100" min="50" max="120" onchange="javascript:changeZoom(this);"/>
+								<html:div id="minmaxclose" class="minmaxclose" >
+									<html:div id="minimizewin" class="minimizewin" onclick="javascript:winMinimize(this, event);">
+									</html:div>
+									<html:div id="maximizewin" class="maximizewin" onclick="javascript:winMaximize(this, event);">
+									</html:div> 
+									<html:div id="closewin" class="closewin" onclick="javascript:winClose(this, event);">
+									</html:div> 
+								</html:div>
+								
+								<!-- SIDEBAR HELP-->
+								<html:div class="sidebar">
+									<!-- HELP-->	
+									<html:div class="help">
+																		
+										<html:div id="modo" class="modo modo-noguiado" onclick="javascript:showhidehelps('completa_frente');">
+											<html:div class="ayudab">
+
+											</html:div>
+										</html:div>
+										<html:div class="buscador" >
+											<html:input type="text" value="buscar" onkeyup="javascript:searchText(this, event);" />
+										</html:div>
+									
+										
+									</html:div>
+									<!-- FIN HELP -->								
+								</html:div>
+								<!-- FIN SIDEBAR HELP -->
+								
+								<html:div id="dbtree" class="tree css-treeview">
+							
+								</html:div>
+						</html:td>
+					</html:tr>
+				</html:table>
+				
+				<!-- BLOQUE MENU / BOTONES FIN -->
+					
+<!-- FIN MENU GRAL -->
+<!-- NAVEGACION -->
+
+<!--
+                    <html:div id="dblocation" class="location">
+					
+                        <html:div id="dbbotonestop" class="botones">																		
+    					    <html:button class="anterior" title="Anterior" onclick="javascript:PreviousForm();"> </html:button><html:button class="siguiente tiene_anterior" title="Siguiente"  onclick="javascript:NextForm();"> </html:button>
+    					</html:div>
+						
+					    <html:ul class="location" id="location_path">
+					    	<html:li class="parent-section">PRESENTACION</html:li> / <html:li class="selected-section">Portada</html:li>
+						</html:ul>
+							
+					</html:div>							
+			-->
+<!-- FIN NAVEGACION -->
+				
+			    </html:div>
+		
+		</vbox>
+		<hbox id="workspace_box" flex="1">
+			<html:div id="container" >		
+<!--HEADER-->						
+
+<!--FIN HEADER-->
+				<html:div class="panel" style="display: block;">
+				
+				<!-- BLOQUE CENTRAL -->
+						<html:div id="dbmultipage" class="multipage">
+								
+								<html:div id="dbformularios" class="formularios">										
+								</html:div>
+								<html:div class="formulariosbottom">										
+								</html:div>
+								<html:div id="ayudaguia-frente" class="drag contenedor" style="display:none;">
+									<html:div id="cerrarayuda" class="close" onclick="javascript:hidediv('ayudaguia-frente');" border="0">
+									</html:div>
+									<html:div id="cambiarayuda" class="cambiarayuda" onclick="javascript:cambiarayuda('ayudaguia-frente');" border="0">
+									</html:div>
+									<html:div class="textocontenedorscroll" id="ayuda_contenedor_scroll_frente">
+										<html:span class="textocontenedor" id="ayuda_contenedor_frente">
+										</html:span>
+									</html:div>
+								</html:div>
+						</html:div>
+
+						<html:div id="popuprelational" class="popuprelational">
+						</html:div>
+				<!-- BLOQUE CENTRAL FIN -->
+				<html:input style="display: block; position: fixed; right: 4000px;" type="text" id="OutFocus"  value="" />
+				</html:div>	
+			</html:div>
+			<html:div id="windowprint" style="display: none; position: fixed; width: 100%; height: 100%; z-index: 40000; left: 0px; top: 0px;" class="windowprint">
+				<editor id="htmlframe" class="htmlframe" style="background-color: rgba(0,0,0,0.5); display: block; width: 100%;height: 100%; left: 0px; top: 0px; position: fixed; background-color: #DDD;" frameborder="0" src="about:blank"
+						onclick="javascript:this.makeEditable(true);"
+						editortype="html">
+					
+				</editor>
+			</html:div>
+		</hbox>
+		<vbox id="workspace_footer" height="20">
+			<html:div id="footer_status">
+				<html:div id="project_zoom">
+					<!--<scale min="50" max="150" onchange="javascript:zoomPage(this,event);"> </scale> -->
+					<html:select id="zoompage" class="zoompage" onchange="javascript:zoomPage(this,event);">
+						<html:option value="50">50%</html:option>
+						<html:option value="60">60%</html:option>
+						<html:option value="70">70%</html:option>
+						<html:option value="80">80%</html:option>
+						<html:option value="90">90%</html:option>
+						<html:option selected="selected" value="100">100%</html:option>
+						<html:option value="110">110%</html:option>
+						<html:option value="120">120%</html:option>
+						<html:option value="130">130%</html:option>
+						<html:option value="140">140%</html:option>
+						<html:option value="150">150%</html:option>
+					</html:select>
+				</html:div>
+				<html:div id="project_progress">
+					<html:span class="avances" id="avances">AVANCES</html:span>
+				</html:div>
+			</html:div>
+		</vbox>
+	</vbox>
+	
+</window>

@@ -1,0 +1,29 @@
+<div class="campo campo-parrafo {CAMPOCONAYUDA}  campo-{CLASE}">
+	<div class="titulo">
+		<label class="titulocampo" tootltiptext="{NOMBRECAMPO}" title="{AYUDARAPIDA}"  onmouseover="javascript:ShowHint('{IDCAMPO}');"><span>{NOMBRECAMPO}</span>{HELPER}</label>
+		{MARKER}
+	</div>
+	<div class="entrada">
+		
+		<editor class="parrafo" 
+				id="{IDCAMPO}"  title="{AYUDARAPIDA}"
+				placeholder="{AYUDARAPIDA}"
+				src="{VALOR}" 
+				editortype="html"
+				onclick="javascript:log('check: editor click');"
+				onfocus="javascript:alert('focus');EditField('{PATHCAMPO}','{IDCAMPO}');"
+				onblur="javascript:StopEditField('{PATHCAMPO}','{IDCAMPO}'); SaveField('{PATHCAMPO}','{IDCAMPO}');"
+				onkeydown="javascript:log('check: editor keydown ' + event.currentTarget);var self = this.contentDocument.documentElement; setTimeout(function() {self.focus();}, 100);"
+				></editor>
+				<div class="edittools">
+				<button onclick="javascript:  var editor = document.getElementById('{IDCAMPO}'); editor.contentDocument.execCommand('bold', false, null);"></button>
+				<button onclick="javascript:  var editor = document.getElementById('{IDCAMPO}'); editor.contentDocument.execCommand('italic', false, null);"></button>
+				<button onclick="javascript:  var editor = document.getElementById('{IDCAMPO}'); editor.contentDocument.execCommand('underline', false, null);"></button>
+				<button onclick="javascript:  var editor = document.getElementById('{IDCAMPO}'); editor.contentDocument.execCommand('JustifyLeft', false, null);"></button>
+				<button onclick="javascript:  var editor = document.getElementById('{IDCAMPO}'); editor.contentDocument.execCommand('JustifyCenter', false, null);"></button>
+				<button onclick="javascript:  var editor = document.getElementById('{IDCAMPO}'); editor.contentDocument.execCommand('JustifyRight', false, null);"></button>
+				<button onclick="javascript:SaveField('{PATHCAMPO}','{IDCAMPO}');"></button>
+				<div class="edittools">
+		{FIELDACTIONS}
+	</div>
+</div>

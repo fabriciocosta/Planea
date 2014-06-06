@@ -1,0 +1,18 @@
+<div class="campo campo-porcentaje {CAMPOCONAYUDA}  campo-{CLASE}" id="field_{IDCAMPO}">
+	<div class="titulo">
+			<label class="titulocampo" title="{AYUDARAPIDA}" onmouseover="javascript:ShowHint('{IDCAMPO}');"><span>{NOMBRECAMPO}</span></label>
+			{MARKER}			
+	</div>
+	<div class="entrada">
+	<!--
+		<input id="input_{IDCAMPO}" type="text" value="{VALOR}" title="{AYUDARAPIDA}" placeholder="{AYUDARAPIDA}" onfocus="javascript:OpenHelp('{PATHCAMPO}');"
+         onkeyup="javascript:SaveField('{PATHCAMPO}','input_{IDCAMPO}');"
+         />-->
+		 <textbox id="{IDCAMPO}" type="number" decimalplaces="2" min="0" max="100" value="{VALOR}"
+			onblur="javascript:StopEditField('{PATHCAMPO}','{IDCAMPO}');"
+			onfocus="javascript:EditField('{PATHCAMPO}','{IDCAMPO}');"
+			onchange="javascript:SaveField('{PATHCAMPO}','{IDCAMPO}');"
+			
+			/>
+	</div>
+</div>

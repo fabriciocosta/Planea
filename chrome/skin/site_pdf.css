@@ -1,0 +1,223 @@
+﻿
+.floating {
+
+	display: block; 
+	float: left;
+	clear: none; 
+	width: 150px; 
+	position: relative; 
+	font-size: 17px; 
+	text-align: justify; 
+	font-family: Arial;
+}
+
+
+div.organizacionnombre {
+	display: block;
+	position: absolute;
+
+	
+}
+
+div.organizacionformajuridica {
+	display: block;
+	position: absolute;
+	left: 300px;
+	top: 80px;
+	
+}
+
+div.organizacionidentificacion {
+	display: block;
+	position: absolute;
+	left: 700px;
+	top: 50px;
+}
+
+	div.organizaciondomicilio {
+		display: block;
+		position: absolute;
+		left: 140px;
+		top: 200px;
+	}
+
+	div.organizacionciudad {
+		display: block;
+		position: absolute;
+		left: 400px;
+		top: 200px;
+	}
+
+	div.organizacioncodigopostal {
+		display: block;
+		position: absolute;
+		left: 700px;
+		top: 200px;
+	}
+	
+		div.organizacionprovincia {
+			display: block;
+			position: absolute;
+			left: 140px;
+			top: 350px;
+		}
+
+		div.organizacionpais {
+			display: block;
+			position: absolute;
+			left: 400px;
+			top: 350px;
+		}
+
+		div.organizaciontelefono {
+			display: block;
+			position: absolute;
+			left: 700px;
+			top: 350px;
+		}
+		
+				div.organizacionmail {
+					display: block;
+					position: absolute;
+					left: 140px;
+					top: 550px;
+				}
+
+				div.organizacionweb {
+					display: block;
+					position: absolute;
+					left: 400px;
+					top: 550px;
+				}
+
+				div.organizacionredessociales {
+					display: block;
+					position: absolute;
+					left: 700px;
+					top: 550px;
+				}
+				
+/*PERSONA*/
+
+
+div.personanombre {
+	display: block;
+	position: absolute;
+	left: 140px;
+	top: 50px;
+}
+
+div.apellido {
+	display: block;
+	position: absolute;
+	left: 400px;
+	top: 50px;
+}
+
+div.dni {
+	display: block;
+	position: absolute;
+	left: 700px;
+	top: 50px;
+}			
+				
+		div.nacimiento {
+			display: block;
+			position: absolute;
+			left: 140px;
+			top: 200px;
+		}
+
+		div.domicilio {
+			display: block;
+			position: absolute;
+			left: 400px;
+			top: 200px;
+		}
+
+		div.codigo_postal {
+			display: block;
+			position: absolute;
+			left: 700px;
+			top: 200px;
+		}	
+
+			div.ciudad {
+				display: block;
+				position: absolute;
+				left: 100px;
+				top: 350px;
+			}
+
+			div.provincia {
+				display: block;
+				position: absolute;
+				left: 400px;
+				top: 350px;
+			}
+
+			div.pais {
+				display: block;
+				position: absolute;
+				left: 700px;
+				top: 350px;
+			}
+			
+					div.telefono {
+						display: block;
+						position: absolute;
+						left: 100px;
+						top: 550px;
+					}
+
+					div.web {
+						display: block;
+						position: absolute;
+						left: 400px;
+						top: 550px;
+					}
+
+/*RESPONSABLE*/
+
+div.responsablenombre {
+	display: block;
+	position: absolute;
+	left: 100px;
+	top: 50px;
+}
+
+div.responsableapellido {
+	display: block;
+	position: absolute;
+	left: 400px;
+	top: 50px;
+}
+
+div.responsablemail {
+	display: block;
+	position: absolute;
+	left: 700px;
+	top: 50px;
+}			
+				
+		div.responsabletelefono {
+			display: block;
+			position: absolute;
+			left: 100px;
+			top: 200px;
+		}
+
+		div.responsableweb {
+			display: block;
+			position: absolute;
+			left: 400px;
+			top: 200px;
+		}
+
+		div.responsableredes {
+			display: block;
+			position: absolute;
+			left: 700px;
+			top: 200px;
+		}
+				

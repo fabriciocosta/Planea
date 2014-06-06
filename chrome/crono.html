@@ -1,0 +1,631 @@
+﻿<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+	<title>d3.js test</title>
+	<script type="text/javascript" src="content/js/d3-master/d3.js"  charset="utf-8"></script>
+	<script type="text/javascript" src="content/html_test.js"  charset="utf-8"></script>
+		<style>
+			.overlay {
+			  fill: none;
+			  /*pointer-events: all;*/
+			}
+			
+			.node {
+				font: 10px sans-serif;
+			}
+			
+			.linkhide,
+			.nodehide {
+				visibility: hidden;
+			}
+			
+			.node rect {
+				fill: rgba(255, 255, 255, 1);
+				stroke: #000;
+			}
+			
+			.dragging rect {
+				fill: rgba(200, 255, 255, 1);
+				stroke: #000;
+			}
+			
+			.link {
+			  fill: none;
+			  stroke: #ccc;
+			  stroke-width: 1.5px;
+			}
+			
+			.name {
+				stroke: none;
+				fill: #000;
+				font-size: 12px;
+			}
+
+			.area {
+				stroke: none;
+				fill: #888;
+				font-size: 16px;
+				font-weight: bold;
+			}
+			
+			.linkassistant {
+				stroke-dasharray: 0,2 1;
+			}
+		</style>
+	 <script type="text/javascript">
+		window.onload = function() {
+		
+
+var dbCronogramNode = {};
+var dbCronogramPath = {};
+var dbTasks = [];
+var md5_tree_cronogram_old = "";
+var md5_tree_cronogram_new = "";
+
+function drawD3Cronogram( field_id, tasks ) {
+
+	//getFieldTemplateCronoChart( "", dbCronogramNode, dbCronogramPath );
+
+	if (md5_tree_cronogram_old!=md5_tree_cronogram_new)
+		document.getElementById('cronochart').innerHTML = '';
+	else log("drawD3Cronogram() > nothing changed on dbTasks");
+	
+	md5_tree_cronogram_old = md5_tree_cronogram_new;
+	
+	if (document.getElementById('cronochart').innerHTML!="") {
+		return;
+	}
+	
+	var svgcronochartElement = null;
+	
+	var w = window.innerWidth;
+	var h = window.innerHeight;
+	var width = "100%";
+	var height = "100%";
+	var svg = d3.select("#cronochart")
+			.append("svg")
+			.attr("id", "svgcronochart")
+			.attr("width", width)
+			.attr("height", height);
+				
+	var styled = window.getComputedStyle( document.getElementById("cronochart") );
+	w = parseInt(styled.width);
+	h = parseInt(styled.height);
+	log("drawD3Cronogram() > w ["+w+"] h ["+h+"]");
+	//svg.attr("viewBox", "-1500 0 3000 1000");
+	//svg.attr("viewBox", "0 0 1000 500");
+
+	var sp = {
+  "decimal": ".",
+  "thousands": ",",
+  "grouping": [3],
+  "currency": ["$", ""],
+  "dateTime": "%a %b %e %X %Y",
+  "date": "%m/%d/%Y",
+  "time": "%H:%M:%S",
+  "periods": ["AM", "PM"],
+  "days": ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"],
+  "shortDays": ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"],
+  "months": ["January", "Febrero", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"],
+  "shortMonths": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"]
+};
+
+	
+	var taskArray = [
+	  {
+		task: "conceptualize",
+		type: "development",
+		startTime: "2013-1-28", //year/month/day
+		endTime: "2013-4-1",
+		details: "This actually didn't take any conceptualization"
+	},
+
+	{
+		task: "sketch",
+		type: "development",
+		startTime: "2013-3-1",
+		endTime: "2013-4-6",
+		details: "No sketching either, really"
+	},
+
+	{
+		task: "color profiles",
+		type: "development",
+		startTime: "2013-4-6",
+		endTime: "2013-6-9"
+	},
+
+	{
+		task: "HTML",
+		type: "coding",
+		startTime: "2013-3-2",
+		endTime: "2013-4-6",
+		details: "all three lines of it"
+	},
+
+	{
+		task: "write the JS",
+		type: "coding",
+		startTime: "2013-4-6",
+		endTime: "2013-5-9"
+	},
+
+	{
+		task: "advertise",
+		type: "promotion",
+		startTime: "2013-4-9",
+		endTime: "2013-6-12",
+		details: "This counts, right?"
+	},
+
+	{
+		task: "spam links",
+		type: "promotion",
+		startTime: "2013-7-12",
+		endTime: "2013-8-14"
+	},
+	{
+		task: "eat",
+		type: "celebration",
+		startTime: "2013-4-8",
+		endTime: "2013-7-13",
+		details: "All the things"
+	},
+
+	{
+		task: "crying",
+		type: "celebration",
+		startTime: "2013-2-13",
+		endTime: "2013-8-16"
+	},
+
+	];
+	
+	var zoom = 1.0;
+	//si la combinacion entre zoom e intervalo
+	// se ven dias, meses o años...
+
+	if (tasks) taskArray = tasks;
+	if (dbTasks.length) taskArray = dbTasks;
+	
+	d3.locale(sp);
+	
+	var dateFormat = d3.time.format("%Y-%m-%d");
+
+	var timeScale = d3.time.scale()
+			.domain( [ d3.min( taskArray, function(d) {return dateFormat.parse(d.startTime);}),
+					 d3.max(taskArray, function(d) {return dateFormat.parse(d.endTime);})])
+			.range([ 0, w*zoom-250 ] );
+
+	var categories = new Array();
+
+	for (var i = 0; i < taskArray.length; i++){
+		categories.push(taskArray[i].type);
+	}
+
+	var catsUnfiltered = categories; //for vert labels
+
+	categories = checkUnique(categories);
+
+	makeGant(taskArray, w, h);
+
+	var title = svg.append("text")
+				  .text("ACTIVIDAD")
+				  .attr("x", 50 )
+				  .attr("y", 40 )
+				  .attr("text-anchor", "middle")
+				  .attr("font-size", 15 )
+				  .style("font-family", "Arial")
+				  .attr("fill", "#0ecc7a" );
+
+	function makeGant(tasks, pageWidth, pageHeight) {
+
+		var barHeight = 15;
+		var gap = barHeight + 30;
+		var gapMargin = 4;
+		var topPadding = 50;
+		var sidePadding = 130;
+
+		var colorScale = d3.scale.linear()
+			.domain( [ 0, tasks.length ] )
+			.range( ["#88aaCC" , "#55DD77"] )
+			.interpolate( d3.interpolateHcl );
+
+		
+		
+		drawRects( tasks, gap, gapMargin, topPadding, sidePadding, 				 barHeight, 	colorScale, pageWidth, pageHeight );
+		
+		vertLabelsTasks( tasks, gap, gapMargin, topPadding, sidePadding, 					barHeight, colorScale);
+
+		makeGrid( sidePadding, topPadding, pageWidth, pageHeight);
+	}
+
+	
+	function drawRects(theArray, theGap, theGapMargin, theTopPad, theSidePad, theBarHeight, theColorScale, w, h) {
+	
+		var bigRects = svg.append("g")
+			.selectAll("rect")
+		   .data(theArray)
+		   .enter()
+		   .append("rect")
+		   .attr("x", theSidePad)
+		   .attr("y", function(d, i){
+			  return i*theGap + theTopPad + theGapMargin;
+		  })
+		   .attr("width", function(d){
+			  return w-theSidePad;
+		   })
+		   .attr("height", theGap-theGapMargin*2)
+		   .attr("stroke", "none")
+		   .attr("fill", function(d){
+				return "#e6e7e8";
+				/*
+			for (var i = 0; i < categories.length; i++){
+				if (d.type == categories[i]){
+				  return d3.rgb(theColorScale(i));
+				}
+			}*/
+		   })
+		   .attr("opacity", 1.0);
+
+			 var rectangles = svg.append('g')
+				 .selectAll("rect")
+				 .data(theArray)
+				 .enter();
+
+		   var innerRects = rectangles.append("rect")
+					 .attr("rx", 0)
+					 .attr("ry", 0)
+					 .attr("x", function(d){
+					  return timeScale(dateFormat.parse(d.startTime)) + theSidePad;
+					  })
+					 .attr("y", function(d, i){
+						return i*theGap + theGap/4 + theGapMargin + theTopPad;
+					})
+					 .attr("width", function(d){
+						return (timeScale(dateFormat.parse(d.endTime))-timeScale(dateFormat.parse(d.startTime)));
+					 })
+					 .attr("height", theBarHeight)
+					 .attr("stroke", "none")
+					 .attr("fill", function(d){
+					  for (var i = 0; i < categories.length; i++){
+						  if (d.type == categories[i]){
+							return d3.rgb(theColorScale(i));
+						  }
+					  }
+					 })
+			
+			
+			var rectTextA = rectangles.append("text")
+					.text(function(d) {
+						var format = d3.time.format("%Y-%m-%d");
+						return dateFormat.parse(d.startTime).getDay();
+					})
+					.attr("x", function(d){
+						return ( timeScale( dateFormat.parse(d.startTime) ) + theSidePad - 10 );
+						})
+					.attr("y", function(d, i){
+						  return i*theGap + 27 + theTopPad;
+					  })
+				   .attr("font-size", 12)
+				   .attr("font-family", "Arial")
+				   .attr("font-weight", "bold")
+				   .attr("text-anchor", "middle")
+				   .attr("text-height", theBarHeight)
+				   .attr("fill", "#000");
+			
+			var rectText = rectangles.append("text")
+					   .text(function(d){
+					   
+							//if (d.assigned) return d.task+" ("+d.assigned+")";
+							//return d.task;
+							if (d.assigned) return d.assigned;
+					   })
+					   .attr("x", function(d){
+						return (timeScale(dateFormat.parse(d.endTime))-timeScale(dateFormat.parse(d.startTime)))/2 + timeScale(dateFormat.parse(d.startTime)) + theSidePad;
+						})
+					   .attr("y", function(d, i){
+						  return i*theGap + 14+ theTopPad;
+					  })
+					   .attr("font-size", 11)
+					   .attr("text-anchor", "middle")
+					   .attr("text-height", theBarHeight)
+					   .attr("fill", "#fff");
+
+		rectText.on('mouseover', function(e) {
+		 // console.log(this.x.animVal.getItem(this));
+					   var tag = "";
+
+				 if (d3.select(this).data()[0].details != undefined){
+				  tag = "Actividad: " + d3.select(this).data()[0].task + "<br/>" + 
+						"Etapa: " + d3.select(this).data()[0].type + "<br/>" + 
+						"Inicia: " + d3.select(this).data()[0].startTime + "<br/>" + 
+						"Finaliza: " + d3.select(this).data()[0].endTime + "<br/>" +
+						"Responsable: " + d3.select(this).data()[0].assigned + "<br/>" + 						
+						"Detalle: " + d3.select(this).data()[0].details;
+				 } else {
+				  tag = "Actividad: " + d3.select(this).data()[0].task + "<br/>" + 
+						"Etapa: " + d3.select(this).data()[0].type + "<br/>" + 
+						"Inicia: " + d3.select(this).data()[0].startTime + "<br/>" + 
+						"Finaliza: " + d3.select(this).data()[0].endTime;
+				 }
+				 var output = document.getElementById("tag");
+
+				  var x = this.x.animVal.getItem(this) + "px";
+				  var y = this.y.animVal.getItem(this) + 25 + "px";
+
+				 output.innerHTML = tag;
+				 output.style.top = y;
+				 output.style.left = x;
+				 output.style.display = "block";
+			   }).on('mouseout', function() {
+				 var output = document.getElementById("tag");
+				 output.style.display = "none";
+					 });
+
+		innerRects.on('mouseover', function(e) {
+		 //console.log(this);
+				log("innerRects.on(\"mouseover\") >  this:"+JSON.stringify(this) );
+				 var tag = "";
+
+				 if (d3.select(this).data()[0].details != undefined){
+				  tag = "Actividad: " + d3.select(this).data()[0].task + "<br/>" + 
+						"Etapa: " + d3.select(this).data()[0].type + "<br/>" + 
+						"Inicia: " + d3.select(this).data()[0].startTime + "<br/>" + 
+						"Finaliza: " + d3.select(this).data()[0].endTime + "<br/>" +
+						"Responsable: " + d3.select(this).data()[0].assigned + "<br/>" + 						
+						"Detalle: " + d3.select(this).data()[0].details;
+				 } else {
+				  tag = "Actividad: " + d3.select(this).data()[0].task + "<br/>" + 
+						"Etapa: " + d3.select(this).data()[0].type + "<br/>" + 
+						"Inicia: " + d3.select(this).data()[0].startTime + "<br/>" + 
+						"Finaliza: " + d3.select(this).data()[0].endTime;
+				 }
+				 var output = document.getElementById("tag");
+
+				 var x = (this.x.animVal.value + this.width.animVal.value/2) + "px";
+				 var y = this.y.animVal.value + 25 + "px";
+
+				 output.innerHTML = add_html_namespace( tag );
+				 output.style.top = y;
+				 output.style.left = x;
+				 output.style.display = "block";
+				 log("innerRects.on(\"mouseover\") >  output:"+output.innerHTML );
+			   }).on('mouseout', function() {
+				 var output = document.getElementById("tag");
+				 //output.style.display = "none";
+
+		 });
+
+	}
+
+	function makeGrid(theSidePad, theTopPad, wi, he){
+
+		var xAxis = d3.svg.axis()
+			.scale(timeScale)
+			.orient('bottom')
+			.ticks( d3.time.weeks, 1)
+			.tickSize( -he+theTopPad+20, 0, 0 )
+			.tickFormat( d3.time.format('%s') );
+
+		var grid = svg.append('g')
+			.attr('class', 'grid')
+			.attr('transform', 'translate(' +theSidePad + ', ' + (he - 25) + ')')
+			.call(xAxis)
+			.selectAll("text")  
+				.style("text-anchor", "middle")
+				.attr("fill", "#000")
+				.attr("stroke", "none")
+				.attr("font-size", 14)
+				.attr("dy", "1em");
+					
+		var xAxisMonths = d3.svg.axis()
+				.scale(timeScale)
+				.orient('top')
+				.ticks( d3.time.months, 1)
+				.tickSize( 18, 0, 1 )
+				.tickFormat( d3.time.format('%B') );
+				
+		var gridMonths = svg.append('g')
+			.attr('class', 'gridmonths')
+			.attr('transform', 'translate(' +theSidePad + ', ' + (25) + ')')
+			.call(xAxisMonths);
+
+			gridMonths.selectAll("line")
+				.attr("x1", 0 )
+				.attr("y1", 0 )
+				.attr("x2", 0 )
+				.attr("y2", he )
+				.attr("y2", he )
+				.attr("stroke-width", "4")
+				.attr("stroke", "#FFF");
+				
+			gridMonths.selectAll("text")  
+				.style("text-anchor", "start")
+				.attr("fill", "#808184")
+				.attr("stroke", "none")
+				.attr("font-size", 14)
+				.attr("font-family", "Arial")
+				.attr("dy", "1em");
+			
+		/*	
+		var xAxisMonths2 = d3.svg.axis()
+			.scale(timeScale)
+			.orient('bottom')
+			.ticks( d3.time.months, 1);
+			
+		var gridMonths2 = svg.append('g')
+			.attr('class', 'gridmonths2')
+			.attr('transform', 'translate(' +theSidePad + ', ' + (25) + ')')
+			.call(xAxisMonths2)
+			;
+		*/
+				
+					
+		var dd = 0;
+		var mm = 0;
+		
+		var xAxisMonths3 = d3.svg.axis()
+				.scale(timeScale)
+				.orient('top')
+				.ticks( d3.time.months, 1 )
+				.tickSize( 17, 0, 0 )
+				.tickFormat( 
+						function() { mm+=2; return "m"+mm; }
+				);		
+		var xAxisWeeks = d3.svg.axis()
+				.scale(timeScale)
+				.orient('top')
+				.ticks( d3.time.weeks, 2 )
+				.tickSize( 17, 0, 0 )
+				.tickFormat( /*function() { dd++; return "S" + (1 +(dd % 4)); }*/
+						function() { dd+=2; return "s"+dd; }
+				);
+		var gridWeeks = svg.append('g')
+			.attr('class', 'gridmonths')
+			.attr('transform', 'translate(' +theSidePad + ', ' + (50) + ')')
+			.call(xAxisWeeks)
+			.selectAll("text")  
+					.style("text-anchor", "start")
+					.attr("fill", "#0ecc7a")
+					.attr("stroke", "none")
+					.attr("font-size", 11)
+					.attr("font-family", "Arial")
+					.attr("dy", "1em");
+	}
+
+	function vertLabels(theGap, theTopPad, theSidePad, theBarHeight, theColorScale){
+	  var numOccurances = new Array();
+	  var prevGap = 0;
+
+	  for (var i = 0; i < categories.length; i++){
+		numOccurances[i] = [categories[i], getCount(categories[i], catsUnfiltered)];
+	  }
+
+	  
+	  
+	  var axisText = svg.append("g") //without doing this, impossible to put grid lines behind text
+	   .selectAll("text")
+	   .data(numOccurances)
+	   .enter()
+	   .append("text")
+	   .text(function(d){
+		return d[0];
+	   })
+	   .attr("x", 10)
+	   .attr("y", function(d, i){
+		if (i > 0){
+			for (var j = 0; j < i; j++){
+			  prevGap += numOccurances[i-1][1];
+			 // console.log(prevGap);
+			  return d[1]*theGap/2 + prevGap*theGap + theTopPad;
+			}
+		} else{
+		return d[1]*theGap/2 + theTopPad;
+		}
+	   })
+	   .attr("font-size", 11)
+	   .attr("text-anchor", "start")
+	   .attr("text-height", 14)
+	   .attr("fill", function(d){
+		for (var i = 0; i < categories.length; i++){
+			if (d[0] == categories[i]){
+			//  console.log("true!");
+			  return d3.rgb(theColorScale(i)).darker();
+			}
+		}
+	   });
+
+	}
+
+	function vertLabelsTasks(theArray, theGap, theGapMargin, theTopPad, theSidePad, theBarHeight, theColorScale){
+
+
+	  var prevGap = 0;
+	  
+	  var borderTasks = svg.append("g")
+			.selectAll("rect")
+		   .data(theArray)
+		   .enter()
+		   .append("rect")
+		   .attr("x", -5)
+		   .attr("y", function(d, i){
+			  return i*theGap + theGapMargin + theTopPad;
+		  })
+		   .attr("width", function(d){
+			  return theSidePad;
+		   })
+		   .attr("height", theGap)
+		   .attr("stroke", "#808184")
+		   .attr("fill", "transparent")
+		   .attr("opacity", 1.0);
+
+	  var axisText = svg.append("g") //without doing this, impossible to put grid lines behind text
+	   .selectAll("text")
+	   .data(theArray)
+	   .enter()
+	   .append("text")
+	   .text(function(d){
+			return d.task;
+	   })
+	   .attr("x", 10 )
+	   .attr("y", function(d, i) {
+			return i*theGap + (theGap)/2 + theGapMargin + theTopPad;
+	   })
+	   .attr("font-size", 15)
+	   .style("font-family","Arial")
+	   .attr("text-anchor", "start")
+	   .attr("text-height", 14)
+	   .attr("fill", function(d){
+			return "#58595b";
+	   });
+
+	}
+	
+	
+	
+	//from this stackexchange question: http://stackoverflow.com/questions/1890203/unique-for-arrays-in-javascript
+	function checkUnique(arr) {
+		var hash = {}, result = [];
+		for ( var i = 0, l = arr.length; i < l; ++i ) {
+			if ( !hash.hasOwnProperty(arr[i]) ) { //it works with objects! in FF, at least
+				hash[ arr[i] ] = true;
+				result.push(arr[i]);
+			}
+		}
+		return result;
+	}
+
+	//from this stackexchange question: http://stackoverflow.com/questions/14227981/count-how-many-strings-in-an-array-have-duplicates-in-the-same-array
+	function getCounts(arr) {
+		var i = arr.length, // var to loop over
+			obj = {}; // obj to store results
+		while (i) obj[arr[--i]] = (obj[arr[i]] || 0) + 1; // count occurrences
+		return obj;
+	}
+
+	// get specific from everything
+	function getCount(word, arr) {
+		return getCounts(arr)[word] || 0;
+	}
+	
+	svgcronochartElement = document.getElementById("svgcronochart");
+	//rendersvg( svgcronochartElement, "grafico_canvg_"+field_id );
+}
+				
+			drawD3Cronogram();
+		
+		}
+	</script>
+	<style>
+		body {
+			background-color: #FFF;
+			
+		}
+	</style>
+</head>
+<body >
+<div id="cronochart" style="border: solid 1px #000"></div>
+
+</body>
+</html>

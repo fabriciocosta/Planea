@@ -1,0 +1,12 @@
+<div class="campo campo-texto {CAMPOCONAYUDA}" id="field_{IDCAMPO}">
+	<div class="titulo">
+			<label class="titulocampo" title="{AYUDARAPIDA}" onmouseover="javascript:ShowHint('{IDCAMPO}');"><span>{NOMBRECAMPO}</span></label>
+			{MARKER}			
+	</div>
+	<div class="entrada">
+		<input id="{IDCAMPO}" type="checkbox" checked="{VALOR}" title="{AYUDARAPIDA}" placeholder="{AYUDARAPIDA}"
+		 onblur="javascript:StopEditField('{PATHCAMPO}','{IDCAMPO}');"
+		 onfocus="javascript:EditField('{PATHCAMPO}','{IDCAMPO}');"
+         onchange="javascript:SaveField('{PATHCAMPO}','{IDCAMPO}');"/>
+	</div>
+</div>
